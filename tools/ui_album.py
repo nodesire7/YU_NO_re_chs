@@ -34,7 +34,7 @@ import subprocess
 import sys
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageDraw, ImageFont
 from scipy import ndimage
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -50,20 +50,23 @@ SPEC = os.path.join(ROOT, "work", "ui", "album_spec.json")
 RECON = os.path.join(ROOT, "_recon")
 
 TITLE_FONT = SIMKAI if os.path.exists(SIMKAI) else LXGW
-TITLE_COLOR = "#8f7b55"
+TITLE_COLOR = (150, 130, 92, 238)   # translucent beige, as the original ink
+TITLE_STROKE = 3                    # fake the brush weight of the original
+TITLE_XSCALE = 0.85                 # original glyphs are ~0.8 as wide as tall
 BODY_COLOR = "#6f6558"       # NO DATA watermark grey-brown
 PLAQUE_COLOR = "#807a6d"     # plaque small-caps colour
 
 # ---------------------------------------------------------------------------
 # geometry measured on the 1920x4464 sheet
 # ---------------------------------------------------------------------------
-# calligraphy: (char, size, ink centre x, ink centre y)
-TITLE = [("美", 200, 100, 108), ("术", 205, 296, 112), ("室", 182, 462, 84)]
+# calligraphy: (char, size, ink centre x, ink centre y); drawn condensed
+TITLE = [("美", 215, 95, 100), ("术", 215, 290, 102), ("室", 190, 470, 80)]
 TITLE_BOX = (0, 0, 570, 340)          # region that may contain ink
 
 PLAQUE = (376, 170, 176, 29)          # x, y, w, h of the black pill
 PLAQUE_TEXT = "图像鉴赏"
-PLAQUE_SIZE = 23
+PLAQUE_SIZE = 22
+PLAQUE_PITCH = 37
 
 # empty-thumbnail placeholders: block origin (the NO DATA wordmark sits at +13,+15
 # inside a 82x62 stamp) for both page bands
@@ -79,7 +82,7 @@ BACK_BUTTONS = [
     ((1788, 4060, 112, 44), (1846, 4084), "bright", "#f4f2ea"),
 ]
 BACK_TEXT = "返回"
-BACK_SIZE = 38
+BACK_SIZE = 35
 
 
 # ---------------------------------------------------------------------------
@@ -113,15 +116,18 @@ def glyph_mask(lum, box, mode, delta=24, size=41, dilate=2, opening=False):
 
     A 41 px median ignores the strokes (they never fill half the window), so
     solid glyph bodies are caught as well as their soft shadows. No opening
-    pass: the thin 1 px tops of strokes must survive the mask.
+    pass: the thin 1 px tops of strokes must survive the mask. mode="contrast"
+    also catches the dark rim drawn around white letters.
     """
     x0, y0, x1, y1 = box
     sub = lum[y0:y1, x0:x1]
     bg = ndimage.median_filter(sub, size=size, mode="nearest")
     if mode == "dark":
         m = sub < bg - delta
-    else:
+    elif mode == "bright":
         m = sub > bg + delta
+    else:
+        m = np.abs(sub - bg) > delta
     if opening:
         m = ndimage.binary_opening(m, np.ones((2, 2)))
     if dilate:
@@ -272,13 +278,31 @@ def erase_nodata(rgba, blocks, rng, faded_blocks=()):
     print("  NO DATA slots re-stamped: %d" % len(blocks))
 
 
+def diffuse_fill(rgba, box, m, iterations=240):
+    """Laplace inpaint of a masked label: the plate shading flows through the hole.
+
+    Watercolour / printed plates have soft gradients rather than hard texture, so
+    a diffusion fill leaves no screenshot-visible patch, unlike a copied patch.
+    """
+    x0, y0, x1, y1 = box
+    sub = rgba[y0:y1, x0:x1].astype(np.float32)
+    work = sub.copy()
+    # seed the hole from the nearest surrounding colour
+    dist, (iy, ix) = ndimage.distance_transform_edt(m, return_indices=True)
+    work[m] = sub[iy[m], ix[m]]
+    for _ in range(iterations):
+        blur = ndimage.uniform_filter(work, size=(3, 3, 1), mode="nearest")
+        work[m] = blur[m]
+    rgba[y0:y1, x0:x1] = np.clip(work, 0, 255).round().astype(np.uint8)
+    return int(m.sum())
+
+
 def erase_back(rgba, box, mode, rng):
     x, y, w, h = box
     box = (x, y, x + w, y + h)
     lum = rgba[:, :, :3].mean(2)
-    m = glyph_mask(lum, box, mode, delta=30 if mode == "dark" else 26, size=45,
-                   dilate=3)
-    n = apply_mask_at(rgba, box, m, rng, (8, 14, 20), max_lum=None)
+    m = glyph_mask(lum, box, "contrast", delta=22, size=45, dilate=2)
+    n = diffuse_fill(rgba, box, m)
     print("  back glyph removed: %d px" % n)
 
 
@@ -318,13 +342,39 @@ def spaced_ops(cx, cy, text, size, color, font, variation=None, pitch=None):
     return ops
 
 
+def draw_title(im):
+    """Composite the calligraphy: condensed, faux-bold and slightly translucent.
+
+    ui_edit.py cannot scale a glyph run or blend it translucently, so the header
+    title is rendered here; every other string goes through the JSON spec.
+    """
+    layer = Image.new("RGBA", im.size, (0, 0, 0, 0))
+    metrics = ImageDraw.Draw(Image.new("L", (8, 8)))
+    for ch, size, cx, cy in TITLE:
+        font = ImageFont.truetype(TITLE_FONT, size)
+        b = metrics.textbbox((0, 0), ch, font=font, anchor="la",
+                             stroke_width=TITLE_STROKE)
+        pad = 16
+        tile = Image.new("RGBA", (b[2] - b[0] + pad * 2, b[3] - b[1] + pad * 2),
+                         (0, 0, 0, 0))
+        ImageDraw.Draw(tile).text((pad - b[0], pad - b[1]), ch, font=font,
+                                  fill=TITLE_COLOR, anchor="la",
+                                  stroke_width=TITLE_STROKE,
+                                  stroke_fill=TITLE_COLOR)
+        tile = tile.resize((max(1, round(tile.width * TITLE_XSCALE)), tile.height),
+                           Image.LANCZOS)
+        layer.alpha_composite(tile, (round(cx - tile.width / 2.0),
+                                     round(cy - tile.height / 2.0)))
+    out = im.copy()
+    out.alpha_composite(layer)
+    return out
+
+
 def build_spec():
     spec = []
-    for ch, size, cx, cy in TITLE:
-        spec.append(text_op(cx, cy, ch, size, TITLE_COLOR, TITLE_FONT))
     px, py, pw, ph = PLAQUE
-    spec += spaced_ops(px + pw / 2.0, py + ph / 2.0 + 1, PLAQUE_TEXT, PLAQUE_SIZE,
-                       PLAQUE_COLOR, NOTO, "Bold", pitch=38)
+    spec += spaced_ops(px + pw / 2.0, py + ph / 2.0, PLAQUE_TEXT, PLAQUE_SIZE,
+                       PLAQUE_COLOR, NOTO, "Bold", pitch=PLAQUE_PITCH)
     for (bx, by) in NODATA_P1:
         spec.append(text_op(bx + 40, by + 26, NODATA_TEXT, 21, BODY_COLOR, NOTO,
                             "Bold"))
@@ -377,8 +427,28 @@ def main():
                     "--out", args.out], check=True)
 
     out = Image.open(args.out).convert("RGBA")
+    out = draw_title(out)
+    out.save(args.out)
     preview(out, args.recon_dir)
-    print("album -> %s (%d ops)" % (args.out, len(spec)))
+    print("album -> %s (%d spec ops + calligraphy)" % (args.out, len(spec)))
+
+    # album_thum.png is a plain montage of CG thumbnails: no translatable text
+    # (verified with a matched filter, see the report), so the sheet is passed
+    # through unchanged through an empty spec.
+    thum = os.path.join(ROOT, "work", "extract", "system", "album_thum.png")
+    thum_out = os.path.join(ROOT, "work", "ui_out", "album_thum.png")
+    thum_spec = os.path.join(ROOT, "work", "ui", "album_thum_spec.json")
+    with open(thum_spec, "w", encoding="utf-8") as fh:
+        json.dump([], fh, indent=1)
+    subprocess.run([sys.executable, os.path.join(ROOT, "tools", "ui_edit.py"),
+                    "--image", thum, "--spec", thum_spec,
+                    "--out", thum_out], check=True)
+    th = Image.open(thum_out).convert("RGB")
+    for name, col in (("dark", (26, 24, 22)), ("light", (238, 236, 232))):
+        bg = Image.new("RGB", th.size, col)
+        bg.paste(th)
+        bg.save(os.path.join(args.recon_dir, "album_thum_check_%s.png" % name))
+    print("album_thum -> %s (no text found, passthrough)" % thum_out)
     return 0
 
 

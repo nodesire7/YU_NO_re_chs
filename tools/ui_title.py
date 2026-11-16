@@ -91,6 +91,10 @@ def main():
     subprocess.run([sys.executable, os.path.join(ROOT, "tools", "ui_edit.py"),
                     "--image", args.sheet, "--spec", spec_path, "--out", args.out], check=True)
 
+    # apply the GBT branding plate so the sheet is complete in one step
+    subprocess.run([sys.executable, os.path.join(ROOT, "tools", "ui_brand.py"),
+                    "--image", args.out, "--out", args.out], check=True)
+
     # preview: crop menu area composited over a dark background
     im = Image.open(args.out).convert("RGBA")
     bg = Image.new("RGBA", (1450, 800), (40, 38, 34, 255))

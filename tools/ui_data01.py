@@ -92,7 +92,13 @@ def text_op(rect, text, size, color, align="center", valign="center", target=Non
         op["stroke_width"] = int(stroke_width)
         op["stroke_fill"] = stroke_fill
     op.update(extra)
+    ink = (px + op["dx"] + bb[0], py + op["dy"] + bb[1],
+           px + op["dx"] + bb[2], py + op["dy"] + bb[3])
+    OPS_INFO.append({"op": op, "ink": ink})
     return op
+
+
+OPS_INFO = []
 
 
 # ---------------------------------------------------------------------------
@@ -179,19 +185,21 @@ def build_spec():
     for y, a in CAUTION_BAND:
         spec.append({"rect": [CAUTION_RECT[0], y, CAUTION_RECT[2], 1],
                      "fill": "#0e050b%02x" % a})
-    title_target = (2354, 48.5)
-    for sw, a in ((7, 0x1e), (4, 0x37), (2, 0x55)):
-        spec.append(text_op(CAUTION_RECT, CAUTION, 30, "#0e050b00",
+    title_target = (2354, 46)
+    # stepped rings emulate the soft drop shadow the Latin title had
+    for sw, a in ((6, 0x18), (5, 0x20), (4, 0x2a), (3, 0x36), (2, 0x44), (1, 0x54)):
+        spec.append(text_op(CAUTION_RECT, CAUTION, 34, "#0e050b00",
                             stroke_width=sw, stroke_fill="#0e050b%02x" % a,
                             target=title_target))
     # the feet of the old glyphs also sit on the dark AA row of the rule, which
     # is a flat 91 grey - repaint it over the glow spill.
     spec.append({"rect": [CAUTION_RECT[0], 70, CAUTION_RECT[2], 1], "fill": "#5b5b5b"})
-    spec.append(text_op(CAUTION_RECT, CAUTION, 30, "#ecf0f0", target=title_target))
+    spec.append(text_op(CAUTION_RECT, CAUTION, 34, "#ecf0f0", target=title_target))
 
     # --- install progress label ------------------------------------------
-    # translucent plate (5,1,1,179): repaint the label box with the same colour
-    spec.append(text_op([1463, 182, 128, 15], "安装中", 16, "#ffffff",
+    # translucent plate (5,1,1,179): repaint the label box (incl. its AA rows
+    # 181/197) with the same colour, then draw the new caption
+    spec.append(text_op([1466, 181, 124, 17], "安装中", 16, "#ffffff",
                         target=(1528, 189), fill="#050101b3"))
 
     # --- PS controller labels --------------------------------------------
@@ -212,7 +220,49 @@ def build_spec():
     return spec
 
 
+def verify(path):
+    """Check cleared/repainted boxes: nothing but the new glyph ink may survive."""
+    from PIL import ImageColor
+    im = Image.open(path).convert("RGBA")
+    arr = np.array(im).astype(int)
+    by_rect = {}
+    for info in OPS_INFO:
+        by_rect.setdefault(tuple(info["op"]["rect"]), []).append(info)
+    bad_total = 0
+    for rect, infos in sorted(by_rect.items()):
+        x, y, w, h = rect
+        clear = any(i["op"].get("clear") for i in infos)
+        fills = [i["op"]["fill"] for i in infos if i["op"].get("fill")]
+        if not clear and not fills:
+            continue
+        x0 = min(i["ink"][0] for i in infos) - 1
+        y0 = min(i["ink"][1] for i in infos) - 1
+        x1 = max(i["ink"][2] for i in infos) + 1
+        y1 = max(i["ink"][3] for i in infos) + 1
+        mask = np.ones((h, w), bool)
+        xa, xb = max(0, int(x0 - x)), min(w, int(x1 - x + 1))
+        ya, yb = max(0, int(y0 - y)), min(h, int(y1 - y + 1))
+        mask[ya:yb, xa:xb] = False
+        sub = arr[y:y + h, x:x + w]
+        if clear:
+            bad = mask & (sub[:, :, 3] > 8)
+        else:
+            col = ImageColor.getrgb(fills[-1])
+            exp = np.array(col + ((255,) if len(col) == 3 else ()))
+            diff = np.abs(sub - exp).max(axis=2)
+            bad = mask & (diff > 8)
+        n = int(bad.sum())
+        if n:
+            bad_total += n
+            ys, xs = np.where(bad)
+            print("  residue in %s: %d px, bbox x %d..%d y %d..%d" % (
+                rect, n, xs.min() + x, xs.max() + x, ys.min() + y, ys.max() + y))
+    print("verify: %d stray pixels" % bad_total)
+    return bad_total
+
+
 def cmd_build(args):
+    OPS_INFO.clear()
     spec = build_spec()
     os.makedirs(os.path.dirname(SPEC), exist_ok=True)
     with open(SPEC, "w", encoding="utf-8") as fh:
@@ -221,6 +271,7 @@ def cmd_build(args):
     subprocess.run([sys.executable, os.path.join(ROOT, "tools", "ui_edit.py"),
                     "--image", SRC, "--spec", SPEC, "--out", OUT], check=True)
     print("spec -> %s (%d ops)" % (SPEC, len(spec)))
+    verify(OUT)
     return 0
 
 

@@ -10,10 +10,10 @@ The table cells have flat backgrounds, so plain `fill` + `text` operations (hand
 tools/ui_edit.py) are enough.  The heading and the call-outs are printed on the grunge
 paper, where a flat fill would leave a visible patch, so their pixels are replaced by a
 feather-blended copy of a text-free patch of the same paper; that cleaned plate is
-written to work/ui_out/_help_prep.png and tools/ui_edit.py then stamps the text over it.
+written to work/ui/help_prep.png and tools/ui_edit.py then stamps the text over it.
 Controller artwork, button icons and the Nintendo Switch logo are left untouched.
 
-Usage: python tools/ui_help.py [--sheet ...] [--out ...] [--preview-dir ...]
+Usage: python tools/ui_help.py [--sheet ...] [--out ...] [--spec ...] [--prep ...]
 """
 import argparse
 import json
@@ -22,17 +22,25 @@ import subprocess
 import sys
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFont
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WINDIR = os.environ.get("WINDIR", r"C:\Windows")
 FONT_SANS = os.path.join(WINDIR, "Fonts", "NotoSansSC-VF.ttf")
 FONT_SERIF = os.path.join(WINDIR, "Fonts", "NotoSerifSC-VF.ttf")
+# The Japanese sheet prints the table and the call-outs in a gothic face, but every
+# other UI sheet of this patch is drawn with Noto Serif SC (see tools/ui_menu.py,
+# tools/ui_config.py), so the same family is used here too.  Point this at FONT_SANS
+# to get the gothic look of the original instead.
+BODY_FONT = FONT_SERIF
+BODY_LEFT_VAR, BODY_LEFT_SIZE = "Bold", 23
+BODY_RIGHT_VAR, BODY_RIGHT_SIZE = "SemiBold", 23
+CALLOUT_VAR, CALLOUT_SIZE = "Bold", 27
 
 SHEET = os.path.join(ROOT, "work", "extract", "system", "help.png")
 OUT = os.path.join(ROOT, "work", "ui_out", "help.png")
 SPEC = os.path.join(ROOT, "work", "ui", "help_spec.json")
-PREP = os.path.join(ROOT, "work", "ui_out", "_help_prep.png")
+PREP = os.path.join(ROOT, "work", "ui", "help_prep.png")
 
 # --- table geometry (measured on the original sheet) -------------------------------
 TABLE_L, TABLE_R = 999, 1797          # outer bounds of the two cell columns
@@ -62,23 +70,24 @@ LEFT = [
 ]
 
 # right cell: (chinese, size) or (chinese, size) tuples; row 5 is split into a main
-# sentence plus a smaller parenthetical, exactly like the original
+# sentence plus a smaller parenthetical, exactly like the original.  Size None means
+# BODY_RIGHT_SIZE; the trailing "baseline" flag keeps a shrunken part on the same line.
 RIGHT = [
-    [("光标移动", 23)],
-    [("同方向键", 23)],
-    [("同方向键", 23)],
-    [("强制跳过（按住时）", 23)],
-    [("跳过模式开关", 23)],
-    [("切换操作模式", 23), ("（选择画面⇒道具⇒宝玉⇒选择画面 循环）", 16)],
-    [("自动模式开关", 23)],
-    [("打开系统菜单", 23)],
-    [("打开历史记录", 23)],
-    [("推进文本·确定选项", 23)],
-    [("停止自动／跳过·取消", 23)],
-    [("打开 A.D.M.S.", 23)],
-    [("不使用", 23)],
-    [("不使用", 23)],
-    [("不使用", 23)],
+    [("光标移动", None)],
+    [("同方向键", None)],
+    [("同方向键", None)],
+    [("强制跳过（按住时）", None)],
+    [("跳过模式开关", None)],
+    [("切换操作模式", None), ("（选择画面⇒道具⇒宝玉⇒选择画面 循环）", 16, "baseline")],
+    [("自动模式开关", None)],
+    [("打开系统菜单", None)],
+    [("打开历史记录", None)],
+    [("推进文本·确定选项", None)],
+    [("停止自动／跳过·取消", None)],
+    [("打开 A.D.M.S.", None)],
+    [("不使用", None)],
+    [("不使用", None)],
+    [("不使用", None)],
 ]
 
 # --- call-outs around the controller drawings --------------------------------------
@@ -103,8 +112,10 @@ CALLOUTS = [
 
 # heading: ink boxes measured on the original sheet
 TITLE_BOX = (84, 58, 328, 122)                 # "HELP"
-SUBTITLE_SLOTS = (383, 434, 485, 537)          # centres of 操 / 作 / 説 / 明
-TITLE_CLEAN = (72, 44, 570, 141)               # area to clear (incl. shadows)
+TITLE_X, TITLE_SIZE, TITLE_PITCH = 84, 68, 93  # 帮助: first glyph, size, tracking
+SUBTITLE_SLOTS = (281, 333, 385, 437)          # centres of 操 / 作 / 说 / 明
+TITLE_CLEAN = (78, 52, 338, 136)               # "HELP" box incl. its shadow
+SUBTITLE_CLEAN = (366, 96, 554, 128)           # 操作説明 box
 
 _FONTS = {}
 
@@ -197,6 +208,10 @@ def patch_fill(arr, x0, y0, x1, y1, pad=6, feather=4.0, dx_range=(-360, 360, 18)
             sx0, sy0 = rx0 + dx, ry0 + dy
             if sx0 < 0 or sy0 < 0 or sx0 + target.shape[1] > arr.shape[1] or sy0 + target.shape[0] > arr.shape[0]:
                 continue
+            # never take the donor from the very area that is being replaced: it still
+            # holds the original glyphs and copying it back would leave fragments
+            if sx0 < rx1 and sx0 + target.shape[1] > rx0 and sy0 < ry1 and sy0 + target.shape[0] > ry0:
+                continue
             donor = rgb[sy0:sy0 + target.shape[0], sx0:sx0 + target.shape[1]]
             d_ring = donor[ring]
             inner = donor[pad:pad + h, pad:pad + w]
@@ -217,10 +232,14 @@ def patch_fill(arr, x0, y0, x1, y1, pad=6, feather=4.0, dx_range=(-360, 360, 18)
     d_ring = donor[ring]
     donor += (t_mean - d_ring.mean(0))            # match the local paper brightness
 
-    mask = Image.new("L", (target.shape[1], target.shape[0]), 0)
-    ImageDraw.Draw(mask).rectangle([pad, pad, pad + w - 1, pad + h - 1], fill=255)
-    mask = mask.filter(ImageFilter.GaussianBlur(feather))
-    m = (np.asarray(mask, dtype=float) / 255.0)[:, :, None]
+    mask = np.zeros((target.shape[0], target.shape[1]))
+    yy = np.arange(mask.shape[0])[:, None]
+    xx = np.arange(mask.shape[1])[None, :]
+    # distance outside the core rectangle (0 while still inside it)
+    d = np.maximum(np.maximum(pad - yy, yy - (pad + h - 1)), 0)
+    d = np.maximum(d, np.maximum(np.maximum(pad - xx, xx - (pad + w - 1)), 0))
+    t = np.clip(1.0 - d / float(feather), 0.0, 1.0)
+    m = (t * t * (3.0 - 2.0 * t))[:, :, None]
 
     blended = target * (1.0 - m) + donor * m
     arr[ry0:ry1, rx0:rx1, :3] = np.clip(blended, 0, 255).astype(arr.dtype)
@@ -230,16 +249,22 @@ def patch_fill(arr, x0, y0, x1, y1, pad=6, feather=4.0, dx_range=(-360, 360, 18)
 
 def clean_background(arr):
     """Remove the heading and the call-out labels from the paper background."""
+    # the caption is cleaned first so that its (now empty) paper can serve as a donor
+    # for the big title patch
+    x0, y0, x1, y1 = SUBTITLE_CLEAN
+    arr = patch_fill(arr, x0, y0, x1, y1, pad=10, feather=7.0,
+                     dx_range=(-320, 560, 12), dy_range=(-84, 40, 6),
+                     max_inner_std=22.0, tag="subtitle")
     x0, y0, x1, y1 = TITLE_CLEAN
-    arr = patch_fill(arr, x0, y0, x1, y1, pad=7, feather=5.0,
-                     dx_range=(-65, 1340, 20), dy_range=(-36, 20, 7),
+    arr = patch_fill(arr, x0, y0, x1, y1, pad=11, feather=8.0,
+                     dx_range=(-70, 700, 12), dy_range=(-40, 8, 6),
                      max_inner_std=24.0, tag="title")
     for key, bx0, by0, bx1, by1, icon_right, _text, anchor in CALLOUTS:
         if anchor == "icon":
             ex0 = icon_right + 1
         else:
             ex0 = bx0 - 2
-        arr = patch_fill(arr, ex0 - 1, by0 - 1, bx1 + 1, by1 + 1, pad=6, feather=4.0,
+        arr = patch_fill(arr, ex0 - 1, by0 - 1, bx1 + 1, by1 + 1, pad=9, feather=5.0,
                          dx_range=(-300, 300, 15), dy_range=(-120, 120, 6), tag=key)
     return arr
 
@@ -267,24 +292,21 @@ def build_spec(arr):
                                 font_path=FONT_SERIF, size=TITLE_SIZE,
                                 variation="SemiBold", color=color))
     sub_center = (98 + 124) / 2.0
-    for n, (slot, ch) in enumerate(zip(SUBTITLE_SLOTS, "操作说明")):
-        for dx, color in ((2, "#14110c"), (0, "#ffffff")):
-            spec.append(text_op(ch, x_center=slot + dx, y_center=sub_center + dx * 0.7,
-                                font_path=FONT_SERIF, size=30,
-                                variation="Black", color=color))
+    for slot, ch in zip(SUBTITLE_SLOTS, "操作说明"):
+        spec.append(text_op(ch, x_center=slot, y_center=sub_center, font_path=FONT_SERIF,
+                            size=27, variation="Black", color="#ffffff"))
 
     # call-outs ---------------------------------------------------------------
     for key, bx0, by0, bx1, by1, icon_right, text, anchor in CALLOUTS:
         cy = (by0 + by1) / 2.0
+        kw = dict(font_path=BODY_FONT, size=CALLOUT_SIZE, variation=CALLOUT_VAR,
+                  color="#111111")
         if anchor == "icon":
-            spec.append(text_op(text, x=icon_right + 4, y_center=cy, size=27,
-                                variation="Bold", color="#111111"))
+            spec.append(text_op(text, x=icon_right + 4, y_center=cy, **kw))
         elif anchor == "left":
-            spec.append(text_op(text, x=bx0, y_center=cy, size=27,
-                                variation="Bold", color="#111111"))
+            spec.append(text_op(text, x=bx0, y_center=cy, **kw))
         else:
-            spec.append(text_op(text, x_right=bx1, y_center=cy, size=27,
-                                variation="Bold", color="#111111"))
+            spec.append(text_op(text, x_right=bx1, y_center=cy, **kw))
 
     # table -------------------------------------------------------------------
     for i in range(NROWS):
@@ -300,23 +322,26 @@ def build_spec(arr):
                      "fill": bg})
         cy = y0 + ROW_H / 2.0 - 0.5
         spec.append(text_op(left, x=(ICON_RIGHT + 2) if has_icon else LEFT_INK,
-                            y_center=cy, size=23, variation="Bold", color=ink))
+                            y_center=cy, font_path=BODY_FONT, size=BODY_LEFT_SIZE,
+                            variation=BODY_LEFT_VAR, color=ink))
         pen = RIGHT_INK
         base = None
         for part in RIGHT[i]:
             text, size = part[0], part[1]
+            size = BODY_RIGHT_SIZE if size is None else size
+            fnt = font(BODY_FONT, size, BODY_RIGHT_VAR)
             if part[2:] and part[2] == "baseline" and base is not None:
-                h = ink_bbox(text, font(FONT_SANS, size, "Medium"))[3]
-                op = text_op(text, x=pen, y_top=base - h, size=size,
-                             variation="Medium", color=ink)
+                h = ink_bbox(text, fnt)[3]
+                op = text_op(text, x=pen, y_top=base - h, font_path=BODY_FONT,
+                             size=size, variation=BODY_RIGHT_VAR, color=ink)
             else:
-                op = text_op(text, x=pen, y_center=cy, size=size,
-                             variation="Medium", color=ink)
+                op = text_op(text, x=pen, y_center=cy, font_path=BODY_FONT,
+                             size=size, variation=BODY_RIGHT_VAR, color=ink)
             spec.append(op)
             if base is None:
-                b = ink_bbox(text, font(FONT_SANS, size, "Medium"))
+                b = ink_bbox(text, fnt)
                 base = cy + (b[1] + b[3]) / 2.0
-            pen += int(_MEASURE.textlength(text, font=font(FONT_SANS, size, "Medium")))
+            pen += int(_MEASURE.textlength(text, font=fnt))
     return spec
 
 

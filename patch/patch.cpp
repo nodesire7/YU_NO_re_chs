@@ -5,7 +5,6 @@
 #include<InlineHook.h> 
 
 #include"lib/Detours-4.0.1/include/detours.h"
-#pragma comment(lib,"C:/Users/wcy/Documents/GitHub/YU_NO_re_chs/patch/lib/Detours-4.0.1/lib.X86/detours.lib")
 auto GetCommandLineW_s=GetCommandLineW;
 typedef LPWSTR (*GetCommandLineW_t)(
     VOID
@@ -53,7 +52,7 @@ CreateWindowExAh(
         auto hwnd=CreateWindowExA_s(dwExStyle,lpClassName,lpWindowName,dwStyle,X,Y,nWidth,nHeight,hWndParent,hMenu,hInstance,lpParam);
         //std::thread([hwnd](){
           //  Sleep(3000);
-        SetWindowTextW(hwnd,L"在世界尽头咏唱爱的少女 YU-NO          https://github.com/HIllya51/YU_NO_re_chs 制作");
+        SetWindowTextW(hwnd,L"在世界尽头咏唱爱的少女 YU-NO   A-FEI- 汉化  BBS.GBTGAME.ME");
         //}).detach();
         return hwnd;
     }

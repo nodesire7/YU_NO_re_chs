@@ -1,0 +1,35 @@
+YU-NO 重制版 简体中文补丁
+==========================================
+
+制作：A-FEI-
+论坛：BBS.GBTGAME.ME
+
+【补丁内容】
+  data\scrchs.cpk   剧情与系统文本（全中文，替换原脚本）
+  data\syschs.cpk   字体（思源宋体）+ 已汉化的标题菜单 / 游戏内菜单 / 设置界面项目名
+  patch.dll         注入后显示中文窗口标题，并补全启动参数
+  GBT_logo.png      GBT 论坛标识
+
+【安装】
+  1. 把本压缩包完整解压到任意位置（不要在压缩包里直接运行）。
+  2. 双击“安装到游戏目录.bat”。
+  3. 按提示输入游戏根目录，例如：
+       F:\game\steam\steamapps\common\YU-NO
+     直接回车则使用上面的默认路径。
+  4. 运行游戏目录下的 launcher.exe 或 Game.exe 即可。
+
+【还原】
+  双击“卸载还原.bat”，脚本会把 _backup_cht 里的原始文件复制回去。
+
+【注意】
+  * 本补丁不会修改 script.cpk / system.cpk，随时可以删除 scrchs.cpk / syschs.cpk 回到原版。
+  * 若之前安装过旧版汉化，请先运行一次卸载还原，再安装本补丁。
+  * 目前设置界面的按钮文字、帮助/图鉴/存档界面、开场影片字幕仍保留原版外文，
+    后续版本会继续补齐。
+
+【致谢】
+  原移植工程：HIllya51 / nodesire7（https://github.com/nodesire7/YU_NO_re_chs）
+  工具：CRI File System Tools、sc3tools、mgsfontgen-dx、CriPakTools
+
+  本补丁仅供学习交流使用，请支持正版游戏。
+  游戏素材版权归 MAGES./5pb. 及发行方所有。

@@ -1,4 +1,4 @@
-dump/build
+﻿dump/build
 sc3tools-main/target
 sc3tools-main_pack/target
 unpack/vMES
@@ -8,3 +8,10 @@ pack/CriPakTools-master/.vs
 pack/CriPakTools-master/CriPakTools/bin
 pack/CriPakTools-master/CriPakTools/obj
 patch/build
+work/
+dist/
+_recon/
+tools/__pycache__/
+pack/mgsfontgen-dx-master/bin
+pack/mgsfontgen-dx-master/obj
+pack/sc3tools-decode/target

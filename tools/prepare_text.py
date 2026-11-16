@@ -26,6 +26,9 @@ GLOSSARY = [
     ("亚由美不在……走错了吗？", "亚由美不在……是我走错了吗？"),
     ("大能力生理学", "超能力生理学"),
     ("网子", "网子"),
+    ("老头子", "老爸"),
+    ("没有在这里", "不在这里"),
+    ("的房子那里", "的宅邸"),
     ("不加载", "不读取"),
     # keep full-width punctuation consistent
     ("…….", "……"),
@@ -37,8 +40,12 @@ def clean_line(line: str) -> str:
     line = line.replace("JF|", "").replace("JF:", "")
     for a, b in GLOSSARY:
         line = line.replace(a, b)
-    # collapse accidental double full stops
-    line = line.replace("。。", "。")
+    # duplicated punctuation produced by the machine translation
+    line = line.replace("，，", "，").replace("。。", "。").replace("、。", "。")
+    # doubled characters that are always typos in context
+    for a, b in (("是是理成", "是理成"), ("那是是锁上", "那是锁上"),
+                 ("是是。那么", "是。那么"), ("的的灯", "的灯")):
+        line = line.replace(a, b)
     return line
 
 

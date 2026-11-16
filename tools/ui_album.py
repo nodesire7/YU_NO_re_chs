@@ -11,18 +11,21 @@ The sheet is 1920x4464 and holds four stacked UI bands:
 Every translatable string is baked into a textured background (stone, parchment,
 watercolour plate), so the old glyphs are removed with a mask based fill:
 
-  * calligraphy  - the beige ink is segmented by its warm tint, then every masked
-    pixel is refilled from a random nearby clean patch of the same texture;
+  * calligraphy  - the beige ink is segmented by its warm tint and healed with a
+    Laplace diffusion plus grain matched to the surrounding stone (only the ink
+    pixels are touched, so formulas and decorations between the strokes stay);
   * plaque       - the plaque base is pure black, so the golden letters are simply
-    repainted black;
+    repainted as an anti-aliased black pill;
   * NO DATA      - the warm grey letters are separated from the paper by a local
-    contrast mask, refilled from the surrounding parchment;
-  * 戻る          - the glyphs are separated from the plate by a local contrast
-    mask and refilled from the plate around them.
+    contrast mask and refilled from the surrounding parchment;
+  * 戻る          - the glyphs are separated from the plate by a median background
+    model and healed by diffusion.
 
 The Chinese strings are described in work/ui/album_spec.json and drawn by
-tools/ui_edit.py on top of the erased sheet; PAGE 01/02, the digits and the
-decorations are deliberately left untouched.
+tools/ui_edit.py on top of the erased sheet; the condensed calligraphy is
+composited by this script because ui_edit.py cannot scale glyphs.
+PAGE 01/02, the digits and the decorations are deliberately left untouched.
+album_thum.png (thumbnails only, no text) is copied unchanged.
 
 Usage:
   python tools/ui_album.py [--sheet ...] [--out ...] [--recon-dir ...]
@@ -30,6 +33,7 @@ Usage:
 import argparse
 import json
 import os
+import shutil
 import subprocess
 import sys
 
@@ -88,26 +92,15 @@ BACK_SIZE = 35
 # ---------------------------------------------------------------------------
 # masking / inpainting helpers
 # ---------------------------------------------------------------------------
-def warm_ink_mask(rgb, box, min_tint=14, min_r=55):
+def warm_ink_mask(rgb, box, min_tint=28, min_r=70):
     """Segment the beige calligraphy: warm tint (R-B) above the stone's."""
     x0, y0, x1, y1 = box
     sub = rgb[y0:y1, x0:x1].astype(np.int32)
     r, b = sub[:, :, 0], sub[:, :, 2]
     m = ((r - b) > min_tint) & (r > min_r)
-    m = ndimage.binary_closing(m, np.ones((3, 3)))
-    m = ndimage.binary_dilation(m, np.ones((5, 5)))
-    return m
-
-
-def local_contrast_mask(lum, box, thr, dilate=2):
-    """Mask glyph pixels that stick out of their locally averaged background."""
-    x0, y0, x1, y1 = box
-    sub = lum[y0:y1, x0:x1]
-    bg = ndimage.median_filter(sub, size=(11, 11))
-    m = np.abs(sub - bg) > thr
     m = ndimage.binary_opening(m, np.ones((2, 2)))
-    if dilate:
-        m = ndimage.binary_dilation(m, np.ones((dilate, dilate)))
+    m = ndimage.binary_closing(m, np.ones((5, 5)))
+    m = ndimage.binary_dilation(m, np.ones((6, 6)))
     return m
 
 
@@ -130,24 +123,6 @@ def glyph_mask(lum, box, mode, delta=24, size=41, dilate=2, opening=False):
         m = np.abs(sub - bg) > delta
     if opening:
         m = ndimage.binary_opening(m, np.ones((2, 2)))
-    if dilate:
-        m = ndimage.binary_dilation(m, np.ones((dilate, dilate)))
-    return m
-
-
-def dark_glyph_mask(lum, box, thr, dilate=2):
-    x0, y0, x1, y1 = box
-    m = lum[y0:y1, x0:x1] < thr
-    m = ndimage.binary_opening(m, np.ones((2, 2)))
-    if dilate:
-        m = ndimage.binary_dilation(m, np.ones((dilate, dilate)))
-    return m
-
-
-def bright_glyph_mask(lum, box, thr, dilate=2):
-    x0, y0, x1, y1 = box
-    m = lum[y0:y1, x0:x1] > thr
-    m = ndimage.binary_opening(m, np.ones((2, 2)))
     if dilate:
         m = ndimage.binary_dilation(m, np.ones((dilate, dilate)))
     return m
@@ -213,53 +188,74 @@ def apply_mask_at(rgba, box, m, rng, radii, max_lum=None, exclude=None,
     return int(full.sum())
 
 
-def soften(rgba, mask, sigma=0.6):
-    """Soften the seam of a patch filled area (keeps the copied grain)."""
-    if not mask.any():
-        return
-    blur = ndimage.gaussian_filter(rgba.astype(np.float32), (sigma, sigma, 0))
-    edge = ndimage.binary_dilation(mask, np.ones((3, 3))) & ~ndimage.binary_erosion(
-        mask, np.ones((3, 3)))
-    rgba[edge] = blur[edge].round().astype(np.uint8)
-
-
 # ---------------------------------------------------------------------------
 # erasing passes
 # ---------------------------------------------------------------------------
-def erase_title(rgba, rng):
-    rgb = rgba[:, :, :3]
+def heal_title(rgba, rng):
+    """Remove the calligraphy and refill the stone behind it.
+
+    The ink is segmented by its warm tint, each ink pixel is then filled with a
+    Laplace diffusion (which follows the stone's soft lighting) and re-textured
+    with grain matched to the surrounding rock. Only the ink is repainted, so
+    the formulas and decorations between the strokes stay untouched.
+    """
     box = TITLE_BOX
-    m = warm_ink_mask(rgb, box)
-    # the plaque is opaque black and gets its own treatment below
+    x0, y0, x1, y1 = box
+    m = warm_ink_mask(rgba[:, :, :3], box)
     px, py, pw, ph = PLAQUE
-    m[max(0, py - 3):py + ph + 3, max(0, px - 3):px + pw + 3] = False
-    # never source patches from the plaque - its golden letters would ghost
-    exclude = np.zeros(rgba.shape[:2], bool)
-    exclude[py - 8:py + ph + 8, px - 8:px + pw + 8] = True
-    n = apply_mask_at(rgba, box, m, rng, (26, 44, 66, 92), max_lum=150,
-                      exclude=exclude)
-    print("  title ink removed: %d px" % n)
+    m[max(0, py - 4):py + ph + 4, max(0, px - 4):px + pw + 4] = True   # plaque repainted next
+    sub = rgba[y0:y1, x0:x1].astype(np.float32)
+    work = sub.copy()
+    dist, (iy, ix) = ndimage.distance_transform_edt(m, return_indices=True)
+    work[m] = sub[iy[m], ix[m]]
+    for _ in range(320):
+        blur = ndimage.uniform_filter(work, size=(3, 3, 1), mode="nearest")
+        work[m] = blur[m]
+    # stone grain / contrast taken from a clean ring around the calligraphy
+    full = np.zeros(rgba.shape[:2], bool)
+    full[y0:y1, x0:x1] = m
+    ring = (ndimage.binary_dilation(full, np.ones((31, 31)))
+            & ~ndimage.binary_dilation(full, np.ones((11, 11))))
+    ring &= rgba[:, :, :3].mean(2) < 85
+    ring_std = rgba[ring][:, :3].astype(np.float32).std(0).mean()
+    h, w = y1 - y0, x1 - x0
+    fine = ndimage.gaussian_filter(rng.normal(0.0, 1.0, (h, w)), 1.1)
+    coarse = ndimage.gaussian_filter(rng.normal(0.0, 1.0, (h, w)), 4.0)
+    tex = fine / max(fine.std(), 1e-6) * (ring_std * 0.45)
+    tex += coarse / max(coarse.std(), 1e-6) * (ring_std * 0.45)
+    hidden = work[m]
+    hidden[:, :3] += tex[m][:, None]
+    work[m] = hidden
+    out = sub.copy()
+    out[m] = work[m]
+    out[:, :, 3] = sub[:, :, 3]
+    rgba[y0:y1, x0:x1] = np.clip(out, 0, 255).round().astype(np.uint8)
+    print("  calligraphy healed: %d px" % int(m.sum()))
 
 
-def pill_mask(shape, px, py, pw, ph):
-    """Rounded pill covering the plaque, for a clean text repaint."""
+def pill_distance(shape, px, py, pw, ph):
+    """Signed distance to the plaque pill surface (negative inside)."""
     yy, xx = np.mgrid[0:shape[0], 0:shape[1]]
     r = ph / 2.0
     cy = py + r
     x0, x1 = px + r, px + pw - r
     dx = np.clip(xx, x0, x1) - xx
     dy = cy - yy
-    return (dx * dx + dy * dy) <= (r - 0.6) ** 2
+    return np.sqrt(dx * dx + dy * dy) - r
 
 
 def erase_plaque(rgba):
-    """The plaque base is pure black - repaint the golden small caps black."""
+    """The plaque base is pure black - repaint the golden small caps black.
+
+    The fill around it is repainted as an anti-aliased pill so the rounded ends
+    stay smooth even after the diffusion pass touched the area.
+    """
     px, py, pw, ph = PLAQUE
-    lum = rgba[:, :, :3].mean(2)
-    pill = pill_mask(lum.shape, px, py, pw, ph)
-    m = pill & (lum > 26)
-    rgba[m] = (0, 0, 0, 255)
-    print("  plaque repainted: %d px" % int(m.sum()))
+    d = pill_distance(rgba.shape, px, py, pw, ph)
+    alpha = np.clip((1.0 - d) / 2.0, 0.0, 1.0)
+    rgb = rgba[:, :, :3].astype(np.float32) * (1 - alpha[:, :, None])
+    rgba[:, :, :3] = np.clip(rgb, 0, 255).round().astype(np.uint8)
+    print("  plaque repainted: %d px" % int((alpha > 0.5).sum()))
 
 
 def erase_nodata(rgba, blocks, rng, faded_blocks=()):
@@ -407,13 +403,15 @@ def main():
     rng = np.random.default_rng(20240517)
     im = Image.open(args.sheet).convert("RGBA")
     rgba = np.array(im)
+    orig_alpha = rgba[:, :, 3].copy()
     print("erasing album.png")
-    erase_title(rgba, rng)
+    heal_title(rgba, rng)
     erase_plaque(rgba)
     erase_nodata(rgba, NODATA_P1, rng)
     erase_nodata(rgba, NODATA_P2, rng, faded_blocks=((334, 3341), (616, 3341)))
     for box, centre, mode, color in BACK_BUTTONS:
         erase_back(rgba, box, mode, rng)
+    rgba[:, :, 3] = orig_alpha   # keep the sprite alpha exactly as shipped
     erased = Image.fromarray(rgba)
     os.makedirs(os.path.join(ROOT, "work", "ui"), exist_ok=True)
     erased_path = os.path.join(ROOT, "_recon", "album_erased.png")
@@ -433,22 +431,20 @@ def main():
     print("album -> %s (%d spec ops + calligraphy)" % (args.out, len(spec)))
 
     # album_thum.png is a plain montage of CG thumbnails: no translatable text
-    # (verified with a matched filter, see the report), so the sheet is passed
-    # through unchanged through an empty spec.
+    # (verified with a matched filter, see the report), so the sheet is copied
+    # byte for byte and its spec stays empty.
     thum = os.path.join(ROOT, "work", "extract", "system", "album_thum.png")
     thum_out = os.path.join(ROOT, "work", "ui_out", "album_thum.png")
     thum_spec = os.path.join(ROOT, "work", "ui", "album_thum_spec.json")
     with open(thum_spec, "w", encoding="utf-8") as fh:
         json.dump([], fh, indent=1)
-    subprocess.run([sys.executable, os.path.join(ROOT, "tools", "ui_edit.py"),
-                    "--image", thum, "--spec", thum_spec,
-                    "--out", thum_out], check=True)
+    shutil.copyfile(thum, thum_out)
     th = Image.open(thum_out).convert("RGB")
     for name, col in (("dark", (26, 24, 22)), ("light", (238, 236, 232))):
         bg = Image.new("RGB", th.size, col)
         bg.paste(th)
         bg.save(os.path.join(args.recon_dir, "album_thum_check_%s.png" % name))
-    print("album_thum -> %s (no text found, passthrough)" % thum_out)
+    print("album_thum -> %s (no text found, copied unchanged)" % thum_out)
     return 0
 
 

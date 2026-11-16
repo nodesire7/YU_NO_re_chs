@@ -159,6 +159,20 @@ def main():
             ls[idx] = new
             open(p, "w", encoding="utf-8", newline="\n").write("\n".join(ls))
             changed += 1
+    # unify character-name spellings that the machine translation mixed up
+    global_repl = {"亜由美": "亚由美", "尤诺": "优诺"}
+    for name in os.listdir(args.text):
+        if not name.endswith(".txt"):
+            continue
+        p2 = os.path.join(args.text, name)
+        s = open(p2, encoding="utf-8", errors="replace").read()
+        s2 = s
+        for a, b in global_repl.items():
+            s2 = s2.replace(a, b)
+        if s2 != s:
+            open(p2, "w", encoding="utf-8", newline="\n").write(s2)
+            changed += 1
+
     print("patched %d lines" % changed)
     return 0
 

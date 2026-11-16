@@ -95,6 +95,18 @@ def main():
             "valign": "center",
             "dx": 0,
         })
+    # cast / voice-test name column (x 2430-2660, 16 rows, ~48px pitch)
+    names = ["有马拓也", "有马亚由美", "一条美月", "武田绘里子", "结城正胜", "岛津澪",
+             "波多乃神奈", "朝仓香织", "龙藏寺幸三", "丰富秀夫", "优诺", "阿曼达",
+             "塞蕾丝", "其他（男性）", "其他（女性）", "北条笃"]
+    centers = [1218, 1265, 1313, 1362, 1410, 1458, 1506, 1554, 1602, 1650,
+               1698, 1745, 1793, 1841, 1889, 1937]
+    for cy, name in zip(centers, names):
+        spec.append({"rect": [2425, cy - 22, 265, 44], "clear": True})
+        spec.append({"rect": [2432, cy - 20, 250, 42], "text": name, "font": FONT, "size": 30,
+                     "variation": "Bold", "color": "#f2efe6", "align": "left",
+                     "valign": "center", "dx": 0, "stroke_width": 1, "stroke_fill": "#14110c"})
+
     # section subtitles drawn after the decorative squiggles
     for y, text in ((1088, "文本设定"), (1124, "声音设定"), (1160, "其他设定")):
         spec.append({"rect": [2436, y - 4, 460, 40], "clear": True})

@@ -11,9 +11,9 @@ The sheet is 1920x3474 and holds:
 
 The glyphs are baked into textured plates, so they are removed with masks:
 
-  * calligraphy  - warm beige ink segmented by tint and refilled from nearby
-    clean stone texture;
-  * plaque       - pure black base, the golden small caps are repainted black;
+  * calligraphy  - warm beige ink segmented by tint and healed with a Laplace
+    diffusion plus grain matched to the surrounding stone;
+  * plaque       - pure black base, repainted as an anti-aliased black pill;
   * tab labels   - white / grey serif on parchment or dark wood plates, removed
     with a median background model and refilled by diffusion (the plates are
     soft watercolour, so no patch seams show);
@@ -94,13 +94,14 @@ BACK_SIZE = 35
 # ---------------------------------------------------------------------------
 # helpers (same technique as tools/ui_album.py)
 # ---------------------------------------------------------------------------
-def warm_ink_mask(rgb, box, min_tint=14, min_r=55):
+def warm_ink_mask(rgb, box, min_tint=28, min_r=70):
     x0, y0, x1, y1 = box
     sub = rgb[y0:y1, x0:x1].astype(np.int32)
     r, b = sub[:, :, 0], sub[:, :, 2]
     m = ((r - b) > min_tint) & (r > min_r)
-    m = ndimage.binary_closing(m, np.ones((3, 3)))
-    m = ndimage.binary_dilation(m, np.ones((5, 5)))
+    m = ndimage.binary_opening(m, np.ones((2, 2)))
+    m = ndimage.binary_closing(m, np.ones((5, 5)))
+    m = ndimage.binary_dilation(m, np.ones((6, 6)))
     return m
 
 
@@ -119,57 +120,6 @@ def glyph_mask(lum, box, mode, delta=24, size=41, dilate=2):
     return m
 
 
-def patch_fill(rgba, mask, rng, radii, max_lum=None, min_alpha=200, exclude=None,
-               max_sat=None):
-    h, w = mask.shape
-    ys, xs = np.nonzero(mask)
-    if not len(xs):
-        return
-    lum = rgba[:, :, :3].mean(2)
-    usable = ~mask
-    usable &= rgba[:, :, 3] > min_alpha
-    if max_lum is not None:
-        usable &= lum < max_lum
-    if exclude is not None:
-        usable &= ~exclude
-    if max_sat is not None:
-        usable &= (rgba[:, :, :3].max(2).astype(np.int32)
-                   - rgba[:, :, :3].min(2).astype(np.int32)) <= max_sat
-    offsets = []
-    for rad in radii:
-        for ang in range(0, 360, 12):
-            offsets.append((int(round(rad * np.cos(np.radians(ang)))),
-                            int(round(rad * np.sin(np.radians(ang))))))
-    rng.shuffle(offsets)
-    done = np.zeros(len(xs), bool)
-    src = rgba.copy()
-    for dx, dy in offsets:
-        if done.all():
-            break
-        sx = np.clip(xs + dx, 0, w - 1)
-        sy = np.clip(ys + dy, 0, h - 1)
-        ok = (~done) & usable[sy, sx]
-        idx = np.nonzero(ok)[0]
-        if not len(idx):
-            continue
-        rgba[ys[idx], xs[idx]] = src[sy[idx], sx[idx]]
-        done[idx] = True
-    rem = np.nonzero(~done)[0]
-    if len(rem):
-        dist, (iy, ix) = ndimage.distance_transform_edt(mask, return_indices=True)
-        rgba[ys[rem], xs[rem]] = src[iy[ys[rem], xs[rem]], ix[ys[rem], xs[rem]]]
-
-
-def apply_mask_at(rgba, box, m, rng, radii, max_lum=None, exclude=None,
-                  max_sat=None):
-    x0, y0, x1, y1 = box
-    full = np.zeros(rgba.shape[:2], bool)
-    full[y0:y1, x0:x1] = m
-    patch_fill(rgba, full, rng, radii, max_lum=max_lum, exclude=exclude,
-               max_sat=max_sat)
-    return int(full.sum())
-
-
 def diffuse_fill(rgba, box, m, iterations=240):
     x0, y0, x1, y1 = box
     sub = rgba[y0:y1, x0:x1].astype(np.float32)
@@ -183,37 +133,62 @@ def diffuse_fill(rgba, box, m, iterations=240):
     return int(m.sum())
 
 
-def pill_mask(shape, px, py, pw, ph):
+def pill_distance(shape, px, py, pw, ph):
+    """Signed distance to the plaque pill surface (negative inside)."""
     yy, xx = np.mgrid[0:shape[0], 0:shape[1]]
     r = ph / 2.0
     cy = py + r
     x0, x1 = px + r, px + pw - r
     dx = np.clip(xx, x0, x1) - xx
     dy = cy - yy
-    return (dx * dx + dy * dy) <= (r - 0.6) ** 2
+    return np.sqrt(dx * dx + dy * dy) - r
 
 
 # ---------------------------------------------------------------------------
 # erasing passes
 # ---------------------------------------------------------------------------
-def erase_title(rgba, rng):
+def heal_title(rgba, rng):
+    """Remove the calligraphy and refill the stone behind it (see ui_album.py)."""
     box = TITLE_BOX
+    x0, y0, x1, y1 = box
     m = warm_ink_mask(rgba[:, :, :3], box)
     px, py, pw, ph = PLAQUE
-    m[max(0, py - 3):py + ph + 3, max(0, px - 3):px + pw + 3] = False
-    exclude = np.zeros(rgba.shape[:2], bool)
-    exclude[py - 8:py + ph + 8, px - 8:px + pw + 8] = True
-    n = apply_mask_at(rgba, box, m, rng, (26, 44, 66, 92), max_lum=150,
-                      exclude=exclude)
-    print("  title ink removed: %d px" % n)
+    m[max(0, py - 4):py + ph + 4, max(0, px - 4):px + pw + 4] = True
+    sub = rgba[y0:y1, x0:x1].astype(np.float32)
+    work = sub.copy()
+    dist, (iy, ix) = ndimage.distance_transform_edt(m, return_indices=True)
+    work[m] = sub[iy[m], ix[m]]
+    for _ in range(320):
+        blur = ndimage.uniform_filter(work, size=(3, 3, 1), mode="nearest")
+        work[m] = blur[m]
+    full = np.zeros(rgba.shape[:2], bool)
+    full[y0:y1, x0:x1] = m
+    ring = (ndimage.binary_dilation(full, np.ones((31, 31)))
+            & ~ndimage.binary_dilation(full, np.ones((11, 11))))
+    ring &= rgba[:, :, :3].mean(2) < 85
+    ring_std = rgba[ring][:, :3].astype(np.float32).std(0).mean()
+    h, w = y1 - y0, x1 - x0
+    fine = ndimage.gaussian_filter(rng.normal(0.0, 1.0, (h, w)), 1.1)
+    coarse = ndimage.gaussian_filter(rng.normal(0.0, 1.0, (h, w)), 4.0)
+    tex = fine / max(fine.std(), 1e-6) * (ring_std * 0.45)
+    tex += coarse / max(coarse.std(), 1e-6) * (ring_std * 0.45)
+    hidden = work[m]
+    hidden[:, :3] += tex[m][:, None]
+    work[m] = hidden
+    out = sub.copy()
+    out[m] = work[m]
+    out[:, :, 3] = sub[:, :, 3]
+    rgba[y0:y1, x0:x1] = np.clip(out, 0, 255).round().astype(np.uint8)
+    print("  calligraphy healed: %d px" % int(m.sum()))
 
 
 def erase_plaque(rgba):
     px, py, pw, ph = PLAQUE
-    lum = rgba[:, :, :3].mean(2)
-    m = pill_mask(lum.shape, px, py, pw, ph) & (lum > 26)
-    rgba[m] = (0, 0, 0, 255)
-    print("  plaque repainted: %d px" % int(m.sum()))
+    d = pill_distance(rgba.shape, px, py, pw, ph)
+    alpha = np.clip((1.0 - d) / 2.0, 0.0, 1.0)
+    rgb = rgba[:, :, :3].astype(np.float32) * (1 - alpha[:, :, None])
+    rgba[:, :, :3] = np.clip(rgb, 0, 255).round().astype(np.uint8)
+    print("  plaque repainted: %d px" % int((alpha > 0.5).sum()))
 
 
 def erase_tabs(rgba):
@@ -303,7 +278,9 @@ def build_spec():
                                 NOTO, "Bold"))
     for box, right_centre, text in SOURCE_LABELS:
         # right aligned to the original label's right edge
-        b = ImageFont.truetype(NOTO, SOURCE_SIZE).getbbox(text)
+        measure = ImageFont.truetype(NOTO, SOURCE_SIZE)
+        measure.set_variation_by_name("Bold")
+        b = measure.getbbox(text)
         width = b[2] - b[0]
         cx = right_centre[0] - width / 2.0
         spec.append(text_op(cx + 2, right_centre[1] + 2, text, SOURCE_SIZE,
@@ -359,13 +336,16 @@ def main():
     rng = np.random.default_rng(19790221)
     im = Image.open(args.sheet).convert("RGBA")
     rgba = np.array(im)
+    orig_alpha = rgba[:, :, 3].copy()
     print("erasing music.png")
-    erase_title(rgba, rng)
+    heal_title(rgba, rng)
     erase_plaque(rgba)
     erase_tabs(rgba)
-    clear_source_labels(rgba)
     for box, centre, color in BACK_BUTTONS:
         erase_back(rgba, box)
+    # keep the sprite alpha exactly as shipped (only the cleared labels change it)
+    rgba[:, :, 3] = orig_alpha
+    clear_source_labels(rgba)
     erased_path = os.path.join(ROOT, "_recon", "music_erased.png")
     Image.fromarray(rgba).save(erased_path)
 

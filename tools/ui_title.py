@@ -63,6 +63,12 @@ def build_spec():
     spec.append({"rect": [x - 10, y - 3, 470, h + 6], "clear": True, "text": text,
                  "font": FONT, "size": 50, "variation": "Bold",
                  "color": COL_COLORS[1], "align": "left", "valign": "center", "dx": 6})
+    # "Press any key to Start" under the logo
+    spec.append({"rect": [1280, 1618, 660, 82], "clear": True, "text": "按任意键开始",
+                 "font": FONT, "size": 46, "variation": "Bold", "color": "#2a2420",
+                 "align": "center", "valign": "center", "stroke_width": 2,
+                 "stroke_fill": "#e8e0cc"})
+
     # the actual title-menu EXIT sprites (white / gold), near the sheet bottom
     for (x, y, w, h), color in (((1060, 2682, 190, 66), "#f4f1e8"),
                                 ((1494, 2682, 190, 66), "#ffd200"),

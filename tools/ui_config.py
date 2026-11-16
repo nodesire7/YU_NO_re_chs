@@ -81,8 +81,11 @@ def main():
             continue
         h = y1 - y0 + 1
         spec.append({
-            "rect": [1900, y0 - 4, (250 if is_header else 520), h + 8],
+            "rect": [1893, y0 - 5, 520, h + 10],
             "clear": True,
+        })
+        spec.append({
+            "rect": [1952, y0 - 4, 400, h + 8],
             "text": text,
             "font": FONT,
             "size": 33 if is_header else max(22, min(28, int(h * 0.95))),
@@ -90,8 +93,14 @@ def main():
             "color": "#eae5d7",
             "align": "left",
             "valign": "center",
-            "dx": 4,
+            "dx": 0,
         })
+    # section subtitles drawn after the decorative squiggles
+    for y, text in ((1088, "文本设定"), (1124, "声音设定"), (1160, "其他设定")):
+        spec.append({"rect": [2436, y - 4, 460, 40], "clear": True})
+        spec.append({"rect": [2444, y - 4, 440, 40], "text": text, "font": FONT, "size": 26,
+                     "variation": "Bold", "color": "#d9d3c4", "align": "left",
+                     "valign": "center", "dx": 0})
     spec_path = os.path.join(ROOT, "work", "ui", "config_spec.json")
     with open(spec_path, "w", encoding="utf-8") as fh:
         json.dump(spec, fh, ensure_ascii=False, indent=1)

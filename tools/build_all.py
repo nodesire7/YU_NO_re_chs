@@ -64,6 +64,7 @@ def main():
     # 1b. fill in the lines that are still Japanese (zz.scx monologue etc.)
     run([sys.executable, os.path.join(ROOT, "tools", "patch_jp_lines.py")])
     run([sys.executable, os.path.join(ROOT, "tools", "patch_ui_lines.py")])
+    run([sys.executable, os.path.join(ROOT, "tools", "final_clean.py")])
 
     # 2. charset
     charset = os.path.join(work, "charset_new.utf8")

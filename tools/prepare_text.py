@@ -40,6 +40,13 @@ def clean_line(line: str) -> str:
     line = line.replace("JF|", "").replace("JF:", "")
     for a, b in GLOSSARY:
         line = line.replace(a, b)
+    # Japanese-style two-dot ellipsis -> Chinese standard ellipsis
+    line = line.replace("‥‥", "……")
+    # mixed half/full-width parentheses
+    line = re.sub(r"（([^（）]{0,80})\)", r"（\1）", line)
+    line = re.sub(r"\(([^()]{0,80})）", r"（\1）", line)
+    for a, b in (("经营?运营", "经营·运营"), ("事象反射器?装置", "事象反射器·装置")):
+        line = line.replace(a, b)
     # duplicated punctuation produced by the machine translation
     line = line.replace("，，", "，").replace("。。", "。").replace("、。", "。")
     # doubled characters that are always typos in context

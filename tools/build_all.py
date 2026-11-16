@@ -61,6 +61,9 @@ def main():
     # 1. text
     run([sys.executable, os.path.join(ROOT, "tools", "prepare_text.py")])
 
+    # 1b. fill in the lines that are still Japanese (zz.scx monologue etc.)
+    run([sys.executable, os.path.join(ROOT, "tools", "patch_jp_lines.py")])
+
     # 2. charset
     charset = os.path.join(work, "charset_new.utf8")
     run([sys.executable, os.path.join(ROOT, "tools", "make_charset.py")])
@@ -92,7 +95,7 @@ def main():
     # 5. CPKs
     scrchs = os.path.join(out, "scrchs.cpk")
     run([sys.executable, os.path.join(ROOT, "tools", "build_cpk.py"),
-         "--reference", os.path.join(work, "extract", "scrchs.cpk"),
+         "--reference", os.path.join(work, "ref", "scrchs.cpk"),
          "--src", build_dir, "--out", scrchs])
     if os.path.isdir(ui_out):
         for name in os.listdir(ui_out):
@@ -100,7 +103,7 @@ def main():
                 COPY(os.path.join(ui_out, name), os.path.join(system_build, name))
     syschs = os.path.join(out, "syschs.cpk")
     run([sys.executable, os.path.join(ROOT, "tools", "build_cpk.py"),
-         "--reference", os.path.join(work, "extract", "syschs.cpk"),
+         "--reference", os.path.join(work, "ref", "syschs.cpk"),
          "--src", system_build, "--out", syschs])
 
     # 6. install

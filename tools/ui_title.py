@@ -63,6 +63,13 @@ def build_spec():
     spec.append({"rect": [x - 10, y - 3, 470, h + 6], "clear": True, "text": text,
                  "font": FONT, "size": 50, "variation": "Bold",
                  "color": COL_COLORS[1], "align": "left", "valign": "center", "dx": 6})
+    # the actual title-menu EXIT sprites (white / gold), near the sheet bottom
+    for (x, y, w, h), color in (((1060, 2682, 190, 66), "#f4f1e8"),
+                                ((1494, 2682, 190, 66), "#ffd200"),
+                                ((1925, 2676, 190, 70), "#8b8b8b")):
+        spec.append({"rect": [x, y, w, h], "clear": True, "text": "退出游戏",
+                     "font": FONT, "size": 40, "variation": "Bold",
+                     "color": color, "align": "center", "valign": "center"})
     for (x, y, w, h), text in zip(EXIT_BOXES, EXIT_TEXTS):
         spec.append({"rect": [x - 6, y - 3, w + 30, h + 6], "erase_text": {"threshold": 105}, "text": text,
                      "font": FONT, "size": 40, "variation": "Bold",

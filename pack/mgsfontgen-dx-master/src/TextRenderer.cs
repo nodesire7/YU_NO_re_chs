@@ -78,6 +78,7 @@ namespace MgsFontGenDX
                 _textFormat.WordWrapping = WordWrapping.NoWrap;
 
                 DeviceContext.BeginDraw();
+                DeviceContext.Clear(new Color4(0, 0, 0, 0));
 #if DEBUG
                 DrawGridLines();
 #endif
@@ -121,6 +122,9 @@ namespace MgsFontGenDX
             var old = DeviceContext.Transform;
             for (int i = 0; i < characters.Length; i++)
             {
+                // A negative baseline offset must not paint into the preceding row.
+                DeviceContext.PushAxisAlignedClip(new SharpDX.Mathematics.Interop.RawRectangleF(
+                    0, 0, _cellWidth, _cellHeight), AntialiasMode.Aliased);
                 Console.WriteLine("DrawRow2");
                 Console.WriteLine((characters[i]));
                 Console.WriteLine(((short)characters[i]));
@@ -142,6 +146,7 @@ namespace MgsFontGenDX
                     }
                 }
 
+                DeviceContext.PopAxisAlignedClip();
                 var transform = Matrix3x2.Multiply(DeviceContext.Transform, Matrix3x2.Translation(_cellWidth, 0));
                 DeviceContext.Transform = transform;
             }

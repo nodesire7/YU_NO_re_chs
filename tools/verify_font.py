@@ -4,6 +4,7 @@ from pathlib import Path
 import unicodedata
 
 from PIL import Image
+from make_font import fit_fixed_cell, FIXED_METRIC_CELLS
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -26,8 +27,21 @@ def verify(directory, generated, original, charset):
             box = (x, y, x + 48, y + 48)
             source = original_image if unicodedata.category(char) == "Co" else generated_image
             expected = source.crop(box)
+            if index < FIXED_METRIC_CELLS and unicodedata.category(char) != "Co" and not char.isspace():
+                expected = fit_fixed_cell(expected, original_image.crop(box))
             if actual.crop(box).tobytes() != expected.tobytes():
                 errors.append(f"{name}:{index}:U+{ord(char):04X}")
+            ink_bounds = actual.crop(box).getchannel("A").getbbox()
+            old_bounds = original_image.crop(box).getchannel("A").getbbox()
+            if (index < FIXED_METRIC_CELLS and unicodedata.category(char) != "Co"
+                    and ink_bounds and old_bounds
+                    and (ink_bounds[0] < old_bounds[0] or ink_bounds[2] > old_bounds[2])):
+                errors.append(f"{name}:{index}:ink outside engine's original horizontal slot")
+            if char.isspace() and ink_bounds:
+                errors.append(f"{name}:{index}:neighboring ink leaked into whitespace cell")
+            if (ink_bounds and not unicodedata.category(char).startswith("C")
+                    and (ink_bounds[1] == 0 or ink_bounds[3] == 48)):
+                errors.append(f"{name}:{index}:ink touches vertical clipping edge")
             if (not char.isspace() and not unicodedata.category(char).startswith("C")
                     and expected.getchannel("A").getbbox() is None):
                 errors.append(f"{name}:{index}:missing glyph U+{ord(char):04X}")

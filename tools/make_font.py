@@ -5,6 +5,8 @@ The MAGES font atlas uses 48x48 cells, 64 columns per row. The first 10 rows (64
 keep their original character indices, not their original artwork. Punctuation,
 Latin letters, numbers, kana and mathematical symbols all use the generated font.
 Private-use cells are game-specific glyphs that the text font cannot supply.
+Generated text in the first 640 cells fits the original horizontal slots because
+the engine crops these proportional characters using fixed source metrics.
 
 Usage: python make_font.py --generated FONT_A.png --original font.png --charset charset.utf8 --outdir DIR
 """
@@ -18,6 +20,28 @@ from PIL import Image
 
 CELL = 48
 COLS = 64
+FIXED_METRIC_CELLS = 640
+
+
+def fit_fixed_cell(glyph, original):
+    """Fit generated ink to the original horizontal slot; keep its new baseline/height.
+
+    YU-NO clips proportional symbols to fixed widths. A CJK opening bracket's
+    right-side bearing cannot be copied directly into that narrow texture slot.
+    """
+    bounds = glyph.getchannel("A").getbbox()
+    old_bounds = original.getchannel("A").getbbox()
+    if bounds is None or old_bounds is None:
+        return glyph
+    left, top, right, bottom = bounds
+    target_left = old_bounds[0]
+    width = min(right - left, old_bounds[2] - target_left)
+    ink = glyph.crop(bounds)
+    if ink.width != width:
+        ink = ink.resize((width, ink.height), Image.Resampling.LANCZOS)
+    result = Image.new("RGBA", glyph.size)
+    result.paste(ink, (target_left, top))
+    return result
 
 
 def main():
@@ -50,6 +74,9 @@ def main():
         if (not character.isspace() and not unicodedata.category(character).startswith("C")
                 and glyph.getchannel("A").getbbox() is None):
             ap.error(f"generated character U+{ord(character):04X} has no ink at cell {index}")
+        if index < FIXED_METRIC_CELLS and not character.isspace():
+            glyph = fit_fixed_cell(glyph, orig.crop((x, y, x + CELL, y + CELL)))
+            out.paste(glyph, (x, y))
     os.makedirs(args.outdir, exist_ok=True)
     for name in ("font.png", "font2.png"):
         out.save(os.path.join(args.outdir, name))

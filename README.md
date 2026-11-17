@@ -7,11 +7,11 @@
 * 发布/交流：**BBS.GBTGAME.ME**
 * 原工程：<https://github.com/nodesire7/YU_NO_re_chs>（HIllya51）
 
-**下载补丁：** [v1.3.1 发布页](https://github.com/nodesire7/YU_NO_re_chs/releases/tag/v1.3.1)（含安装/卸载脚本与 SHA256）。
+**下载补丁：** [v1.3.2 发布页](https://github.com/nodesire7/YU_NO_re_chs/releases/tag/v1.3.2)（含安装/卸载脚本与 SHA256）。
 
 ## 当前汉化状态
 
-> v1.3.1 完成剩余机翻条目的日文对照校订，整稿待校清单归零；标点、括号、字母、数学符号及半角/全角数字同步正文字体，并修正操作提示条的固定裁切位置。详细进度、已知限制与验证记录见 [docs/STATUS.md](docs/STATUS.md)。
+> v1.3.2 修复实机发现的括号裁切和字格串笔，调整字体基线；12 组标点、数字、字母、符号及长句样例通过实机复查。此前整稿待校清单已归零。详细进度、已知限制与验证记录见 [docs/STATUS.md](docs/STATUS.md) 和 [实机检查记录](docs/font_runtime_v1.3.2.md)。
 
 | 模块 | 状态 |
 | --- | --- |
@@ -79,7 +79,7 @@ cl /O2 /MT /EHsc /std:c++17 /DUNICODE /D_UNICODE /LD patch\patch.cpp patch\lib\I
 ```bat
 python tools\localize_text.py prepare --localization localization --out work\localization_zh
 python tools\build_all.py --install
-python tools\package_release.py --version 1.3.1
+python tools\package_release.py --version 1.3.2
 python tools\verify_release.py
 ```
 

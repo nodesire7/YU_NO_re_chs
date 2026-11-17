@@ -133,6 +133,8 @@ def main():
         run(["cargo", "build", "--release", "--target-dir", os.path.join(crate_dir, "target")], cwd=crate_dir)
 
     # 3. font
+    run(["dotnet", "build", os.path.join(ROOT, "pack", "mgsfontgen-dx-master", "src", "MgsFontGenDX.csproj"),
+         "-c", "Release"])
     fontgen = os.path.join(ROOT, "pack", "mgsfontgen-dx-master", "bin", "Release", "net461", "mgsfontgen-dx.exe")
     fontdir = os.path.join(work, "fontgen")
     os.makedirs(fontdir, exist_ok=True)

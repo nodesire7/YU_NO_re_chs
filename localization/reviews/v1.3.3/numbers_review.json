@@ -1,0 +1,304 @@
+[
+  {
+    "file": "yns_17_01.scx.txt",
+    "line": 82,
+    "ja_numbers": [
+      "1",
+      "3"
+    ],
+    "zh_numbers": [
+      "3"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_25_02.scx.txt",
+    "line": 254,
+    "ja_numbers": [
+      "3"
+    ],
+    "zh_numbers": [
+      "3",
+      "3"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_27_01.scx.txt",
+    "line": 46,
+    "ja_numbers": [
+      "3"
+    ],
+    "zh_numbers": [
+      "3",
+      "3"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_27_01.scx.txt",
+    "line": 48,
+    "ja_numbers": [
+      "3"
+    ],
+    "zh_numbers": [
+      "3",
+      "3"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_27_01.scx.txt",
+    "line": 52,
+    "ja_numbers": [
+      "3",
+      "1"
+    ],
+    "zh_numbers": [
+      "3"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_a34_01.scx.txt",
+    "line": 22,
+    "ja_numbers": [
+      "1",
+      "1"
+    ],
+    "zh_numbers": [
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_c18.scx.txt",
+    "line": 262,
+    "ja_numbers": [
+      "1",
+      "3"
+    ],
+    "zh_numbers": [
+      "3"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_d07.scx.txt",
+    "line": 102,
+    "ja_numbers": [
+      "1"
+    ],
+    "zh_numbers": [
+      "1",
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_d13_02.scx.txt",
+    "line": 138,
+    "ja_numbers": [
+      "1582",
+      "1",
+      "10"
+    ],
+    "zh_numbers": [
+      "1582",
+      "10"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_d13_02.scx.txt",
+    "line": 144,
+    "ja_numbers": [
+      "1582",
+      "10",
+      "15",
+      "10"
+    ],
+    "zh_numbers": [
+      "10",
+      "1582",
+      "10",
+      "15"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_d13_02.scx.txt",
+    "line": 307,
+    "ja_numbers": [
+      "18",
+      "83",
+      "4"
+    ],
+    "zh_numbers": [
+      "18"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_e05_02.scx.txt",
+    "line": 122,
+    "ja_numbers": [
+      "1"
+    ],
+    "zh_numbers": [
+      "1",
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_e15_04.scx.txt",
+    "line": 51,
+    "ja_numbers": [
+      "1"
+    ],
+    "zh_numbers": [
+      "1",
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_e25_01.scx.txt",
+    "line": 44,
+    "ja_numbers": [
+      "2",
+      "180"
+    ],
+    "zh_numbers": [
+      "180"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_f15_08.scx.txt",
+    "line": 11,
+    "ja_numbers": [
+      "1",
+      "1"
+    ],
+    "zh_numbers": [
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_p04.scx.txt",
+    "line": 11,
+    "ja_numbers": [
+      "2",
+      "1"
+    ],
+    "zh_numbers": [
+      "2"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_sp55.scx.txt",
+    "line": 21,
+    "ja_numbers": [
+      "4",
+      "5"
+    ],
+    "zh_numbers": [
+      "4"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_z00_06.scx.txt",
+    "line": 224,
+    "ja_numbers": [
+      "1",
+      "3",
+      "1"
+    ],
+    "zh_numbers": [
+      "1",
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_z52.scx.txt",
+    "line": 65,
+    "ja_numbers": [
+      "1",
+      "24",
+      "365",
+      "1"
+    ],
+    "zh_numbers": [
+      "1",
+      "24",
+      "365"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_z54_01.scx.txt",
+    "line": 6,
+    "ja_numbers": [
+      "2",
+      "1"
+    ],
+    "zh_numbers": [
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_z72_02.scx.txt",
+    "line": 59,
+    "ja_numbers": [
+      "2",
+      "2"
+    ],
+    "zh_numbers": [
+      "2"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_z73_04.scx.txt",
+    "line": 165,
+    "ja_numbers": [
+      "1"
+    ],
+    "zh_numbers": [
+      "1",
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_z77_01.scx.txt",
+    "line": 412,
+    "ja_numbers": [
+      "1"
+    ],
+    "zh_numbers": [
+      "1",
+      "1"
+    ],
+    "decision": "retained: Chinese numeral/wording, stutter, repetition or reordered explanation; checked against source"
+  },
+  {
+    "file": "yns_c27.scx.txt",
+    "line": 199,
+    "ja_numbers": [
+      "1",
+      "2"
+    ],
+    "zh_numbers_before": [
+      "2"
+    ],
+    "decision": "corrected wording: 他带着两个像黑帮的家伙; number now written in Chinese"
+  }
+]

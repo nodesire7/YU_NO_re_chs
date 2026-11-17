@@ -19,7 +19,7 @@ CONTROLS = re.compile(
     r"ruby-?(?:base|text-?start|text-?end)|ruby-center-per-char|"
     r"auto-?forward(?:-1a)?|%p|%e|%05|%18|"
     r"(?:color|margin|font|hardcoded-?value|evaluate) [^\]]+|[A-Z][A-Z0-9_]*)\]"
-    r"|:[a-z][a-z0-9_]*:"
+    r"|:[a-zA-Z][a-zA-Z0-9_]*:"
 )
 
 

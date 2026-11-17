@@ -117,6 +117,9 @@ def main():
             prepare(args.localization, text_final)
         except ValueError as exc:
             ap.error(str(exc))
+        run([sys.executable, os.path.join(ROOT, "tools", "audit_text.py"),
+             "--manuscript", os.path.join(args.localization, "中日对照.jsonl"),
+             "--out", os.path.join(work, "display_audit", "build_report.json")])
     else:
         run([sys.executable, os.path.join(ROOT, "tools", "prepare_text.py")])
         run([sys.executable, os.path.join(ROOT, "tools", "patch_jp_lines.py")])

@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--version', default='1.3.2')
+    parser.add_argument('--version', default='1.3.3')
     args = parser.parse_args()
     staging = ROOT / 'dist' / f'v{args.version}'
     staging.mkdir(parents=True, exist_ok=True)

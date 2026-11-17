@@ -1,44 +1,44 @@
 
-[color index="A01F0000"]JF:D线[color index="800000"]JF:已发送
+[color index="A01F0000"]D线路[color index="800000"]已发送
 
 
 
-[color index="800000"]JF:在标题菜单中
-[color index="A01F0000"]JF:“EXTRA”菜单
-[color index="800000"]JF:已添加。
-[color index="800000"]JF:在“EXTRA”菜单上
+[color index="800000"]标题菜单中
+[color index="A01F0000"]“附加内容”菜单
+[color index="800000"]已添加。
+[color index="800000"]在“附加内容”菜单中
 [color index="A01F0000"]CLEAR LIST
-[color index="800000"]JF:已添加。
-[color index="800000"]JF:在“EXTRA”菜单上
+[color index="800000"]已添加。
+[color index="800000"]在“附加内容”菜单中
 [color index="A01F0000"]CG LIBRARY
-[color index="800000"]JF:已添加。
-[color index="800000"]JF:在“EXTRA”菜单上
+[color index="800000"]已添加。
+[color index="800000"]在“附加内容”菜单中
 [color index="A01F0000"]SOUND LIBRARY
-[color index="800000"]JF:已添加。
-[color index="800000"]JF:在“EXTRA”菜单上
+[color index="800000"]已添加。
+[color index="800000"]在“附加内容”菜单中
 [color index="A01F0000"]MOVIE LIBRARY
-[color index="800000"]JF:已添加。
-[color index="800000"]JF:在“EXTRA”菜单上
+[color index="800000"]已添加。
+[color index="800000"]在“附加内容”菜单中
 [color index="A01F0000"]TIPS
-[color index="800000"]JF:已添加。
-[color index="800000"]JF:《TIPS》的
-[color index="A01F0000"]JF:新项目
-[color index="800000"]JF:开放了。
-[color index="800000"]JF:在《CG LIBRARY》中
-[color index="A01F0000"]JF:新项目
-[color index="800000"]JF:开放了。
-[color index="800000"]JF:RINE触发器的“设定”→“壁纸设定”
-[color index="A01F0000"]JF:新建壁纸
-[color index="800000"]JF:开放了。
-[color index="A01F0000"][name]JF:盟誓的精神[line][color index="800000"]JF:清除
-[color index="A01F0000"][name]JF:存在证明自动机[line][color index="800000"]JF:清除
-[color index="A01F0000"][name]JF:互递归的母牛[line][color index="800000"]JF:清除
-[color index="A01F0000"][name]JF:无限远点的磁砖[line][color index="800000"]JF:清除
-[color index="A01F0000"][name]JF:我秘镜里的斯蒂格玛[line][color index="800000"]JF:清除
-[color index="A01F0000"][name]JF:相交坐标星尘[line][color index="800000"]JF:清除
-[color index="810000"][name]JF:盟誓的精神[line][color index="800000"]JF:清除
-[color index="810000"][name]JF:存在证明自动机[line][color index="800000"]JF:清除
-[color index="810000"][name]JF:互递归的母牛[line][color index="800000"]JF:清除
-[color index="810000"][name]JF:无限远点的磁砖[line][color index="800000"]JF:清除
-[color index="810000"][name]JF:我秘镜里的斯蒂格玛[line][color index="800000"]JF:清除
-[color index="810000"][name]JF:相交坐标星尘[line][color index="800000"]JF:清除
+[color index="800000"]已添加。
+[color index="800000"]“TIPS”的
+[color index="A01F0000"]新条目
+[color index="800000"]已解锁。
+[color index="800000"]在“CG鉴赏”中
+[color index="A01F0000"]新条目
+[color index="800000"]已解锁。
+[color index="800000"]在RINE的“设置”→“壁纸设置”中
+[color index="A01F0000"]新壁纸
+[color index="800000"]已解锁。
+[color index="A01F0000"][name]盟誓的文艺复兴[line][color index="800000"] 通关
+[color index="A01F0000"][name]存在证明的自动人偶[line][color index="800000"] 通关
+[color index="A01F0000"][name]相互递归的鹅妈妈[line][color index="800000"] 通关
+[color index="A01F0000"][name]无限远点的牛郎星[line][color index="800000"] 通关
+[color index="A01F0000"][name]私密镜里的圣痕[line][color index="800000"] 通关
+[color index="A01F0000"][name]交叉坐标的星尘[line][color index="800000"] 通关
+[color index="810000"][name]盟誓的文艺复兴[line][color index="800000"] 通关
+[color index="810000"][name]存在证明的自动人偶[line][color index="800000"] 通关
+[color index="810000"][name]相互递归的鹅妈妈[line][color index="800000"] 通关
+[color index="810000"][name]无限远点的牛郎星[line][color index="800000"] 通关
+[color index="810000"][name]私密镜里的圣痕[line][color index="800000"] 通关
+[color index="810000"][name]交叉坐标的星尘[line][color index="800000"] 通关

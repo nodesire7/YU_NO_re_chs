@@ -43,6 +43,35 @@ def load_font(path, size, variation=None):
     return font
 
 
+def glyph_mask(text, font, width, height):
+    """Fit the visible glyphs to the dimensions of the original ink."""
+    left, top, right, bottom = font.getbbox(text)
+    mask = Image.new("L", (right - left, bottom - top))
+    ImageDraw.Draw(mask).text((-left, -top), text, font=font, fill=255)
+    mask = mask.crop(mask.getbbox())
+    target_width = min(width, round(mask.width * height / mask.height))
+    return mask.resize((target_width, height), Image.Resampling.LANCZOS)
+
+
+def text_sprite(mask, ink, glow, glow_alpha):
+    """Render a glyph and a halo whose opacity follows the source sprite."""
+    import numpy as np
+    from scipy.ndimage import distance_transform_edt
+
+    radius = len(glow_alpha) - 1
+    size = (mask.width + 2 * radius, mask.height + 2 * radius)
+    alpha = Image.new("L", size)
+    alpha.paste(mask, (radius, radius))
+    distance = distance_transform_edt(np.asarray(alpha) < 235)
+    halo = np.interp(distance, np.arange(len(glow_alpha)), glow_alpha, right=0)
+    result = Image.new("RGBA", size, glow)
+    result.putalpha(Image.fromarray(halo.astype(np.uint8)))
+    glyph = Image.new("RGBA", size, ink)
+    glyph.putalpha(alpha)
+    result.alpha_composite(glyph)
+    return result
+
+
 def anchor_for(align, valign):
     h = {"left": "l", "center": "m", "right": "r"}[align]
     v = {"top": "a", "center": "m", "bottom": "d"}[valign]

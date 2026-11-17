@@ -1,0 +1,71 @@
+{
+  "version": "1.3.0",
+  "scripts": 886,
+  "rows": 95559,
+  "pending": 0,
+  "changed_rows_since_manuscript_baseline": 40835,
+  "dynamic_variables_mismatched": 0,
+  "machine_markers": 0,
+  "manuscript_sha256": "f902d06985a05a3a5f15d32de0376b9e58a6c1f437f3a76c4c80494535e374c4",
+  "archive_roundtrip_scripts": 886,
+  "font_family": "LXGW WenKai",
+  "digit_cells": 20,
+  "review_scope": "逐条对照处理剩余 JF 标记和日文缺失；官方中文主体做全稿结构、术语、残留、标点检查，并非 95,559 行全部重新翻译。",
+  "preserved_metadata": "_system 标点表；_tips 原版日文读音及排序键。",
+  "installation": [
+    {
+      "name": "scrchs.cpk",
+      "bytes": 10961960,
+      "sha256": "7ac114fb7a9c385279a67f5ef0da99e460f078343e040d1c1bcf35ec37be3ac8"
+    },
+    {
+      "name": "syschs.cpk",
+      "bytes": 74002696,
+      "sha256": "49124b37b8cdb30c5c7939a3a9d26949f3cffc5f832f98911eebc22e5b7ceeb2"
+    },
+    {
+      "name": "manual.cpk",
+      "bytes": 8216712,
+      "sha256": "36d920af7f72388788a2619044bb2903a990d73e20ecca0c9eda9d69a779e838"
+    },
+    {
+      "name": "patch.dll",
+      "bytes": 103936,
+      "sha256": "e754fe502e822840394ee6b024888f1139254ba2a4f4a5f892fd542ee313ddbc"
+    }
+  ],
+  "installer_tests": [
+    {
+      "scenario": "existing",
+      "install": true,
+      "reinstall_preserves_backup": true,
+      "uninstall_restores_original": true
+    },
+    {
+      "scenario": "clean",
+      "install": true,
+      "reinstall_preserves_backup": true,
+      "uninstall_restores_original": true
+    },
+    {
+      "scenario": "legacy",
+      "install": true,
+      "reinstall_preserves_backup": true,
+      "uninstall_restores_original": true
+    }
+  ],
+  "nonempty_scripts": 868,
+  "archive_roundtrip_system_resources": 18,
+  "guide_fixed_slots": 22,
+  "release_archive": {
+    "name": "YU-NO_汉化补丁_A-FEI-_v1.3.0.zip",
+    "bytes": 85120552,
+    "sha256": "1bbd00bf36eb05aefa7b702eb103b9c3b5f45f821e8c0aec16e883036ff09d99"
+  },
+  "runtime_checks": [
+    "标题菜单、完整确定/返回提示",
+    "键盘鼠标及手柄帮助页",
+    "存档编号使用正文字体",
+    "序章中文对白"
+  ]
+}

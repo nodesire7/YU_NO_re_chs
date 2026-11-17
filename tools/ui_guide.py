@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
 """Localise the button-hint sheet (system/guide.png) into Chinese.
 
-guide.png is an atlas of dark hint bars: three bars carry Japanese labels, the other
-four carry PS / Xbox / keyboard glyphs (kept as they are - they are hardware symbols).
-Each bar is one complete image, so the labels of a bar stay on the same line, keep the
-original total width and get evenly distributed spacing; the bar plate and its top
-highlight are untouched (the text band itself is pure black, so it can simply be
-refilled with black).
+The game samples each label from a fixed atlas rectangle. Keep the original slots,
+plate, highlight and controller/key symbols; fit Chinese ink inside each slot.
 
 Usage: python tools/ui_guide.py [--sheet ...] [--out ...] [--recon-dir ...]
 """
 import argparse
 import json
 import os
-import subprocess
 import sys
 
 from PIL import Image, ImageDraw, ImageFont
+from ui_edit import glyph_mask
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WINDIR = os.environ.get("WINDIR", r"C:\Windows")
@@ -45,9 +41,7 @@ ORIGINALS = [
 
 TEXT_SIZE = 39
 TEXT_VARIATION = "Medium"
-INK_DY = 0           # ink centre offset from the bar centre
 _FONTS = {}
-_MEASURE = ImageDraw.Draw(Image.new("RGBA", (8, 8)))
 
 
 def font(size=TEXT_SIZE, variation=TEXT_VARIATION):
@@ -63,56 +57,28 @@ def font(size=TEXT_SIZE, variation=TEXT_VARIATION):
     return _FONTS[key]
 
 
-def ink_box(text, fnt):
-    return _MEASURE.textbbox((0, 0), text, font=fnt, anchor="la")
+
+# Original Japanese label slots, measured on the source atlas (x0 inclusive, x1 exclusive).
+SLOTS = [
+    [(2, 80), (82, 157), (160, 237), (240, 449), (452, 723), (726, 797), (800, 961), (964, 1095)],
+    [(2, 183), (186, 322), (325, 545), (548, 704), (707, 806), (809, 913)],
+    [(2, 122), (125, 251), (254, 330), (333, 412), (415, 549), (552, 688), (691, 773), (776, 853)],
+]
 
 
-def text_op(text, x, y_center, size, color="#ffffff"):
-    fnt = font(size)
-    b = ink_box(text, fnt)
-    pen_x = x - b[0]
-    pen_y = y_center - (b[1] + b[3]) / 2.0
-    return {
-        "rect": [int(round(pen_x)), int(round(pen_y)), int(b[2] - b[0]), int(b[3] - b[1])],
-        "text": text,
-        "font": FONT,
-        "size": int(size),
-        "variation": TEXT_VARIATION,
-        "color": color,
-        "align": "left",
-        "valign": "top",
-        "dx": 0,
-        "dy": 0,
-    }
-
-
-def layout(words, x0, x1, size):
-    """Evenly spread the words over [x0, x1] (ink edges)."""
-    fnt = font(size)
-    widths = [ink_box(w, fnt)[2] - ink_box(w, fnt)[0] for w in words]
-    total = sum(widths)
-    span = x1 - x0
-    gap = (span - total) / float(len(words) - 1)
-    if gap < 6:
-        raise SystemExit("words do not fit in bar (gap %.1f)" % gap)
-    pos = []
-    cursor = float(x0)
-    for w in widths:
-        pos.append(cursor)
-        cursor += w + gap
-    return pos, gap
-
-
-def build_spec():
-    spec = []
-    for (bar, plate_w, x0, x1, words) in BARS:
+def build_sheet(source):
+    image = Image.open(source).convert("RGBA")
+    operations = []
+    for (bar, plate_w, _, _, words), slots in zip(BARS, SLOTS, strict=True):
         top = BAR_FIRST + BAR_STEP * bar
-        # clear the old label row: the band inside the plate is plain black
-        spec.append({"rect": [2, top + 5, plate_w - 4, 54], "fill": "#000000"})
-        y_center = top + 31.5 + INK_DY
-        for (pos, word) in zip(layout(words, x0, x1, TEXT_SIZE)[0], words):
-            spec.append(text_op(word, pos, y_center, TEXT_SIZE))
-    return spec
+        ImageDraw.Draw(image).rectangle((2, top + 5, plate_w - 3, top + 58), fill=(0, 0, 0, 255))
+        for text, (left, right) in zip(words, slots, strict=True):
+            mask = glyph_mask(text, font(), right - left - 4, 35)
+            x = left + (right - left - mask.width) // 2
+            y = top + 14
+            image.paste((255, 255, 255, 255), (x, y, x + mask.width, y + mask.height), mask)
+            operations.append(dict(text=text, rect=[x, y, mask.width, mask.height], slot=[left, right]))
+    return image, operations
 
 
 def main():
@@ -123,19 +89,13 @@ def main():
     ap.add_argument("--recon-dir", default=os.path.join(ROOT, "_recon"))
     args = ap.parse_args()
 
-    spec = build_spec()
+    image, spec = build_sheet(args.sheet)
     os.makedirs(os.path.dirname(args.spec), exist_ok=True)
     with open(args.spec, "w", encoding="utf-8") as fh:
         json.dump(spec, fh, ensure_ascii=False, indent=1)
-    subprocess.run([sys.executable, os.path.join(ROOT, "tools", "ui_edit.py"),
-                    "--image", args.sheet, "--spec", args.spec, "--out", args.out], check=True)
-    print("guide -> %s (%d ops)" % (args.out, len(spec)))
-
-    for (bar, plate_w, x0, x1, words) in BARS:
-        pos, gap = layout(words, x0, x1, TEXT_SIZE)
-        print("  bar %d: %s" % (bar, "  ".join("%s@%d" % (w, round(p)) for w, p in zip(words, pos))))
-        print("          gap %.1f px, line %.0f..%.0f (was %d..%d)"
-              % (gap, pos[0], pos[-1] + 0, x0, x1))
+    os.makedirs(os.path.dirname(args.out), exist_ok=True)
+    image.save(args.out)
+    print("guide -> %s (%d fixed label slots)" % (args.out, len(spec)))
 
     recon(args.out, args.sheet, args.recon_dir)
     return 0

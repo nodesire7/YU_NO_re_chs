@@ -28,11 +28,8 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 WINDIR = os.environ.get("WINDIR", r"C:\Windows")
 FONT_SANS = os.path.join(WINDIR, "Fonts", "NotoSansSC-VF.ttf")
 FONT_SERIF = os.path.join(WINDIR, "Fonts", "NotoSerifSC-VF.ttf")
-# The Japanese sheet prints the table and the call-outs in a gothic face, but every
-# other UI sheet of this patch is drawn with Noto Serif SC (see tools/ui_menu.py,
-# tools/ui_config.py), so the same family is used here too.  Point this at FONT_SANS
-# to get the gothic look of the original instead.
-BODY_FONT = FONT_SERIF
+# Match the original gothic lettering in the table and call-outs.
+BODY_FONT = FONT_SANS
 BODY_LEFT_VAR, BODY_LEFT_SIZE = "Bold", 23
 BODY_RIGHT_VAR, BODY_RIGHT_SIZE = "SemiBold", 23
 CALLOUT_VAR, CALLOUT_SIZE = "Bold", 27
@@ -73,17 +70,17 @@ LEFT = [
 # sentence plus a smaller parenthetical, exactly like the original.  Size None means
 # BODY_RIGHT_SIZE; the trailing "baseline" flag keeps a shrunken part on the same line.
 RIGHT = [
-    [("光标移动", None)],
-    [("同方向键", None)],
-    [("同方向键", None)],
+    [("移动光标", None)],
+    [("功能同方向键", None)],
+    [("功能同方向键", None)],
     [("强制跳过（按住时）", None)],
     [("跳过模式开关", None)],
     [("切换操作模式", None), ("（选择画面⇒道具⇒宝玉⇒选择画面 循环）", 16, "baseline")],
     [("自动模式开关", None)],
     [("打开系统菜单", None)],
     [("打开历史记录", None)],
-    [("推进文本·确定选项", None)],
-    [("停止自动／跳过·取消", None)],
+    [("推进对话／确认选项", None)],
+    [("停止自动或跳过／取消", None)],
     [("打开 A.D.M.S.", None)],
     [("不使用", None)],
     [("不使用", None)],
@@ -360,6 +357,7 @@ def main():
 
     print("cleaning paper background")
     arr = clean_background(arr)
+    os.makedirs(os.path.dirname(os.path.abspath(args.prep)), exist_ok=True)
     Image.fromarray(arr).save(args.prep)
 
     spec = build_spec(arr)

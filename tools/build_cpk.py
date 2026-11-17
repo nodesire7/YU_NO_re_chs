@@ -73,12 +73,15 @@ def main():
         fh.write("\n".join(csv_lines) + "\n")
         list_csv = fh.name
     try:
-        r = subprocess.run([args.cpkmakec, list_csv, args.out,
-                            "-align=" + args.align, "-mode=" + args.mode],
-                           capture_output=True, text=True, errors="replace")
-        if not os.path.exists(args.out):
-            print("build failed:\n" + (r.stdout or "") + (r.stderr or ""), file=sys.stderr)
-            return 3
+        with tempfile.TemporaryDirectory(dir=os.path.dirname(os.path.abspath(args.out))) as stage:
+            archive = os.path.join(stage, "build.cpk")
+            r = subprocess.run([args.cpkmakec, list_csv, archive,
+                                "-align=" + args.align, "-mode=" + args.mode, "-noerrorstop"],
+                               capture_output=True, text=True, errors="replace")
+            if r.returncode or not os.path.isfile(archive):
+                print("build failed:\n" + (r.stdout or "") + (r.stderr or ""), file=sys.stderr)
+                return 3
+            os.replace(archive, args.out)
         print("built", args.out, os.path.getsize(args.out), "files:", len(csv_lines))
     finally:
         os.unlink(list_csv)

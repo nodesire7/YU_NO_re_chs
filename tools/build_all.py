@@ -6,7 +6,7 @@ Steps (idempotent, re-runnable):
   2. build the font charset from the final text
   3. generate the bitmap font atlas and merge it with the original ASCII rows
   4. encode every .scx with the Chinese text
-  5. pack data/scrchs.cpk and data/syschs.cpk using the original archives as ID reference
+  5. regenerate the title, menu and settings sprites, and manuals, then pack the CPKs
   6. optionally install into the game folder (with backups)
 
 Requirements:
@@ -23,6 +23,11 @@ import os
 import shutil
 import subprocess
 import sys
+import tempfile
+
+from build_cpk import CPKMAKEC
+from install_patch import BACKUP
+from localize_text import prepare
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COPY = shutil.copy2
@@ -40,11 +45,52 @@ def rust_bin(crate):
     return exe
 
 
+def build_manual(game, work, out):
+    reference = os.path.join(work, "ref", "manual.cpk")
+    if not os.path.isfile(reference):
+        # An existing installation may already contain the translated manual.
+        backup = os.path.join(game, BACKUP, "manual.cpk")
+        original = backup if os.path.isfile(backup) else os.path.join(game, "data", "manual.cpk")
+        COPY(original, reference)
+
+    source = os.path.join(work, "extract", "manual")
+    staging = os.path.join(work, "manual_build")
+    os.makedirs(source, exist_ok=True)
+    run([CPKMAKEC, reference, "-extract=" + source, "-noerrorstop"])
+    run([sys.executable, os.path.join(ROOT, "tools", "ui_manual.py"),
+         "--source", source, "--out", staging])
+    manual = os.path.join(out, "manual.cpk")
+    run([sys.executable, os.path.join(ROOT, "tools", "build_cpk.py"),
+         "--reference", reference, "--src", staging, "--out", manual])
+    return manual
+
+
+def verify_manuscript_archive(archive, text_dir):
+    width_map = str.maketrans({**{code: code - 0xFEE0 for code in range(0xFF01, 0xFF5F)}, 0x3000: 0x20})
+    with tempfile.TemporaryDirectory() as directory:
+        run([CPKMAKEC, archive, "-extract=" + directory, "-noerrorstop"])
+        run([rust_bin("sc3tools-decode"), "extract-text", os.path.join(directory, "*.scx"), "yuno"])
+        decoded = {name for name in os.listdir(os.path.join(directory, "txt")) if name.endswith(".scx.txt")}
+        expected = {name for name in os.listdir(text_dir) if name.endswith(".scx.txt")}
+        if decoded != expected:
+            raise ValueError("编译后的脚本文本文件与译稿不一致")
+        for name in sorted(expected):
+            with open(os.path.join(text_dir, name), encoding="utf-8") as source:
+                source_lines = source.read().translate(width_map).splitlines()
+            with open(os.path.join(directory, "txt", name), encoding="utf-8") as result:
+                result_lines = result.read().translate(width_map).splitlines()
+            if source_lines != result_lines:
+                raise ValueError(f"解包回读与译稿不一致：{name}")
+    print(f"解包回读通过，共 {len(expected)} 个脚本。")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--game", default=r"F:\game\steam\steamapps\common\YU-NO")
     ap.add_argument("--install", action="store_true")
-    ap.add_argument("--font-family", default="Noto Serif SC")
+    ap.add_argument("--font-family", default="LXGW WenKai")
+    ap.add_argument("--localization", default=os.path.join(ROOT, "localization"),
+                    help="从已校完的整份中日对照译稿批量构建（默认 localization）")
     args = ap.parse_args()
 
     work = os.path.join(ROOT, "work")
@@ -58,21 +104,33 @@ def main():
     out = os.path.join(work, "out")
     os.makedirs(out, exist_ok=True)
 
-    # 1. text
-    run([sys.executable, os.path.join(ROOT, "tools", "prepare_text.py")])
-
-    # 1b. fill in the lines that are still Japanese (zz.scx monologue etc.)
-    run([sys.executable, os.path.join(ROOT, "tools", "patch_jp_lines.py")])
-    run([sys.executable, os.path.join(ROOT, "tools", "patch_ui_lines.py")])
-    run([sys.executable, os.path.join(ROOT, "tools", "final_clean.py")])
+    if args.localization:
+        text_final = os.path.join(work, "localization_zh")
+        manuscript_script = os.path.join(args.localization, "original_scx")
+        if os.path.isdir(manuscript_script):
+            script_dir = manuscript_script
+        elif not os.path.isdir(script_dir):
+            os.makedirs(script_dir, exist_ok=True)
+            run([CPKMAKEC, os.path.join(args.game, "data", "script.cpk"),
+                 "-extract=" + script_dir, "-noerrorstop"])
+        try:
+            prepare(args.localization, text_final)
+        except ValueError as exc:
+            ap.error(str(exc))
+    else:
+        run([sys.executable, os.path.join(ROOT, "tools", "prepare_text.py")])
+        run([sys.executable, os.path.join(ROOT, "tools", "patch_jp_lines.py")])
+        run([sys.executable, os.path.join(ROOT, "tools", "patch_ui_lines.py")])
+        run([sys.executable, os.path.join(ROOT, "tools", "final_clean.py")])
 
     # 2. charset
     charset = os.path.join(work, "charset_new.utf8")
-    run([sys.executable, os.path.join(ROOT, "tools", "make_charset.py")])
+    run([sys.executable, os.path.join(ROOT, "tools", "make_charset.py"), "--text", text_final])
     COPY(charset, os.path.join(ROOT, "pack", "sc3tools-main_pack", "resources", "yuno", "charset.utf8"))
     COPY(charset, os.path.join(ROOT, "pack", "sc3tools-decode", "resources", "yuno", "charset.utf8"))
     for crate in ("sc3tools-main_pack", "sc3tools-decode"):
-        run(["cargo", "build", "--release"], cwd=os.path.join(ROOT, "pack", crate))
+        crate_dir = os.path.join(ROOT, "pack", crate)
+        run(["cargo", "build", "--release", "--target-dir", os.path.join(crate_dir, "target")], cwd=crate_dir)
 
     # 3. font
     fontgen = os.path.join(ROOT, "pack", "mgsfontgen-dx-master", "bin", "Release", "net461", "mgsfontgen-dx.exe")
@@ -85,6 +143,7 @@ def main():
     run([sys.executable, os.path.join(ROOT, "tools", "make_font.py"),
          "--generated", os.path.join(fontdir, "FONT_A.png"),
          "--original", os.path.join(ROOT, "font", "origin", "font.png"),
+         "--charset", charset,
          "--outdir", system_build])
 
     # 4. encode scripts
@@ -94,11 +153,21 @@ def main():
     run([rust_bin("sc3tools-main_pack"), "replace-text",
          os.path.join(build_dir, "*.scx"), os.path.join(text_final, "*.txt"), "yuno"])
 
-    # 5. CPKs
+    # 5. Regenerate the menu atlases from the extracted original textures.
+    for tool in ("ui_config.py", "ui_menu.py", "ui_title.py"):
+        run([sys.executable, os.path.join(ROOT, "tools", tool)])
+
+    run([sys.executable, os.path.join(ROOT, "tools", "ui_help.py"),
+         "--recon-dir", os.path.join(work, "ui", "help_check")])
+    run([sys.executable, os.path.join(ROOT, "tools", "ui_guide.py")])
+
+    # Preserve the reference archive IDs when packing the rebuilt files.
     scrchs = os.path.join(out, "scrchs.cpk")
     run([sys.executable, os.path.join(ROOT, "tools", "build_cpk.py"),
          "--reference", os.path.join(work, "ref", "scrchs.cpk"),
          "--src", build_dir, "--out", scrchs])
+    if args.localization:
+        verify_manuscript_archive(scrchs, text_final)
     if os.path.isdir(ui_out):
         for name in os.listdir(ui_out):
             if name.endswith(".png") and os.path.exists(os.path.join(system_src, name)):
@@ -108,11 +177,13 @@ def main():
          "--reference", os.path.join(work, "ref", "syschs.cpk"),
          "--src", system_build, "--out", syschs])
 
+    manual = build_manual(args.game, work, out)
+
     # 6. install
     if args.install:
         run([sys.executable, os.path.join(ROOT, "tools", "install_patch.py"),
-             "--game", args.game, "--scrchs", scrchs, "--syschs", syschs, "--patch", patch_out])
-    print("done:", scrchs, syschs)
+             "--game", args.game, "--scrchs", scrchs, "--syschs", syschs, "--manual", manual, "--patch", patch_out])
+    print("done:", scrchs, syschs, manual)
     return 0
 
 

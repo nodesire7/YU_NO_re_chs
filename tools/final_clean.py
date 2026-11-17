@@ -28,6 +28,13 @@ def clean(line: str) -> str:
         line = line.replace(a, b)
     line = re.sub(r"（([^（）]{0,80})\)", r"（\1）", line)
     line = re.sub(r"\(([^()]{0,80})）", r"（\1）", line)
+
+    if any(tag in line for tag in ("[%p]", "[%e]", "[auto-forward]")):
+        # The imported Chinese sometimes added a second set of parentheses
+        # around the original Japanese internal-monologue punctuation.
+        line = line.replace("（（", "（").replace("(（", "（")
+        line = line.replace("）。)", "）").replace("）)", "）")
+        line = re.sub(r"([？！])。(?=[）』》」]?(?:\[|$))", r"\1", line)
     return line
 
 

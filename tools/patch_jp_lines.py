@@ -119,8 +119,8 @@ ZZ = {
 }
 
 OTHER = {
-    ("_system.scx.txt", 214): " 【介护】[名](サ变) 照顾病人、伤者等人。‥‥OK？",
-    ("z_saverestarttext.scx.txt", 38): " 【介护】[名](サ变) 照顾病人、伤者等人。‥‥OK？[%p]",
+    ("_system.scx.txt", 214): " 【照料】[名]（也可作动词）照看病人、伤者等。……明白了吗？",
+    ("z_saverestarttext.scx.txt", 38): " 【照料】[名]（也可作动词）照看病人、伤者等。……明白了吗？[%p]",
     ("yns_25_02i.scx.txt", 9): "[name]绘里子[line]嗯？波多乃同学的学生手册……？[%p]",
     ("yns_c27.scx.txt", 68): "[name]结城[line]嘶——……",
     ("yns_c27.scx.txt", 70): "[name]结城[line]嘶——……哈啊啊啊啊……。",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Install the built patch into the game folder, keeping a rollback backup.
 
-Usage: python tools/install_patch.py --game <dir> [--scrchs ...] [--syschs ...] [--patch ...]
+Usage: python tools/install_patch.py --game <dir> [--scrchs ...] [--syschs ...] [--manual ...] [--patch ...]
 """
 import argparse
 import os
@@ -38,14 +38,21 @@ def main():
     ap.add_argument("--game", required=True)
     ap.add_argument("--scrchs", default=None)
     ap.add_argument("--syschs", default=None)
+    ap.add_argument("--manual", default=None)
     ap.add_argument("--patch", default=None)
     args = ap.parse_args()
 
+    if args.manual:
+        if not os.path.isfile(args.manual):
+            ap.error("manual archive does not exist: " + args.manual)
+        backup(args.game, "data/manual.cpk")
     for rel in ("data/scrchs.cpk", "data/syschs.cpk", "patch.dll"):
         backup(args.game, rel)
     install(args.game, args.scrchs, "data/scrchs.cpk")
     install(args.game, args.syschs, "data/syschs.cpk")
     install(args.game, args.patch, "patch.dll")
+    if args.manual:
+        install(args.game, args.manual, "data/manual.cpk")
     print("done. rollback files are in", os.path.join(args.game, BACKUP))
     return 0
 

@@ -7,11 +7,11 @@
 * 发布/交流：**BBS.GBTGAME.ME**
 * 原工程：<https://github.com/nodesire7/YU_NO_re_chs>（HIllya51）
 
-**下载补丁：** [v1.3.0 发布页](https://github.com/nodesire7/YU_NO_re_chs/releases/tag/v1.3.0)（含安装/卸载脚本与 SHA256）。
+**下载补丁：** [v1.3.1 发布页](https://github.com/nodesire7/YU_NO_re_chs/releases/tag/v1.3.1)（含安装/卸载脚本与 SHA256）。
 
 ## 当前汉化状态
 
-> v1.3.0 完成剩余机翻条目的日文对照校订，整稿待校清单归零；半角、全角数字同步正文字体，并修正操作提示条的固定裁切位置。详细进度、已知限制与验证记录见 [docs/STATUS.md](docs/STATUS.md)。
+> v1.3.1 完成剩余机翻条目的日文对照校订，整稿待校清单归零；标点、括号、字母、数学符号及半角/全角数字同步正文字体，并修正操作提示条的固定裁切位置。详细进度、已知限制与验证记录见 [docs/STATUS.md](docs/STATUS.md)。
 
 | 模块 | 状态 |
 | --- | --- |
@@ -79,7 +79,7 @@ cl /O2 /MT /EHsc /std:c++17 /DUNICODE /D_UNICODE /LD patch\patch.cpp patch\lib\I
 ```bat
 python tools\localize_text.py prepare --localization localization --out work\localization_zh
 python tools\build_all.py --install
-python tools\package_release.py --version 1.3.0
+python tools\package_release.py --version 1.3.1
 python tools\verify_release.py
 ```
 
@@ -101,7 +101,7 @@ python tools\localize_text.py extract --chinese alltexts\zh --out work\new_local
 | `tools/build_cpk.py` | 以原版 CPK 的 ID 表为参照重新打包 |
 | `tools/prepare_text.py` | 清理机翻标记、统一术语、输出最终文本 |
 | `tools/make_charset.py` | 按字频生成字体 charset（前 640 字保留原版） |
-| `tools/make_font.py` | 合并原版符号与正文新字形，半角和全角数字使用正文字体 |
+| `tools/make_font.py` | 全部普通字符使用正文字体，仅保留游戏专用私用字形 |
 | `tools/localize_text.py` | 从原版提取日文，生成整份中日对照译稿，验证译文行号和控制标签 |
 | `tools/find_text.py` / `detect_bands.py` / `gridview.py` | UI 图片文字定位 |
 | `tools/ui_edit.py` | 按 JSON 规格擦除并重绘 UI 文字 |

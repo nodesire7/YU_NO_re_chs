@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.3.1",
   "scripts": 886,
   "rows": 95559,
   "pending": 0,
@@ -20,8 +20,8 @@
     },
     {
       "name": "syschs.cpk",
-      "bytes": 74002696,
-      "sha256": "49124b37b8cdb30c5c7939a3a9d26949f3cffc5f832f98911eebc22e5b7ceeb2"
+      "bytes": 73916680,
+      "sha256": "dff0755aa2688dd77a1db6c602f6a60ae0a6ae014e4ca6350ae6bde5fe46edb5"
     },
     {
       "name": "manual.cpk",
@@ -58,14 +58,20 @@
   "archive_roundtrip_system_resources": 18,
   "guide_fixed_slots": 22,
   "release_archive": {
-    "name": "YU-NO_汉化补丁_A-FEI-_v1.3.0.zip",
-    "bytes": 85120552,
-    "sha256": "1bbd00bf36eb05aefa7b702eb103b9c3b5f45f821e8c0aec16e883036ff09d99"
+    "name": "YU-NO_CHS_A-FEI-_v1.3.1.zip",
+    "bytes": 85033537,
+    "sha256": "9c67a611e0ec7a299b5b48812ebb66f4cfab947beb9aea5cbc78f2da12a31eb2"
   },
-  "runtime_checks": [
+  "font_text_cells": 3851,
+  "font_private_cells": 33,
+  "font_regression_errors_before": 1174,
+  "font_regression_errors_after": 0,
+  "font_coverage_missing_nonprivate": 0,
+  "runtime_checks_v1.3.0": [
     "标题菜单、完整确定/返回提示",
     "键盘鼠标及手柄帮助页",
     "存档编号使用正文字体",
     "序章中文对白"
-  ]
+  ],
+  "runtime_v1.3.1": "未完成截图复查：窗口自动化 failed to activate captured window；资源验证通过。"
 }

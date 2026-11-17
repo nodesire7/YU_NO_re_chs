@@ -4,7 +4,7 @@
 Steps (idempotent, re-runnable):
   1. clean the translated text (strip machine-translation markers)
   2. build the font charset from the final text
-  3. generate the bitmap font atlas and merge it with the original ASCII rows
+  3. generate all text glyphs in one font and retain original private-use glyphs
   4. encode every .scx with the Chinese text
   5. regenerate the title, menu and settings sprites, and manuals, then pack the CPKs
   6. optionally install into the game folder (with backups)
@@ -145,6 +145,9 @@ def main():
          "--original", os.path.join(ROOT, "font", "origin", "font.png"),
          "--charset", charset,
          "--outdir", system_build])
+    run([sys.executable, os.path.join(ROOT, "tools", "verify_font.py"),
+         "--directory", system_build, "--generated", os.path.join(fontdir, "FONT_A.png"),
+         "--charset", charset])
 
     # 4. encode scripts
     if os.path.exists(build_dir):

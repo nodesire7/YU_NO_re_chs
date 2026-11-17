@@ -3,7 +3,7 @@
 
 The game addresses glyphs by 2-byte code (0x8000 + index); the font atlas is laid out in
 that same order. We keep the first 640 entries of the shipped Japanese charset (ASCII,
-punctuation, kana) so those glyphs stay pixel-identical, then append every other character
+punctuation, kana) so their character indices stay compatible, then append every other character
 used by the translated script, sorted by frequency.
 
 Usage: python make_charset.py [--text work/text_final] [--out work/charset_new.utf8]

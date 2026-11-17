@@ -1,12 +1,16 @@
 """Exercise the packaged installer with pre-existing files and a clean game folder."""
 import hashlib
+import argparse
 import json
 from pathlib import Path
 import subprocess
 import tempfile
 
 ROOT = Path(__file__).resolve().parent.parent
-STAGE = ROOT / 'dist/v1.3.0'
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--version', default='1.3.1')
+args = parser.parse_args()
+STAGE = ROOT / 'dist' / f'v{args.version}'
 FILES = ['data/scrchs.cpk', 'data/syschs.cpk', 'data/manual.cpk', 'patch.dll', 'GBT_logo.png']
 results = []
 for kind in ('existing', 'clean', 'legacy'):
@@ -46,4 +50,4 @@ for kind in ('existing', 'clean', 'legacy'):
         results.append(dict(scenario=kind, install=True, reinstall_preserves_backup=True,
                             uninstall_restores_original=True))
         print(kind, 'PASS')
-(ROOT / 'work/installer_v1.3_results.json').write_text(json.dumps(results, indent=2), encoding='utf-8')
+(ROOT / 'work' / f'installer_v{args.version}_results.json').write_text(json.dumps(results, indent=2), encoding='utf-8')

@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Merge the generated Chinese font atlas with the original Japanese glyph rows.
+"""Use the dialogue font for all text, retaining only game-specific private glyphs.
 
 The MAGES font atlas uses 48x48 cells, 64 columns per row. The first 10 rows (640 cells)
-hold the original ASCII/symbol/kana glyphs. Use the generated dialogue-font glyphs for
-both half-width and full-width decimal digits, keeping the other original glyphs there.
+keep their original character indices, not their original artwork. Punctuation,
+Latin letters, numbers, kana and mathematical symbols all use the generated font.
+Private-use cells are game-specific glyphs that the text font cannot supply.
 
 Usage: python make_font.py --generated FONT_A.png --original font.png --charset charset.utf8 --outdir DIR
 """
@@ -11,13 +12,12 @@ import argparse
 import os
 from pathlib import Path
 import sys
+import unicodedata
 
 from PIL import Image
 
 CELL = 48
 COLS = 64
-KEEP_ROWS = 10
-DIGITS = frozenset("0123456789０１２３４５６７８９")
 
 
 def main():
@@ -30,27 +30,31 @@ def main():
 
     gen = Image.open(args.generated).convert("RGBA")
     orig = Image.open(args.original).convert("RGBA")
-    cut = KEEP_ROWS * CELL
-    if gen.width != COLS * CELL or orig.width != gen.width or min(orig.height, gen.height) < cut:
+    if gen.width != COLS * CELL or orig.width != gen.width:
         ap.error(f"unexpected font atlas sizes: generated {gen.size}, original {orig.size}")
     charset = args.charset.read_text(encoding="utf-8")
-    digit_cells = [(index, character) for index, character in enumerate(charset[:KEEP_ROWS * COLS])
-                   if character in DIGITS]
-    if len(digit_cells) != len(DIGITS) or {character for _, character in digit_cells} != DIGITS:
-        ap.error("charset does not contain the 20 expected digit cells in the original rows")
+    if gen.height < ((len(charset) + COLS - 1) // COLS) * CELL:
+        ap.error("generated atlas does not contain the entire charset")
     out = gen.copy()
-    out.paste(orig.crop((0, 0, orig.width, cut)), (0, 0))
-    for index, character in digit_cells:
+    private_cells = 0
+    for index, character in enumerate(charset):
         x = index % COLS * CELL
         y = index // COLS * CELL
+        if unicodedata.category(character) == "Co":
+            if y + CELL > orig.height:
+                ap.error(f"private glyph U+{ord(character):04X} has no original cell")
+            out.paste(orig.crop((x, y, x + CELL, y + CELL)), (x, y))
+            private_cells += 1
+            continue
         glyph = gen.crop((x, y, x + CELL, y + CELL))
-        if glyph.getchannel("A").getbbox() is None:
-            ap.error(f"generated digit {character} has no ink at cell {index}")
-        out.paste(glyph, (x, y))
+        if (not character.isspace() and not unicodedata.category(character).startswith("C")
+                and glyph.getchannel("A").getbbox() is None):
+            ap.error(f"generated character U+{ord(character):04X} has no ink at cell {index}")
     os.makedirs(args.outdir, exist_ok=True)
     for name in ("font.png", "font2.png"):
         out.save(os.path.join(args.outdir, name))
-    print(f"wrote font.png/font2.png {out.width}x{out.height} with {len(digit_cells)} dialogue-font digits -> {args.outdir}")
+    print(f"wrote font.png/font2.png {out.width}x{out.height}: "
+          f"{len(charset) - private_cells} dialogue-font cells, {private_cells} original private cells -> {args.outdir}")
     return 0
 
 

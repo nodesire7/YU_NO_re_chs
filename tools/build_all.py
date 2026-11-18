@@ -28,6 +28,7 @@ import tempfile
 from build_cpk import CPKMAKEC
 from install_patch import BACKUP
 from localize_text import prepare
+from ui_backlog import render_backlog
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 COPY = shutil.copy2
@@ -180,6 +181,8 @@ def main():
         for name in os.listdir(ui_out):
             if name.endswith(".png") and os.path.exists(os.path.join(system_src, name)):
                 COPY(os.path.join(ui_out, name), os.path.join(system_build, name))
+    render_backlog(os.path.join(system_src, "backlog.png"),
+                   os.path.join(system_build, "backlog.png"))
     syschs = os.path.join(out, "syschs.cpk")
     run([sys.executable, os.path.join(ROOT, "tools", "build_cpk.py"),
          "--reference", os.path.join(work, "ref", "syschs.cpk"),

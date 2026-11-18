@@ -62,6 +62,8 @@ def audit(path, baseline=None):
             flags.append('kana_remaining')
         if dialogue and re.search(r'[ \u3000]{4,}', text):
             flags.append('dialogue_whitespace_run')
+        if not is_metadata and re.search(r'，。|。，', text):
+            flags.append('comma_full_stop_collision')
         if dialogue and re.search(r'[!?()]', text) and not re.search(r'[A-Za-zＡ-Ｚａ-ｚ]', text):
             flags.append('mixed_dialogue_punctuation')
         if not visible(zh).strip() and visible(ja).strip():

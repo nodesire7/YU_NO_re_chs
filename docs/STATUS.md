@@ -145,10 +145,15 @@ v1.0 的实机截图见 `_recon/`：
 | [公司名与门禁说明](../localization/reviews/in_progress/geo_technics.jsonl) | 313 |
 | [序章逐句复核与省略号修订](../localization/reviews/in_progress/prologue.jsonl) | 152 |
 | [原文括号与对白校订](../localization/reviews/in_progress/parentheses.jsonl) | 333 |
+| [场景复查、神社称呼及其余错字](../localization/reviews/in_progress/scene_followup.jsonl) | 84 |
 
-相对 v1.3.3，五批合计实际改变 335 个脚本的 1,053 个不同位置。同一位置可经两批修改。按表中顺序从 v1.3.3 重放，结果与当前译稿逐行一致。886 个脚本重新构建并解包回读，95,559 条记录的原文对应、控制符和格式检查通过。游戏目录中的三个 CPK 和 DLL 均与本次构建的 SHA-256 一致。本地包通过已有文件、干净目录、旧备份三种安装、重装和卸载测试。
+相对 v1.3.3，六批合计实际改变 364 个脚本的 1,137 个不同位置。同一位置可经两批修改。按表中顺序从 v1.3.3 重放，结果与当前译稿逐行一致。886 个脚本重新构建并解包回读，95,559 条记录的原文对应、控制符和格式检查通过。游戏目录中的三个 CPK 和 DLL 均与本次构建的 SHA-256 一致。本地包通过已有文件、干净目录、旧备份三种安装、重装和卸载测试。
 
 序章在正式剧情中从梦境推进到了学校天台。更新译稿前，第 124 行的「在。」换到了第二行，对话框完整显示；紧接着打开历史记录，底部没有透出这句正在显示的对白。见[现场对白](backlog_comparison/rooftop_before.jpg)和[同位置的历史记录](backlog_comparison/rooftop_backlog.jpg)。重启本地修订版，从天台检查存档继续，已在[实际游戏历史记录](backlog_comparison/rooftop_revised.jpg)看到修订后的第 158 至 160 行，句末标点均可读，底部未透出当前对白。测试存档单独备份，玩家原存档与检查前的 SHA-256 一致。各路线原场景验证和剩余正文逐句复核继续计为未完成。离线模型筛查只供定位疑点。
+
+### 无路线存档时的实机范围
+
+在独立的测试目录中加载完整的三角山场景脚本。游戏实际绘出了神社背景和道具，显示了 `yns_c22.scx.txt` 第 53 行。根据[现场画面](backlog_comparison/shrine_before.jpg)和日文读音「やしろ」，统一修改多份脚本里的神社称呼与括号。重新进入同一位置，[修订后画面](backlog_comparison/shrine_revised.jpg)完整显示了省略号、成对引号和句号。这个入口绕过了正常剧情进度。另一次尝试加载异世界卧室脚本时，原场景出现后，引擎报[「分支目标指定错误」](backlog_comparison/isolated_branch_error.jpg)。直接进入场景缺少正常路线状态，两处都未计入完整路线验收。Steam 安装目录始终使用完整正式剧情，单独的检查存档留在本机 `work/review_next/rooftop_save`。
 
 ### 历史记录底部透字
 

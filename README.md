@@ -79,7 +79,7 @@ cl /O2 /MT /EHsc /std:c++17 /DUNICODE /D_UNICODE /LD patch\patch.cpp patch\lib\I
 ```bat
 python tools\localize_text.py prepare --localization localization --out work\localization_zh
 python tools\build_all.py --install
-python tools\package_release.py --version 1.3.3
+python tools\package_release.py --version 1.3.4-local
 python tools\verify_release.py
 ```
 

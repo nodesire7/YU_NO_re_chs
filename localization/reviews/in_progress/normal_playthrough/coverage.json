@@ -1,0 +1,135 @@
+{
+  "yns_p07_1.scx.txt": {
+    "first": 1,
+    "last": 279,
+    "checked": 279,
+    "proposed": 106,
+    "current_ja_zh_sha256": "82177f44c3f941d9d8e2bb7730550f192fd2fb60f347862c8ff9b7214d2ae0ab"
+  },
+  "yns_p07.scx.txt": {
+    "first": 1,
+    "last": 95,
+    "checked": 95,
+    "proposed": 27,
+    "current_ja_zh_sha256": "c0dedd0f8262e82cd4fcb1a482c231095e1fea3063bec530037baaee58a29f44"
+  },
+  "yns_p08_1.scx.txt": {
+    "first": 1,
+    "last": 176,
+    "checked": 176,
+    "proposed": 63,
+    "current_ja_zh_sha256": "ac6f749fcab22e1cc5c2c24487e2c69036827d3e63d93d2ebad30375743b3f1a"
+  },
+  "yns_p08.scx.txt": {
+    "first": 1,
+    "last": 67,
+    "checked": 67,
+    "proposed": 18,
+    "current_ja_zh_sha256": "47f6e51b29843afb8409620249e33d2ddb85658116d703813665a1608dbe84e8"
+  },
+  "yns_p07_2.scx.txt": {
+    "first": 1,
+    "last": 19,
+    "checked": 19,
+    "proposed": 9,
+    "current_ja_zh_sha256": "4842270163668bd808a63e728669104e8105105fa01135643b1e5ad151883d09"
+  },
+  "yns_p07_3.scx.txt": {
+    "first": 1,
+    "last": 23,
+    "checked": 23,
+    "proposed": 10,
+    "current_ja_zh_sha256": "5e0291da09fd743353b9ab1d36ef03bca1eb9a89b6f733a57769b9dfff482fb2"
+  },
+  "yns_p07_4.scx.txt": {
+    "first": 1,
+    "last": 18,
+    "checked": 18,
+    "proposed": 6,
+    "current_ja_zh_sha256": "428f7fb5cc6f93cabb4c870cff59e0c88c4f310ec06a6306d90845cf73f11704"
+  },
+  "yns_p07_6.scx.txt": {
+    "first": 1,
+    "last": 21,
+    "checked": 21,
+    "proposed": 10,
+    "current_ja_zh_sha256": "f99f8af109ef48fcb413c0a7a487769c28677e7d549a08a96d0cbf5b1678bf64"
+  },
+  "yns_p07_5.scx.txt": {
+    "first": 1,
+    "last": 146,
+    "checked": 146,
+    "proposed": 39,
+    "current_ja_zh_sha256": "429f3d88906a5dda2cb1db85d980efd36d7add3bb716f38822d6e404c859cc9b"
+  },
+  "yns_p08_2.scx.txt": {
+    "first": 1,
+    "last": 19,
+    "checked": 19,
+    "proposed": 5,
+    "current_ja_zh_sha256": "f61545259e4bdeebb923a1ea26d6f4713c523f8ae53e0cb3fc2d3fb827215858"
+  },
+  "yns_p08_3.scx.txt": {
+    "first": 1,
+    "last": 118,
+    "checked": 118,
+    "proposed": 49,
+    "current_ja_zh_sha256": "a898d3bde7262878d7b7049a4403df8662471c38491b3dc51421a5e8daa11cfd"
+  },
+  "yns_p09.scx.txt": {
+    "first": 1,
+    "last": 33,
+    "checked": 33,
+    "proposed": 15,
+    "current_ja_zh_sha256": "6a5b6edd1488c1614fecb1c13772ad1a14d52fd96094697bb4cf9fb462140a52"
+  },
+  "yns_p10.scx.txt": {
+    "first": 1,
+    "last": 14,
+    "checked": 14,
+    "proposed": 8,
+    "current_ja_zh_sha256": "fdd33f5e1b30775e113b2dc4799ec99084560ac374bb4ecfa4e6e8ccaa6a6b80"
+  },
+  "yns_p10_1.scx.txt": {
+    "first": 1,
+    "last": 31,
+    "checked": 31,
+    "proposed": 11,
+    "current_ja_zh_sha256": "e0ece320f96b2494d6e1831da2a014e9a3b61a7305aa0c3724fc729438c436d9"
+  },
+  "yns_p10_2.scx.txt": {
+    "first": 1,
+    "last": 26,
+    "checked": 26,
+    "proposed": 9,
+    "current_ja_zh_sha256": "547cb9a357c783affaf24537f2d1988a5494345851029c663e68954885779bee"
+  },
+  "yns_p09_1.scx.txt": {
+    "first": 1,
+    "last": 92,
+    "checked": 92,
+    "proposed": 38,
+    "current_ja_zh_sha256": "c424d2359aa1366dd4498a76a493ff6a98174a74216227ace1baf88c5c6e0708"
+  },
+  "yns_p22_1.scx.txt": {
+    "first": 1,
+    "last": 34,
+    "checked": 34,
+    "proposed": 18,
+    "current_ja_zh_sha256": "35649ff0e1e9094143c14fb9838db7d325ff9731b4db9718517fab7c87f61e9d"
+  },
+  "yns_p22_2.scx.txt": {
+    "first": 1,
+    "last": 102,
+    "checked": 102,
+    "proposed": 26,
+    "current_ja_zh_sha256": "6c1922639d13da1837a62831fc49f65a43246afdad9d08f5eb3f227c37db2346"
+  },
+  "yns_p22.scx.txt": {
+    "first": 1,
+    "last": 11,
+    "checked": 11,
+    "proposed": 7,
+    "current_ja_zh_sha256": "02c03da6a2a43e7990234d8bb65d64d46b741c12810536fb31acd6471b6c5497"
+  }
+}

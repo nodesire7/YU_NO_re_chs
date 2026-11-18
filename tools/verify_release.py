@@ -8,7 +8,7 @@ import tempfile
 
 ROOT = Path(__file__).resolve().parent.parent
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument('--version', default='1.3.3')
+parser.add_argument('--version', default='1.3.4-local')
 args = parser.parse_args()
 STAGE = ROOT / 'dist' / f'v{args.version}'
 FILES = ['data/scrchs.cpk', 'data/syschs.cpk', 'data/manual.cpk', 'patch.dll', 'GBT_logo.png']

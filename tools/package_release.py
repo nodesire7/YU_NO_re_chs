@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--version', default='1.3.3')
+    parser.add_argument('--version', default='1.3.4-local')
     args = parser.parse_args()
     staging = ROOT / 'dist' / f'v{args.version}'
     staging.mkdir(parents=True, exist_ok=True)
@@ -34,7 +34,8 @@ def main():
                  f'powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0patch.ps1" -Mode {mode} -Game "%~1"\n'
                  'set "RESULT=%ERRORLEVEL%"\npause\nexit /b %RESULT%\n')
         (staging / f'{name}.bat').write_text(batch, encoding='gbk', newline='\r\n')
-    shutil.copy2(ROOT / 'distribution/汉化说明.txt', staging / '汉化说明.txt')
+    notes = (ROOT / 'distribution/汉化说明.txt').read_text(encoding='utf-8')
+    (staging / '汉化说明.txt').write_text(notes.replace('{version}', args.version), encoding='utf-8')
     archive = ROOT / 'dist' / f'YU-NO_CHS_A-FEI-_v{args.version}.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as package:
         for path in sorted(staging.rglob('*')):

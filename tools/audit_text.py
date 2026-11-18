@@ -64,8 +64,14 @@ def audit(path, baseline=None):
             flags.append('dialogue_whitespace_run')
         if not is_metadata and re.search(r'，。|。，', text):
             flags.append('comma_full_stop_collision')
+        if not is_metadata and '‥' in text:
+            flags.append('two_dot_leader_in_translation')
         if dialogue and re.search(r'[!?()]', text) and not re.search(r'[A-Za-zＡ-Ｚａ-ｚ]', text):
             flags.append('mixed_dialogue_punctuation')
+        if dialogue and re.fullmatch(r'（[^（）]+）。', text):
+            original_body = visible(ja.split('[line]', 1)[-1])
+            if '[line]' in ja and not re.search(r'[（(「『《]', original_body):
+                flags.append('added_dialogue_parentheses')
         if not visible(zh).strip() and visible(ja).strip():
             flags.append('empty_translation')
         ref = dict(file=key[0], line=key[1], ja=ja, zh=zh)

@@ -1,0 +1,32 @@
+{"file": "_system.scx.txt", "line": 334, "ja": "急に荒れ果てた土蔵か‥‥", "before": "突然变得破败不堪的土仓啊……", "after": "一下子就破败成这样的土仓啊……"}
+{"file": "_system.scx.txt", "line": 338, "ja": "土蔵の中で餓死とか勘弁だぜ‥‥", "before": "在仓库里饿死可不行……", "after": "我可不想饿死在土仓里……"}
+{"file": "_system.scx.txt", "line": 351, "ja": "あの荒れ果てた土蔵にまか不思議なモノがあるだって? 古文書とかか?", "before": "那座破败的土仓里，有不可思议的东西？是古文书之类的吗？", "after": "那座破败的土仓里有不可思议的东西？难道是古文书之类的？"}
+{"file": "_system.scx.txt", "line": 689, "ja": "ハンディコンピュータ", "before": "笔记本电脑", "after": "便携电脑"}
+{"file": "_system.scx.txt", "line": 913, "ja": "土蔵", "before": "土藏", "after": "土仓"}
+{"file": "_system.scx.txt", "line": 923, "ja": "鍬", "before": "铁镐", "after": "锄头"}
+{"file": "_system.scx.txt", "line": 960, "ja": "ハンディコンピュータ", "before": "笔记本电脑", "after": "便携电脑"}
+{"file": "_yunosys.scx.txt", "line": 201, "ja": "土蔵", "before": "土藏", "after": "土仓"}
+{"file": "_yunosys.scx.txt", "line": 218, "ja": "土蔵", "before": "土藏", "after": "土仓"}
+{"file": "macrosys2.scx.txt", "line": 23, "ja": "[color index=\"280AA0111400\"]ハンディコンピュータ", "before": "[color index=\"280AA0111400\"]笔记本电脑", "after": "[color index=\"280AA0111400\"]便携电脑"}
+{"file": "macrosys2.scx.txt", "line": 1342, "ja": "よし、ハンディコンピュータの[AREA-3]に記録した。[%p]", "before": "好了，已经记录到掌上电脑的[AREA-3]中了。[%p]", "after": "好了，已经记到便携电脑的[AREA-3]里了。[%p]"}
+{"file": "macrosys2.scx.txt", "line": 1344, "ja": "[name]たくや[line]ハンディコンピュータを使えるときなら、いつでもこのデータを呼び出せるぞ。[%p]", "before": "[name]拓也[line]只要能用掌上电脑，就能随时调出这份数据。[%p]", "after": "[name]拓也[line]只要能用便携电脑，就能随时调出这份数据。[%p]"}
+{"file": "yns_b16i.scx.txt", "line": 6, "ja": "[name]女守衛[line]ジオ・テクニクスのセキュリティカードに似ているけど‥‥。[%p]", "before": "[name]女保安[line]跟Geo Technics的安全卡片很像……[%p]", "after": "[name]女保安[line]跟Geo Technics的门禁卡很像……[%p]"}
+{"file": "yns_b16i.scx.txt", "line": 61, "ja": "[name]女守衛[line]ジオ・テクニクスのセキュリティカードに似ているけど‥‥。[%p]", "before": "[name]女保安[line]跟Geo Technics的安全卡片很像……[%p]", "after": "[name]女保安[line]跟Geo Technics的门禁卡很像……[%p]"}
+{"file": "yns_b16i.scx.txt", "line": 63, "ja": "[name]女守衛[line]フフ、まさかね。あなたがここのセキュリティカードを‥‥しかも最高機密のブルーカードを持っているはず、ないもの。[%p]", "before": "[name]女保安[line]呵呵，怎么可能。你怎么可能会有这里的安全卡片……而且拿的还是最高机密的蓝卡，这是不可能的。[%p]", "after": "[name]女保安[line]呵呵，怎么可能。你哪会有这里的门禁卡……何况这还是最高机密的蓝卡。[%p]"}
+{"file": "yns_c24_01.scx.txt", "line": 271, "ja": "[name]たくや[line](俺には、セキュリティ・カードという強い味方が‥‥。)[%p]", "before": "[name]拓也[line]（对我来说，叫做准入卡的强力伙伴是……）[%p]", "after": "[name]拓也[line]（我还有门禁卡这个得力帮手……）[%p]"}
+{"file": "yns_d_a16_02.scx.txt", "line": 12, "ja": "[color index=\"840000\"][ハンディコンピュータ][color index=\"800000\"]を手に入れました。", "before": "获得了[color index=\"840000\"][掌上电脑][color index=\"800000\"]。", "after": "获得了[color index=\"840000\"][便携电脑][color index=\"800000\"]。"}
+{"file": "yns_d_a16_02.scx.txt", "line": 13, "ja": "[color index=\"840000\"][ハンディコンピュータ][color index=\"800000\"]を手に入れました。", "before": "获得了[color index=\"840000\"][掌上电脑][color index=\"800000\"]。", "after": "获得了[color index=\"840000\"][便携电脑][color index=\"800000\"]。"}
+{"file": "yns_d_a16_02.scx.txt", "line": 34, "ja": "[color index=\"840000\"][ハンディコンピュータ][color index=\"800000\"]を手に入れました。", "before": "获得了[color index=\"840000\"][掌上电脑][color index=\"800000\"]。", "after": "获得了[color index=\"840000\"][便携电脑][color index=\"800000\"]。"}
+{"file": "yns_d_a16_02.scx.txt", "line": 35, "ja": "[color index=\"840000\"][ハンディコンピュータ][color index=\"800000\"]を手に入れました。", "before": "获得了[color index=\"840000\"][掌上电脑][color index=\"800000\"]。", "after": "获得了[color index=\"840000\"][便携电脑][color index=\"800000\"]。"}
+{"file": "yns_d_a16_02.scx.txt", "line": 214, "ja": "‥‥‥‥ハンディコンピュータに、簡単なプログラムを入力した。[%p]", "before": "…………笔记本电脑上，输入了一个简单的程序。[%p]", "after": "…………我在便携电脑里输入了一个简单的程序。[%p]"}
+{"file": "yns_d_a16_02.scx.txt", "line": 288, "ja": "‥‥ハンディコンピュータに、簡単なプログラムを入力。[linebreak][margin top=\"76\"][linebreak]これを使用すれば、いつでも‥‥‥‥。[linebreak][margin top=\"38\"][linebreak]ログインネームは、私の名前だ‥‥‥‥。", "before": "……笔记本电脑上，输入了一个简单的程序。[linebreak][margin top=\"76\"][linebreak]只要使用这个，不管什么时候…………[linebreak][margin top=\"38\"][linebreak]登录名，就是我的名字…………", "after": "……在便携电脑里输入了一个简单的程序。[linebreak][margin top=\"76\"][linebreak]用它就能随时…………[linebreak][margin top=\"38\"][linebreak]登录名就是我的名字…………"}
+{"file": "yns_d_c16_02.scx.txt", "line": 12, "ja": "[color index=\"840000\"][ハンディコンピュータ][color index=\"800000\"]を手に入れました。", "before": "获得了[color index=\"840000\"][掌上电脑][color index=\"800000\"]。", "after": "获得了[color index=\"840000\"][便携电脑][color index=\"800000\"]。"}
+{"file": "yns_d_c16_02.scx.txt", "line": 13, "ja": "[color index=\"840000\"][ハンディコンピュータ][color index=\"800000\"]を手に入れました。", "before": "获得了[color index=\"840000\"][掌上电脑][color index=\"800000\"]。", "after": "获得了[color index=\"840000\"][便携电脑][color index=\"800000\"]。"}
+{"file": "yns_d_c16_02.scx.txt", "line": 34, "ja": "[color index=\"840000\"][ハンディコンピュータ][color index=\"800000\"]を手に入れました。", "before": "获得了[color index=\"840000\"][掌上电脑][color index=\"800000\"]。", "after": "获得了[color index=\"840000\"][便携电脑][color index=\"800000\"]。"}
+{"file": "yns_d_c16_02.scx.txt", "line": 35, "ja": "[color index=\"840000\"][ハンディコンピュータ][color index=\"800000\"]を手に入れました。", "before": "获得了[color index=\"840000\"][掌上电脑][color index=\"800000\"]。", "after": "获得了[color index=\"840000\"][便携电脑][color index=\"800000\"]。"}
+{"file": "yns_d_c16_02.scx.txt", "line": 214, "ja": "‥‥‥‥ハンディコンピュータに、簡単なプログラムを入力した。[%p]", "before": "…………笔记本电脑上，输入了一个简单的程序。[%p]", "after": "…………我在便携电脑里输入了一个简单的程序。[%p]"}
+{"file": "yns_d_c16_02.scx.txt", "line": 288, "ja": "‥‥ハンディコンピュータに、簡単なプログラムを入力。[linebreak][margin top=\"76\"][linebreak]これを使用すれば、いつでも‥‥‥‥。[linebreak][margin top=\"38\"][linebreak]ログインネームは、私の名前だ‥‥‥‥。", "before": "……笔记本电脑上，输入了一个简单的程序。[linebreak][margin top=\"76\"][linebreak]只要使用这个，不管什么时候…………[linebreak][margin top=\"38\"][linebreak]登录名，就是我的名字…………", "after": "……在便携电脑里输入了一个简单的程序。[linebreak][margin top=\"76\"][linebreak]用它就能随时…………[linebreak][margin top=\"38\"][linebreak]登录名就是我的名字…………"}
+{"file": "z_saverestarttext.scx.txt", "line": 158, "ja": "急に荒れ果てた土蔵か‥‥[%p]", "before": "突然变得破败不堪的土仓啊……[%p]", "after": "一下子就破败成这样的土仓啊……[%p]"}
+{"file": "z_saverestarttext.scx.txt", "line": 162, "ja": "土蔵の中で餓死とか勘弁だぜ‥‥[%p]", "before": "在仓库里饿死可不行……[%p]", "after": "我可不想饿死在土仓里……[%p]"}
+{"file": "z_saverestarttext.scx.txt", "line": 175, "ja": "あの荒れ果てた土蔵にまか不思議なモノがあるだって? 古文書とかか?[%p]", "before": "那座破败的土仓里，有不可思议的东西？是古文书之类的吗？[%p]", "after": "那座破败的土仓里有不可思议的东西？难道是古文书之类的？[%p]"}
+{"file": "zz.scx.txt", "line": 4, "ja": "ハンディコンピュータ", "before": "笔记本电脑", "after": "便携电脑"}

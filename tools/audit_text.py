@@ -31,7 +31,7 @@ def audit(path, baseline=None):
     source = {p.name: read_lines(p) for p in (ROOT / "alltexts/ja").glob("*.scx.txt")}
     base = {(r['file'], r['line']): r for r in baseline} if baseline is not None else None
     counts = Counter()
-    issues, long_rows, layouts, metadata, quotations = [], [], [], [], []
+    issues, long_rows, layouts, metadata, quotations, address_changes = [], [], [], [], [], []
     for row in rows:
         key = row['file'], row['line']
         counts[row['file']] += 1
@@ -64,6 +64,23 @@ def audit(path, baseline=None):
             flags.append('dialogue_whitespace_run')
         if not is_metadata and re.search(r'，。|。，', text):
             flags.append('comma_full_stop_collision')
+        if dialogue:
+            speaker = visible(zh.partition('[line]')[0]).strip()
+            if speaker and text.startswith((speaker + '：', speaker + ':')):
+                flags.append('speaker_repeated_in_dialogue')
+            if '絵里子先生' in ja and '绘里子先生' in text:
+                flags.append('eriko_teacher_title')
+            if '神奈チャン' in ja and re.search(r'神奈[·・ ]*[张張昌陈]', text):
+                flags.append('kana_honorific_misread_as_name')
+        if dialogue and base is not None and key in base:
+            original_translation = base[key]['zh'].partition('[line]')[2]
+            for surname in ('岛津', '有马'):
+                if surname + '先生' in text and any(surname + title in original_translation
+                                                  for title in ('同学', '女士', '夫人', '太太', '小姐', '主任')):
+                    address_changes.append(dict(file=key[0], line=key[1], ja=ja, before=original_translation, after=text))
+                    break
+        if dialogue and re.search(r'[,，][!?！？。]', text):
+            flags.append('comma_before_sentence_ending')
         if not is_metadata and '‥' in text:
             flags.append('two_dot_leader_in_translation')
         if dialogue and re.search(r'[!?()]', text) and not re.search(r'[A-Za-zＡ-Ｚａ-ｚ]', text):
@@ -87,7 +104,7 @@ def audit(path, baseline=None):
                 pending_flags=sum(r['pending'] for r in rows), missing=missing,
                 issue_counts=dict(Counter(flag for row in issues for flag in row['flags'])),
                 issues=issues, long_dialogue=sorted(long_rows, key=lambda r: -r['visible_characters']),
-                explicit_layout=layouts, original_metadata=metadata, retained_japanese_examples=quotations,
+                changed_forms_of_address=address_changes, explicit_layout=layouts, original_metadata=metadata, retained_japanese_examples=quotations,
                 limitation='Length is a review priority, not an engine width simulation. Static checks do not certify all routes or semantic accuracy.')
 
 

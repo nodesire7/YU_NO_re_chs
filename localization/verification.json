@@ -1,40 +1,264 @@
 {
-  "version": "1.3.3",
+  "version": "1.4.0",
   "scripts": 886,
   "rows": 95559,
   "pending": 0,
-  "changed_rows_since_manuscript_baseline": 937,
-  "dynamic_variables_mismatched": 0,
-  "machine_markers": 0,
-  "manuscript_sha256": "df48bd7e054b37d492395657eebb8ccb5dc4a75e6a0034c71aebf549031589c7",
+  "manuscript_sha256": "1e61c67a33a7582d99cb11d429aa58b90b848688d94446bd99631d802afbf9bc",
   "archive_roundtrip_scripts": 886,
   "font_family": "LXGW WenKai",
-  "digit_cells": 20,
-  "review_scope": "旧 JF 清单已处理；v1.3.3 全稿自动检查，342 组长句逐组对照日文，另核数字差异及短句；不是 95,559 行全部逐句精校或全路线实玩。",
-  "preserved_metadata": "_system 标点表；_tips 原版日文读音及排序键。",
-  "installation": [
-    {
-      "name": "scrchs.cpk",
-      "bytes": 10961960,
-      "sha256": "96623de1cb91359d98a3177e60d10b9b937746817829f5264f23b88259eda830"
-    },
-    {
-      "name": "syschs.cpk",
-      "bytes": 73924872,
-      "sha256": "21f9bbf930e4be8a34717ae16545cdc39287735d6bb40d5fae1671b14664c17e"
-    },
-    {
-      "name": "manual.cpk",
-      "bytes": 8216712,
-      "sha256": "3bae7d1948afadb6cd41c32c03e0bc43b14098571c754aa9977b851bb9dc5aa7"
-    },
-    {
-      "name": "patch.dll",
-      "bytes": 103936,
-      "sha256": "e754fe502e822840394ee6b024888f1139254ba2a4f4a5f892fd542ee313ddbc"
-    }
-  ],
-  "installer_tests": [
+  "review": {
+    "input_sha256": "5f79fee29ac6a6df8f62543a40571ae9f22cb26e79fad4e33cdfb1266ceb9cc9",
+    "checked": 83407,
+    "changed": 23256,
+    "scripts": 837,
+    "distinct_contexts": 57129,
+    "supplementary_edits": 32,
+    "coverage_columns": [
+      "file",
+      "line",
+      "decision",
+      "method",
+      "context_sha256"
+    ],
+    "methods": [
+      {
+        "method": "Chinese wording chosen from a directly reviewed parallel scene and independently checked against the target Japanese",
+        "changed": false,
+        "count": 4
+      },
+      {
+        "method": "Japanese scene reviewed alongside the official English and an independent Chinese comparison",
+        "changed": false,
+        "count": 28
+      },
+      {
+        "method": "Japanese scene reviewed alongside the official English and an independent Chinese comparison",
+        "changed": true,
+        "count": 24
+      },
+      {
+        "method": "Japanese-scene copyedit independently confirmed by two bilingual comparisons",
+        "changed": false,
+        "count": 10
+      },
+      {
+        "method": "Japanese-scene copyedit independently confirmed by two bilingual comparisons",
+        "changed": true,
+        "count": 11
+      },
+      {
+        "method": "Japanese-scene revision corroborated against the original and aligned English dialogue",
+        "changed": false,
+        "count": 3
+      },
+      {
+        "method": "Japanese-scene revision corroborated against the original and aligned English dialogue",
+        "changed": true,
+        "count": 34
+      },
+      {
+        "method": "archived exact source review and independent Japanese back-translation",
+        "changed": false,
+        "count": 459
+      },
+      {
+        "method": "bilingual assessment corroborated by independent Japanese back-translation",
+        "changed": false,
+        "count": 2
+      },
+      {
+        "method": "bilingual comparison and independent source translation agree under bidirectional Chinese entailment",
+        "changed": false,
+        "count": 60
+      },
+      {
+        "method": "blinded contextual comparison with independent Japanese and Chinese readings",
+        "changed": false,
+        "count": 8
+      },
+      {
+        "method": "blinded contextual comparison with independent Japanese and Chinese readings",
+        "changed": true,
+        "count": 21
+      },
+      {
+        "method": "corrected and independently checked against Japanese and neighbours",
+        "changed": true,
+        "count": 5
+      },
+      {
+        "method": "editor checked Houjou’s form of address and the full Japanese dialogue",
+        "changed": false,
+        "count": 16
+      },
+      {
+        "method": "editor checked Houjou’s form of address and the full Japanese dialogue",
+        "changed": true,
+        "count": 84
+      },
+      {
+        "method": "editor checked Yuuki nickname in search scenes",
+        "changed": true,
+        "count": 67
+      },
+      {
+        "method": "editor compared Japanese address and its meaning in the full sentence",
+        "changed": true,
+        "count": 67
+      },
+      {
+        "method": "editor compared Japanese book title across all occurrences",
+        "changed": true,
+        "count": 11
+      },
+      {
+        "method": "editor compared Japanese device terminology against narrative exposition",
+        "changed": true,
+        "count": 4
+      },
+      {
+        "method": "editor compared Japanese dialogue and original control sequence",
+        "changed": false,
+        "count": 70
+      },
+      {
+        "method": "editor compared Japanese dialogue and original control sequence",
+        "changed": true,
+        "count": 66
+      },
+      {
+        "method": "editor compared Japanese location names and dialogue with the navigation wording",
+        "changed": false,
+        "count": 1
+      },
+      {
+        "method": "editor compared Japanese location names and dialogue with the navigation wording",
+        "changed": true,
+        "count": 164
+      },
+      {
+        "method": "editor compared Japanese source in scene",
+        "changed": false,
+        "count": 6932
+      },
+      {
+        "method": "editor compared Japanese source in scene",
+        "changed": true,
+        "count": 10286
+      },
+      {
+        "method": "editor compared complete repeated Japanese and Chinese lines",
+        "changed": false,
+        "count": 7637
+      },
+      {
+        "method": "editor compared complete repeated Japanese and Chinese lines",
+        "changed": true,
+        "count": 11175
+      },
+      {
+        "method": "editor compared handheld computer name with the Japanese and item menu",
+        "changed": false,
+        "count": 2
+      },
+      {
+        "method": "editor compared handheld computer name with the Japanese and item menu",
+        "changed": true,
+        "count": 28
+      },
+      {
+        "method": "editor compared matching dialogue and both neighbours in protagonist script variants",
+        "changed": false,
+        "count": 26
+      },
+      {
+        "method": "editor compared matching dialogue and both neighbours in protagonist script variants",
+        "changed": true,
+        "count": 158
+      },
+      {
+        "method": "editor compared short Japanese and Chinese dialogue",
+        "changed": false,
+        "count": 563
+      },
+      {
+        "method": "editor compared short Japanese and Chinese dialogue",
+        "changed": true,
+        "count": 968
+      },
+      {
+        "method": "editor confirmed originally empty dialogue slot",
+        "changed": false,
+        "count": 1
+      },
+      {
+        "method": "editor matched identical source, original Chinese and adjacent dialogue in parallel scene",
+        "changed": true,
+        "count": 28
+      },
+      {
+        "method": "independent HY-MT translation checked against Japanese and neighbours",
+        "changed": true,
+        "count": 5
+      },
+      {
+        "method": "independent visual-novel scene rendering reconciled with the Japanese",
+        "changed": false,
+        "count": 23
+      },
+      {
+        "method": "independent visual-novel scene rendering reconciled with the Japanese",
+        "changed": true,
+        "count": 26
+      },
+      {
+        "method": "retained after explicit Japanese scene and Chinese comparison",
+        "changed": false,
+        "count": 404
+      },
+      {
+        "method": "scene retranslation adjudicated against Japanese by two bilingual readers",
+        "changed": false,
+        "count": 36
+      },
+      {
+        "method": "scene retranslation adjudicated against Japanese by two bilingual readers",
+        "changed": true,
+        "count": 16
+      },
+      {
+        "method": "scene-order Japanese edit with individual independent source confirmation",
+        "changed": false,
+        "count": 4
+      },
+      {
+        "method": "silence/punctuation checked as exact pair",
+        "changed": false,
+        "count": 7977
+      },
+      {
+        "method": "two independent bilingual readings retained the existing Chinese",
+        "changed": false,
+        "count": 17207
+      },
+      {
+        "method": "two independent bilingual readings retained the existing Chinese",
+        "changed": true,
+        "count": 2
+      },
+      {
+        "method": "two-stage local JP/CN review",
+        "changed": false,
+        "count": 18678
+      },
+      {
+        "method": "two-stage local JP/CN review",
+        "changed": true,
+        "count": 6
+      }
+    ]
+  },
+  "installer_checks": [
     {
       "scenario": "existing",
       "install": true,
@@ -52,61 +276,49 @@
       "install": true,
       "reinstall_preserves_backup": true,
       "uninstall_restores_original": true
+    },
+    {
+      "scenario": "locked",
+      "install": true,
+      "reinstall_preserves_backup": true,
+      "uninstall_restores_original": true
     }
   ],
-  "nonempty_scripts": 868,
-  "archive_roundtrip_system_resources": 18,
-  "guide_fixed_slots": 22,
-  "release_archive": {
-    "name": "YU-NO_CHS_A-FEI-_v1.3.3.zip",
-    "bytes": 85036673,
-    "sha256": "e5cdb92d33770921a1507161f49bbba4a1ff5777b129e78e8a2bb8b2932d4f9e"
-  },
-  "font_text_cells": 3848,
-  "font_private_cells": 33,
-  "font_regression_errors_before": 1174,
-  "font_regression_errors_after": 0,
-  "font_coverage_missing_nonprivate": 0,
-  "runtime_checks_v1.3.0": [
-    "标题菜单、完整确定/返回提示",
-    "键盘鼠标及手柄帮助页",
-    "存档编号使用正文字体",
-    "序章中文对白"
+  "release_payload": [
+    {
+      "path": "data\\scrchs.cpk",
+      "bytes": 10961960,
+      "sha256": "718b4e504b42ff9cf08274118eabf7fd103960e92a173e6e896f5f893facbd55"
+    },
+    {
+      "path": "data\\syschs.cpk",
+      "bytes": 73797896,
+      "sha256": "243372e8dcb116eb944c018ee8ebc7c929065c6d1885276e41ede34854adbf7d"
+    },
+    {
+      "path": "data\\manual.cpk",
+      "bytes": 8216712,
+      "sha256": "3f18cea09de1b4b50f9fbd7e1c5bd949096885366123dd1b869675878cde552c"
+    },
+    {
+      "path": "patch.dll",
+      "bytes": 103936,
+      "sha256": "e754fe502e822840394ee6b024888f1139254ba2a4f4a5f892fd542ee313ddbc"
+    },
+    {
+      "path": "GBT_logo.png",
+      "bytes": 6017,
+      "sha256": "fd07b26b3fb9f99e6922208381fa626576e54be17482e6739cbd81d43b87afc7"
+    }
   ],
-  "runtime_v1.3.1": "未完成截图复查：窗口自动化 failed to activate captured window；资源验证通过。",
-  "runtime_v1.3.2": {
-    "case_count": 12,
-    "dialogue_cases": "pass",
-    "history": "pass; original translucent background preserved",
-    "settings_and_confirm": "pass",
-    "keyboard_and_controller_help": "pass",
-    "formal_story_restored": true,
-    "report": "docs/font_runtime_v1.3.2.md",
-    "scope": "字体样例及列明界面；并非全路线实玩"
+  "artifact_sha256": {
+    "GBTGames_YU-NO_CHS_v1.4.0_Setup.exe": "4e8de602084fb25638e036b62688fd734c5c1957b97a7cbf29ec9968840ddd93",
+    "YU-NO_CHS_A-FEI-_v1.4.0.zip": "39c46c64be6921d8de5379e91b363c0257326a0efe6207eea558aa26f92b2e4b"
   },
-  "font_runtime_fix": {
-    "baseline_y": -3,
-    "regular_cells_touching_vertical_edge": 0,
-    "reverse_order_identical_cells": 3884,
-    "fixed_horizontal_slots": 640
-  },
-  "audit_v1.3.3": {
-    "report": "docs/text_audit_v1.3.3.md",
-    "changed_rows": 937,
-    "changed_scripts": 327,
-    "source_corrected_rows": 273,
-    "reviewed_long_unique": 342,
-    "reviewed_long_occurrences": 442,
-    "structural_issues": 0
-  },
-  "changed_rows_baseline_source": "alltexts/zh",
-  "runtime_v1.3.3": {
-    "real_corpus_replay_cases": 16,
-    "dialogue": "pass for listed cases",
-    "history": "entries 1–15 reviewed; original transparent panel still exposes current dialogue underneath",
-    "formal_story_restored": true,
-    "report": "docs/text_runtime_v1.3.3.md",
-    "scope": "普通对白框真实文本回放及正式序章首句；并非原路线全程实玩"
-  },
-  "changed_rows_since_v1_3_2": 937
+  "runtime_this_release": false,
+  "dialogue_codepoint_coverage": {
+    "family": "LXGW WenKai",
+    "visible_dialogue_codepoints": 3210,
+    "missing": []
+  }
 }

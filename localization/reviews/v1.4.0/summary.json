@@ -1,0 +1,252 @@
+{
+  "input_sha256": "5f79fee29ac6a6df8f62543a40571ae9f22cb26e79fad4e33cdfb1266ceb9cc9",
+  "checked": 83407,
+  "changed": 23256,
+  "scripts": 837,
+  "distinct_contexts": 57129,
+  "supplementary_edits": 32,
+  "coverage_columns": [
+    "file",
+    "line",
+    "decision",
+    "method",
+    "context_sha256"
+  ],
+  "methods": [
+    {
+      "method": "Chinese wording chosen from a directly reviewed parallel scene and independently checked against the target Japanese",
+      "changed": false,
+      "count": 4
+    },
+    {
+      "method": "Japanese scene reviewed alongside the official English and an independent Chinese comparison",
+      "changed": false,
+      "count": 28
+    },
+    {
+      "method": "Japanese scene reviewed alongside the official English and an independent Chinese comparison",
+      "changed": true,
+      "count": 24
+    },
+    {
+      "method": "Japanese-scene copyedit independently confirmed by two bilingual comparisons",
+      "changed": false,
+      "count": 10
+    },
+    {
+      "method": "Japanese-scene copyedit independently confirmed by two bilingual comparisons",
+      "changed": true,
+      "count": 11
+    },
+    {
+      "method": "Japanese-scene revision corroborated against the original and aligned English dialogue",
+      "changed": false,
+      "count": 3
+    },
+    {
+      "method": "Japanese-scene revision corroborated against the original and aligned English dialogue",
+      "changed": true,
+      "count": 34
+    },
+    {
+      "method": "archived exact source review and independent Japanese back-translation",
+      "changed": false,
+      "count": 459
+    },
+    {
+      "method": "bilingual assessment corroborated by independent Japanese back-translation",
+      "changed": false,
+      "count": 2
+    },
+    {
+      "method": "bilingual comparison and independent source translation agree under bidirectional Chinese entailment",
+      "changed": false,
+      "count": 60
+    },
+    {
+      "method": "blinded contextual comparison with independent Japanese and Chinese readings",
+      "changed": false,
+      "count": 8
+    },
+    {
+      "method": "blinded contextual comparison with independent Japanese and Chinese readings",
+      "changed": true,
+      "count": 21
+    },
+    {
+      "method": "corrected and independently checked against Japanese and neighbours",
+      "changed": true,
+      "count": 5
+    },
+    {
+      "method": "editor checked Houjou’s form of address and the full Japanese dialogue",
+      "changed": false,
+      "count": 16
+    },
+    {
+      "method": "editor checked Houjou’s form of address and the full Japanese dialogue",
+      "changed": true,
+      "count": 84
+    },
+    {
+      "method": "editor checked Yuuki nickname in search scenes",
+      "changed": true,
+      "count": 67
+    },
+    {
+      "method": "editor compared Japanese address and its meaning in the full sentence",
+      "changed": true,
+      "count": 67
+    },
+    {
+      "method": "editor compared Japanese book title across all occurrences",
+      "changed": true,
+      "count": 11
+    },
+    {
+      "method": "editor compared Japanese device terminology against narrative exposition",
+      "changed": true,
+      "count": 4
+    },
+    {
+      "method": "editor compared Japanese dialogue and original control sequence",
+      "changed": false,
+      "count": 70
+    },
+    {
+      "method": "editor compared Japanese dialogue and original control sequence",
+      "changed": true,
+      "count": 66
+    },
+    {
+      "method": "editor compared Japanese location names and dialogue with the navigation wording",
+      "changed": false,
+      "count": 1
+    },
+    {
+      "method": "editor compared Japanese location names and dialogue with the navigation wording",
+      "changed": true,
+      "count": 164
+    },
+    {
+      "method": "editor compared Japanese source in scene",
+      "changed": false,
+      "count": 6932
+    },
+    {
+      "method": "editor compared Japanese source in scene",
+      "changed": true,
+      "count": 10286
+    },
+    {
+      "method": "editor compared complete repeated Japanese and Chinese lines",
+      "changed": false,
+      "count": 7637
+    },
+    {
+      "method": "editor compared complete repeated Japanese and Chinese lines",
+      "changed": true,
+      "count": 11175
+    },
+    {
+      "method": "editor compared handheld computer name with the Japanese and item menu",
+      "changed": false,
+      "count": 2
+    },
+    {
+      "method": "editor compared handheld computer name with the Japanese and item menu",
+      "changed": true,
+      "count": 28
+    },
+    {
+      "method": "editor compared matching dialogue and both neighbours in protagonist script variants",
+      "changed": false,
+      "count": 26
+    },
+    {
+      "method": "editor compared matching dialogue and both neighbours in protagonist script variants",
+      "changed": true,
+      "count": 158
+    },
+    {
+      "method": "editor compared short Japanese and Chinese dialogue",
+      "changed": false,
+      "count": 563
+    },
+    {
+      "method": "editor compared short Japanese and Chinese dialogue",
+      "changed": true,
+      "count": 968
+    },
+    {
+      "method": "editor confirmed originally empty dialogue slot",
+      "changed": false,
+      "count": 1
+    },
+    {
+      "method": "editor matched identical source, original Chinese and adjacent dialogue in parallel scene",
+      "changed": true,
+      "count": 28
+    },
+    {
+      "method": "independent HY-MT translation checked against Japanese and neighbours",
+      "changed": true,
+      "count": 5
+    },
+    {
+      "method": "independent visual-novel scene rendering reconciled with the Japanese",
+      "changed": false,
+      "count": 23
+    },
+    {
+      "method": "independent visual-novel scene rendering reconciled with the Japanese",
+      "changed": true,
+      "count": 26
+    },
+    {
+      "method": "retained after explicit Japanese scene and Chinese comparison",
+      "changed": false,
+      "count": 404
+    },
+    {
+      "method": "scene retranslation adjudicated against Japanese by two bilingual readers",
+      "changed": false,
+      "count": 36
+    },
+    {
+      "method": "scene retranslation adjudicated against Japanese by two bilingual readers",
+      "changed": true,
+      "count": 16
+    },
+    {
+      "method": "scene-order Japanese edit with individual independent source confirmation",
+      "changed": false,
+      "count": 4
+    },
+    {
+      "method": "silence/punctuation checked as exact pair",
+      "changed": false,
+      "count": 7977
+    },
+    {
+      "method": "two independent bilingual readings retained the existing Chinese",
+      "changed": false,
+      "count": 17207
+    },
+    {
+      "method": "two independent bilingual readings retained the existing Chinese",
+      "changed": true,
+      "count": 2
+    },
+    {
+      "method": "two-stage local JP/CN review",
+      "changed": false,
+      "count": 18678
+    },
+    {
+      "method": "two-stage local JP/CN review",
+      "changed": true,
+      "count": 6
+    }
+  ]
+}

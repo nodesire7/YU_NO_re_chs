@@ -7,15 +7,15 @@
 * 发布/交流：**BBS.GBTGAME.ME**
 * 原工程：<https://github.com/nodesire7/YU_NO_re_chs>（HIllya51）
 
-**下载补丁：** [v1.3.3 发布页](https://github.com/nodesire7/YU_NO_re_chs/releases/tag/v1.3.3)（含安装/卸载脚本与 SHA256）。
+**下载补丁**　[v1.4.0 发布页](https://github.com/nodesire7/YU_NO_re_chs/releases/tag/v1.4.0)，内含 GBTGames 中文安装器、ZIP 包和 SHA-256。
 
 ## 当前汉化状态
 
-> v1.3.3 全稿扫描 95,559 行，对照日文核查 342 组长句并批量修改 937 行，涵盖错译、异常空格与标点。自动检查、逐句校对和实机覆盖分开记录：见 [本轮校对报告](docs/text_audit_v1.3.3.md)、[实机记录](docs/text_runtime_v1.3.3.md) 和 [当前进度](docs/STATUS.md)。
+> 本轮逐条对照日文原稿核完 83,407 处对白，其中 23,256 处修改译文，60,151 处保留。直接编辑和重复台词核对覆盖 38,354 处，本地模型辅助比对覆盖 37,076 处，另有 7,977 处为原文停顿、沉默和标点的精确匹配。 [校对明细](localization/reviews/v1.4.0) · [项目进度](docs/STATUS.md)
 
 | 模块 | 状态 |
 | --- | --- |
-| 剧情文本（886 个 .scx） | ✅ 官方中文主体 + 日文对照补翻/校订；95,559 行结构验证通过；旧待校清单归零，尚未全稿逐句精校 |
+| 剧情文本（886 个 .scx） | ✅ 官方中文主体 + 日文对照补翻/校订；95,559 行结构验证通过；本版完成剩余 83,407 处对白的日文对照校订 |
 | 字体 | ✅ 正文 = 霞鹜文楷（LXGW WenKai）；标题/菜单图 = 思源宋体 |
 | 标题菜单 / LOGO 页 | ✅ 开始游戏 / 设置 / 帮助 / 退出游戏 / 按任意键开始 |
 | 游戏内菜单（历史记录/设置/帮助/存档/返回标题/退出） | ✅ |
@@ -79,11 +79,12 @@ cl /O2 /MT /EHsc /std:c++17 /DUNICODE /D_UNICODE /LD patch\patch.cpp patch\lib\I
 ```bat
 python tools\localize_text.py prepare --localization localization --out work\localization_zh
 python tools\build_all.py --install
-python tools\package_release.py --version 1.3.4-local
-python tools\verify_release.py
+python tools\package_release.py --version 1.4.0
+python tools\build_installer.py --version 1.4.0 --compiler "C:\Program Files (x86)\NSIS\makensis.exe"
+python tools\verify_release.py --version 1.4.0
 ```
 
-默认构建直接采用已校订的整稿，正文与数字使用霞鹜文楷。工具统一编码打包，并将全部脚本解包回读，与整稿逐行比较后安装。构建环境仍需要原游戏素材、字库生成器和 `work/extract`、`work/ref` 的原始资源；仓库和发行包不包含完整游戏。
+构建安装器时请将 --compiler 指向本机 NSIS 3 的 makensis.exe。默认构建直接采用已校订的整稿，正文、数字和标点使用霞鹜文楷。工具统一编码打包，并将全部脚本解包回读，与整稿逐行比较后安装。构建环境仍需要原游戏素材、字库生成器和 `work/extract`、`work/ref` 的原始资源；仓库和发行包不包含完整游戏。
 
 如需重新从游戏提取一份独立对照稿：
 
@@ -91,7 +92,7 @@ python tools\verify_release.py
 python tools\localize_text.py extract --chinese alltexts\zh --out work\new_localization
 ```
 
-本次逐条核对的是此前剩余的机翻标记和漏译条目；官方中文主体同时经过全稿格式、术语、残留、动态变量检查，不表示 95,559 行都重新翻译或全部路线实玩。结果见 `localization/verification.json`。
+本次新增的 83,407 处核对记录位于 `localization/reviews/v1.4.0`。其中 changes.jsonl 逐处列出日文、旧译和定稿，coverage.jsonl.gz 也记录保留原译的位置。构建、字体及安装器检查结果见 `localization/verification.json`。
 
 ### 构建工具
 

@@ -1,0 +1,5704 @@
+{
+  "_yunosys.scx.txt": {
+    "checked": 14,
+    "changed": 11,
+    "editor_compared": 14
+  },
+  "clrflg.scx.txt": {
+    "checked": 12,
+    "changed": 0,
+    "editor_compared": 12
+  },
+  "macrosys2.scx.txt": {
+    "checked": 20,
+    "changed": 17,
+    "editor_compared": 20
+  },
+  "yns_01.scx.txt": {
+    "checked": 124,
+    "changed": 33,
+    "editor_compared": 102,
+    "punctuation": 22
+  },
+  "yns_01_01.scx.txt": {
+    "checked": 213,
+    "changed": 69,
+    "model_assisted": 91,
+    "editor_compared": 104,
+    "punctuation": 18
+  },
+  "yns_01_01b.scx.txt": {
+    "checked": 59,
+    "changed": 22,
+    "model_assisted": 33,
+    "editor_compared": 23,
+    "punctuation": 3
+  },
+  "yns_01_01c.scx.txt": {
+    "checked": 45,
+    "changed": 5,
+    "model_assisted": 24,
+    "editor_compared": 8,
+    "punctuation": 13
+  },
+  "yns_01_01d.scx.txt": {
+    "checked": 23,
+    "changed": 10,
+    "model_assisted": 10,
+    "editor_compared": 12,
+    "punctuation": 1
+  },
+  "yns_01_01e.scx.txt": {
+    "checked": 68,
+    "changed": 19,
+    "model_assisted": 30,
+    "editor_compared": 23,
+    "punctuation": 15
+  },
+  "yns_01_01f.scx.txt": {
+    "checked": 35,
+    "changed": 11,
+    "model_assisted": 21,
+    "editor_compared": 13,
+    "punctuation": 1
+  },
+  "yns_01_01g.scx.txt": {
+    "checked": 37,
+    "changed": 12,
+    "model_assisted": 18,
+    "editor_compared": 14,
+    "punctuation": 5
+  },
+  "yns_01_02.scx.txt": {
+    "checked": 126,
+    "changed": 41,
+    "model_assisted": 64,
+    "editor_compared": 59,
+    "punctuation": 3
+  },
+  "yns_01_03.scx.txt": {
+    "checked": 57,
+    "changed": 15,
+    "model_assisted": 33,
+    "editor_compared": 17,
+    "punctuation": 7
+  },
+  "yns_01_04.scx.txt": {
+    "checked": 138,
+    "changed": 55,
+    "editor_compared": 61,
+    "model_assisted": 57,
+    "punctuation": 20
+  },
+  "yns_01i.scx.txt": {
+    "checked": 16,
+    "changed": 2,
+    "model_assisted": 6,
+    "editor_compared": 6,
+    "punctuation": 4
+  },
+  "yns_01i_2.scx.txt": {
+    "checked": 20,
+    "changed": 0,
+    "model_assisted": 9,
+    "editor_compared": 11
+  },
+  "yns_02.scx.txt": {
+    "checked": 182,
+    "changed": 58,
+    "editor_compared": 90,
+    "model_assisted": 71,
+    "punctuation": 21
+  },
+  "yns_02_01.scx.txt": {
+    "checked": 112,
+    "changed": 51,
+    "editor_compared": 95,
+    "model_assisted": 12,
+    "punctuation": 5
+  },
+  "yns_02_02.scx.txt": {
+    "checked": 330,
+    "changed": 119,
+    "editor_compared": 189,
+    "model_assisted": 116,
+    "punctuation": 25
+  },
+  "yns_02_03.scx.txt": {
+    "checked": 109,
+    "changed": 48,
+    "model_assisted": 43,
+    "punctuation": 5,
+    "editor_compared": 61
+  },
+  "yns_02i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "model_assisted": 1,
+    "editor_compared": 4,
+    "punctuation": 1
+  },
+  "yns_03.scx.txt": {
+    "checked": 22,
+    "changed": 4,
+    "punctuation": 3,
+    "model_assisted": 10,
+    "editor_compared": 9
+  },
+  "yns_0370i.scx.txt": {
+    "checked": 39,
+    "changed": 14,
+    "punctuation": 2,
+    "model_assisted": 18,
+    "editor_compared": 19
+  },
+  "yns_03_01.scx.txt": {
+    "checked": 117,
+    "changed": 37,
+    "punctuation": 3,
+    "model_assisted": 53,
+    "editor_compared": 61
+  },
+  "yns_03_01b.scx.txt": {
+    "checked": 38,
+    "changed": 20,
+    "model_assisted": 15,
+    "editor_compared": 21,
+    "punctuation": 2
+  },
+  "yns_03i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_04.scx.txt": {
+    "checked": 205,
+    "changed": 84,
+    "model_assisted": 89,
+    "editor_compared": 97,
+    "punctuation": 19
+  },
+  "yns_04_00.scx.txt": {
+    "checked": 13,
+    "changed": 9,
+    "editor_compared": 9,
+    "model_assisted": 4
+  },
+  "yns_04_01.scx.txt": {
+    "checked": 129,
+    "changed": 51,
+    "model_assisted": 50,
+    "editor_compared": 74,
+    "punctuation": 5
+  },
+  "yns_04i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_05.scx.txt": {
+    "checked": 318,
+    "changed": 110,
+    "editor_compared": 140,
+    "model_assisted": 135,
+    "punctuation": 43
+  },
+  "yns_05_01.scx.txt": {
+    "checked": 67,
+    "changed": 30,
+    "editor_compared": 35,
+    "model_assisted": 30,
+    "punctuation": 2
+  },
+  "yns_05_02.scx.txt": {
+    "checked": 92,
+    "changed": 44,
+    "model_assisted": 31,
+    "editor_compared": 53,
+    "punctuation": 8
+  },
+  "yns_05_03.scx.txt": {
+    "checked": 114,
+    "changed": 55,
+    "editor_compared": 66,
+    "model_assisted": 38,
+    "punctuation": 10
+  },
+  "yns_05_04.scx.txt": {
+    "checked": 111,
+    "changed": 43,
+    "model_assisted": 53,
+    "editor_compared": 52,
+    "punctuation": 6
+  },
+  "yns_05_05.scx.txt": {
+    "checked": 71,
+    "changed": 32,
+    "editor_compared": 38,
+    "model_assisted": 27,
+    "punctuation": 6
+  },
+  "yns_05i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_06.scx.txt": {
+    "checked": 137,
+    "changed": 52,
+    "model_assisted": 62,
+    "punctuation": 11,
+    "editor_compared": 64
+  },
+  "yns_06_01.scx.txt": {
+    "checked": 250,
+    "changed": 112,
+    "model_assisted": 121,
+    "editor_compared": 124,
+    "punctuation": 5
+  },
+  "yns_06_02.scx.txt": {
+    "checked": 125,
+    "changed": 45,
+    "editor_compared": 52,
+    "model_assisted": 59,
+    "punctuation": 14
+  },
+  "yns_06_03.scx.txt": {
+    "checked": 30,
+    "changed": 12,
+    "model_assisted": 12,
+    "editor_compared": 15,
+    "punctuation": 3
+  },
+  "yns_06i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_07.scx.txt": {
+    "checked": 288,
+    "changed": 108,
+    "punctuation": 27,
+    "editor_compared": 134,
+    "model_assisted": 127
+  },
+  "yns_07_01.scx.txt": {
+    "checked": 116,
+    "changed": 46,
+    "punctuation": 1,
+    "editor_compared": 54,
+    "model_assisted": 61
+  },
+  "yns_07_02.scx.txt": {
+    "checked": 27,
+    "changed": 9,
+    "punctuation": 2,
+    "editor_compared": 12,
+    "model_assisted": 13
+  },
+  "yns_07i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_08.scx.txt": {
+    "checked": 63,
+    "changed": 20,
+    "punctuation": 12,
+    "editor_compared": 25,
+    "model_assisted": 26
+  },
+  "yns_08_01.scx.txt": {
+    "checked": 200,
+    "changed": 63,
+    "model_assisted": 95,
+    "editor_compared": 87,
+    "punctuation": 18
+  },
+  "yns_08_02.scx.txt": {
+    "checked": 89,
+    "changed": 41,
+    "editor_compared": 51,
+    "model_assisted": 34,
+    "punctuation": 4
+  },
+  "yns_08_03.scx.txt": {
+    "checked": 106,
+    "changed": 52,
+    "model_assisted": 31,
+    "editor_compared": 66,
+    "punctuation": 9
+  },
+  "yns_08_04.scx.txt": {
+    "checked": 467,
+    "changed": 180,
+    "model_assisted": 188,
+    "editor_compared": 239,
+    "punctuation": 40
+  },
+  "yns_08_04i.scx.txt": {
+    "checked": 43,
+    "changed": 12,
+    "model_assisted": 24,
+    "punctuation": 4,
+    "editor_compared": 15
+  },
+  "yns_08_05.scx.txt": {
+    "checked": 213,
+    "changed": 69,
+    "editor_compared": 91,
+    "model_assisted": 93,
+    "punctuation": 29
+  },
+  "yns_08_06.scx.txt": {
+    "checked": 41,
+    "changed": 12,
+    "punctuation": 3,
+    "model_assisted": 15,
+    "editor_compared": 23
+  },
+  "yns_08i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_09.scx.txt": {
+    "checked": 303,
+    "changed": 102,
+    "model_assisted": 130,
+    "editor_compared": 142,
+    "punctuation": 31
+  },
+  "yns_0960i.scx.txt": {
+    "checked": 32,
+    "changed": 13,
+    "editor_compared": 22,
+    "model_assisted": 10
+  },
+  "yns_09_01.scx.txt": {
+    "checked": 159,
+    "changed": 89,
+    "punctuation": 8,
+    "editor_compared": 127,
+    "model_assisted": 24
+  },
+  "yns_09_02.scx.txt": {
+    "checked": 184,
+    "changed": 82,
+    "editor_compared": 114,
+    "model_assisted": 60,
+    "punctuation": 10
+  },
+  "yns_09_03.scx.txt": {
+    "checked": 161,
+    "changed": 55,
+    "model_assisted": 66,
+    "editor_compared": 82,
+    "punctuation": 13
+  },
+  "yns_09_04.scx.txt": {
+    "checked": 157,
+    "changed": 45,
+    "editor_compared": 60,
+    "punctuation": 13,
+    "model_assisted": 84
+  },
+  "yns_09_05.scx.txt": {
+    "checked": 63,
+    "changed": 23,
+    "model_assisted": 32,
+    "editor_compared": 31
+  },
+  "yns_09_05i.scx.txt": {
+    "checked": 28,
+    "changed": 18,
+    "editor_compared": 19,
+    "model_assisted": 9
+  },
+  "yns_09i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_10.scx.txt": {
+    "checked": 74,
+    "changed": 19,
+    "model_assisted": 36,
+    "editor_compared": 31,
+    "punctuation": 7
+  },
+  "yns_10_01.scx.txt": {
+    "checked": 86,
+    "changed": 21,
+    "model_assisted": 42,
+    "punctuation": 7,
+    "editor_compared": 37
+  },
+  "yns_10_02.scx.txt": {
+    "checked": 68,
+    "changed": 35,
+    "model_assisted": 11,
+    "editor_compared": 53,
+    "punctuation": 4
+  },
+  "yns_10_03.scx.txt": {
+    "checked": 123,
+    "changed": 38,
+    "editor_compared": 56,
+    "model_assisted": 58,
+    "punctuation": 9
+  },
+  "yns_10_04.scx.txt": {
+    "checked": 26,
+    "changed": 9,
+    "model_assisted": 12,
+    "editor_compared": 13,
+    "punctuation": 1
+  },
+  "yns_10_05.scx.txt": {
+    "checked": 144,
+    "changed": 55,
+    "editor_compared": 72,
+    "punctuation": 13,
+    "model_assisted": 59
+  },
+  "yns_10i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_12i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_13i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_14i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_15i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_16.scx.txt": {
+    "checked": 235,
+    "changed": 61,
+    "punctuation": 36,
+    "model_assisted": 124,
+    "editor_compared": 75
+  },
+  "yns_16_01.scx.txt": {
+    "checked": 177,
+    "changed": 48,
+    "editor_compared": 61,
+    "model_assisted": 104,
+    "punctuation": 12
+  },
+  "yns_16_02.scx.txt": {
+    "checked": 127,
+    "changed": 28,
+    "model_assisted": 82,
+    "editor_compared": 39,
+    "punctuation": 6
+  },
+  "yns_16_03.scx.txt": {
+    "checked": 56,
+    "changed": 14,
+    "punctuation": 5,
+    "model_assisted": 32,
+    "editor_compared": 19
+  },
+  "yns_16i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_17.scx.txt": {
+    "checked": 12,
+    "changed": 3,
+    "model_assisted": 4,
+    "editor_compared": 5,
+    "punctuation": 3
+  },
+  "yns_17_01.scx.txt": {
+    "checked": 196,
+    "changed": 47,
+    "model_assisted": 112,
+    "editor_compared": 60,
+    "punctuation": 24
+  },
+  "yns_17_01i.scx.txt": {
+    "checked": 28,
+    "changed": 8,
+    "model_assisted": 13,
+    "editor_compared": 12,
+    "punctuation": 3
+  },
+  "yns_17_02.scx.txt": {
+    "checked": 108,
+    "changed": 22,
+    "model_assisted": 57,
+    "editor_compared": 37,
+    "punctuation": 14
+  },
+  "yns_17_03.scx.txt": {
+    "checked": 108,
+    "changed": 35,
+    "punctuation": 3,
+    "editor_compared": 42,
+    "model_assisted": 63
+  },
+  "yns_18.scx.txt": {
+    "checked": 83,
+    "changed": 19,
+    "punctuation": 10,
+    "model_assisted": 42,
+    "editor_compared": 31
+  },
+  "yns_18_01.scx.txt": {
+    "checked": 56,
+    "changed": 21,
+    "editor_compared": 32,
+    "model_assisted": 21,
+    "punctuation": 3
+  },
+  "yns_18_01b.scx.txt": {
+    "checked": 47,
+    "changed": 15,
+    "editor_compared": 25,
+    "model_assisted": 20,
+    "punctuation": 2
+  },
+  "yns_18_02.scx.txt": {
+    "checked": 70,
+    "changed": 30,
+    "model_assisted": 29,
+    "punctuation": 4,
+    "editor_compared": 37
+  },
+  "yns_18_03.scx.txt": {
+    "checked": 93,
+    "changed": 38,
+    "punctuation": 1,
+    "model_assisted": 23,
+    "editor_compared": 69
+  },
+  "yns_18i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_19.scx.txt": {
+    "checked": 46,
+    "changed": 11,
+    "editor_compared": 16,
+    "model_assisted": 20,
+    "punctuation": 10
+  },
+  "yns_19_01.scx.txt": {
+    "checked": 32,
+    "changed": 10,
+    "editor_compared": 13,
+    "model_assisted": 18,
+    "punctuation": 1
+  },
+  "yns_19i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_20i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_21.scx.txt": {
+    "checked": 47,
+    "changed": 10,
+    "model_assisted": 26,
+    "editor_compared": 17,
+    "punctuation": 4
+  },
+  "yns_21_01.scx.txt": {
+    "checked": 198,
+    "changed": 69,
+    "punctuation": 13,
+    "model_assisted": 80,
+    "editor_compared": 105,
+    "speaker_revised": 2
+  },
+  "yns_21i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_22.scx.txt": {
+    "checked": 133,
+    "changed": 46,
+    "punctuation": 25,
+    "model_assisted": 36,
+    "editor_compared": 72
+  },
+  "yns_22_01.scx.txt": {
+    "checked": 38,
+    "changed": 16,
+    "editor_compared": 27,
+    "model_assisted": 8,
+    "punctuation": 3
+  },
+  "yns_22_01b.scx.txt": {
+    "checked": 33,
+    "changed": 14,
+    "editor_compared": 24,
+    "model_assisted": 6,
+    "punctuation": 3
+  },
+  "yns_22_02.scx.txt": {
+    "checked": 75,
+    "changed": 26,
+    "editor_compared": 49,
+    "punctuation": 10,
+    "model_assisted": 16
+  },
+  "yns_22i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_23i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_24.scx.txt": {
+    "checked": 84,
+    "changed": 23,
+    "model_assisted": 34,
+    "punctuation": 11,
+    "editor_compared": 39
+  },
+  "yns_24_01.scx.txt": {
+    "checked": 116,
+    "changed": 50,
+    "editor_compared": 60,
+    "model_assisted": 46,
+    "punctuation": 10
+  },
+  "yns_24_02.scx.txt": {
+    "checked": 120,
+    "changed": 51,
+    "model_assisted": 48,
+    "punctuation": 9,
+    "editor_compared": 63
+  },
+  "yns_24_03.scx.txt": {
+    "checked": 178,
+    "changed": 122,
+    "editor_compared": 162,
+    "punctuation": 11,
+    "model_assisted": 5
+  },
+  "yns_24i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_25.scx.txt": {
+    "checked": 37,
+    "changed": 11,
+    "punctuation": 7,
+    "model_assisted": 22,
+    "editor_compared": 8
+  },
+  "yns_25_01.scx.txt": {
+    "checked": 50,
+    "changed": 12,
+    "model_assisted": 25,
+    "editor_compared": 16,
+    "punctuation": 9
+  },
+  "yns_25_02.scx.txt": {
+    "checked": 284,
+    "changed": 153,
+    "editor_compared": 206,
+    "model_assisted": 55,
+    "punctuation": 23
+  },
+  "yns_25_02i.scx.txt": {
+    "checked": 32,
+    "changed": 10,
+    "model_assisted": 18,
+    "punctuation": 2,
+    "editor_compared": 12
+  },
+  "yns_25_03.scx.txt": {
+    "checked": 107,
+    "changed": 52,
+    "editor_compared": 73,
+    "model_assisted": 34
+  },
+  "yns_25i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_26i.scx.txt": {
+    "checked": 61,
+    "changed": 13,
+    "editor_compared": 20,
+    "model_assisted": 27,
+    "punctuation": 14
+  },
+  "yns_27.scx.txt": {
+    "checked": 17,
+    "changed": 2,
+    "editor_compared": 5,
+    "model_assisted": 10,
+    "punctuation": 2
+  },
+  "yns_27_01.scx.txt": {
+    "checked": 97,
+    "changed": 47,
+    "editor_compared": 65,
+    "model_assisted": 22,
+    "punctuation": 10
+  },
+  "yns_27i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_28.scx.txt": {
+    "checked": 27,
+    "changed": 8,
+    "punctuation": 7,
+    "model_assisted": 10,
+    "editor_compared": 10
+  },
+  "yns_28_01.scx.txt": {
+    "checked": 75,
+    "changed": 15,
+    "editor_compared": 26,
+    "model_assisted": 42,
+    "punctuation": 7
+  },
+  "yns_29.scx.txt": {
+    "checked": 68,
+    "changed": 11,
+    "model_assisted": 39,
+    "punctuation": 11,
+    "editor_compared": 18
+  },
+  "yns_29_01.scx.txt": {
+    "checked": 40,
+    "changed": 5,
+    "model_assisted": 27,
+    "editor_compared": 10,
+    "punctuation": 3
+  },
+  "yns_29_02.scx.txt": {
+    "checked": 67,
+    "changed": 20,
+    "editor_compared": 27,
+    "punctuation": 6,
+    "model_assisted": 34
+  },
+  "yns_29_03.scx.txt": {
+    "checked": 36,
+    "changed": 12,
+    "punctuation": 3,
+    "model_assisted": 18,
+    "editor_compared": 15
+  },
+  "yns_29_04.scx.txt": {
+    "checked": 22,
+    "changed": 4,
+    "model_assisted": 16,
+    "editor_compared": 6
+  },
+  "yns_29i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_30.scx.txt": {
+    "checked": 69,
+    "changed": 16,
+    "punctuation": 20,
+    "model_assisted": 22,
+    "editor_compared": 27
+  },
+  "yns_30_01.scx.txt": {
+    "checked": 42,
+    "changed": 3,
+    "punctuation": 4,
+    "editor_compared": 9,
+    "model_assisted": 29
+  },
+  "yns_30_02.scx.txt": {
+    "checked": 79,
+    "changed": 17,
+    "model_assisted": 49,
+    "editor_compared": 27,
+    "punctuation": 3
+  },
+  "yns_30_03.scx.txt": {
+    "checked": 167,
+    "changed": 31,
+    "model_assisted": 104,
+    "editor_compared": 50,
+    "punctuation": 13
+  },
+  "yns_30_04.scx.txt": {
+    "checked": 263,
+    "changed": 45,
+    "model_assisted": 164,
+    "editor_compared": 74,
+    "punctuation": 25
+  },
+  "yns_30_05.scx.txt": {
+    "checked": 59,
+    "changed": 15,
+    "punctuation": 5,
+    "model_assisted": 34,
+    "editor_compared": 20
+  },
+  "yns_30_06.scx.txt": {
+    "checked": 27,
+    "changed": 5,
+    "punctuation": 2,
+    "model_assisted": 20,
+    "editor_compared": 5
+  },
+  "yns_30i.scx.txt": {
+    "checked": 58,
+    "changed": 9,
+    "model_assisted": 34,
+    "editor_compared": 16,
+    "punctuation": 8
+  },
+  "yns_31.scx.txt": {
+    "checked": 110,
+    "changed": 22,
+    "editor_compared": 33,
+    "punctuation": 20,
+    "model_assisted": 57
+  },
+  "yns_31_01.scx.txt": {
+    "checked": 99,
+    "changed": 26,
+    "editor_compared": 33,
+    "model_assisted": 56,
+    "punctuation": 10
+  },
+  "yns_31_02.scx.txt": {
+    "checked": 35,
+    "changed": 16,
+    "editor_compared": 21,
+    "model_assisted": 12,
+    "punctuation": 2
+  },
+  "yns_31_02b.scx.txt": {
+    "checked": 16,
+    "changed": 5,
+    "model_assisted": 10,
+    "punctuation": 1,
+    "editor_compared": 5
+  },
+  "yns_31_03.scx.txt": {
+    "checked": 144,
+    "changed": 41,
+    "model_assisted": 88,
+    "editor_compared": 47,
+    "punctuation": 9
+  },
+  "yns_31_04.scx.txt": {
+    "checked": 28,
+    "changed": 13,
+    "model_assisted": 10,
+    "editor_compared": 18
+  },
+  "yns_31_05.scx.txt": {
+    "checked": 34,
+    "changed": 17,
+    "punctuation": 4,
+    "editor_compared": 24,
+    "model_assisted": 6
+  },
+  "yns_31_06.scx.txt": {
+    "checked": 118,
+    "changed": 27,
+    "model_assisted": 71,
+    "editor_compared": 34,
+    "punctuation": 13
+  },
+  "yns_31_07.scx.txt": {
+    "checked": 20,
+    "changed": 10,
+    "editor_compared": 15,
+    "model_assisted": 5
+  },
+  "yns_31i.scx.txt": {
+    "checked": 26,
+    "changed": 21,
+    "editor_compared": 24,
+    "punctuation": 2
+  },
+  "yns_32.scx.txt": {
+    "checked": 58,
+    "changed": 18,
+    "punctuation": 10,
+    "editor_compared": 23,
+    "model_assisted": 25
+  },
+  "yns_32_01.scx.txt": {
+    "checked": 79,
+    "changed": 29,
+    "model_assisted": 29,
+    "punctuation": 5,
+    "editor_compared": 45
+  },
+  "yns_32_02.scx.txt": {
+    "checked": 61,
+    "changed": 6,
+    "punctuation": 9,
+    "model_assisted": 33,
+    "editor_compared": 19
+  },
+  "yns_32_03.scx.txt": {
+    "checked": 118,
+    "changed": 26,
+    "model_assisted": 72,
+    "editor_compared": 36,
+    "punctuation": 10
+  },
+  "yns_32_04.scx.txt": {
+    "checked": 467,
+    "changed": 89,
+    "editor_compared": 155,
+    "model_assisted": 259,
+    "punctuation": 53
+  },
+  "yns_32i.scx.txt": {
+    "checked": 10,
+    "changed": 1,
+    "model_assisted": 4,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_33.scx.txt": {
+    "checked": 6,
+    "changed": 0,
+    "editor_compared": 3,
+    "punctuation": 3
+  },
+  "yns_33_01.scx.txt": {
+    "checked": 39,
+    "changed": 13,
+    "editor_compared": 20,
+    "model_assisted": 16,
+    "punctuation": 3
+  },
+  "yns_33_02.scx.txt": {
+    "checked": 41,
+    "changed": 19,
+    "editor_compared": 30,
+    "punctuation": 6,
+    "model_assisted": 5
+  },
+  "yns_33i.scx.txt": {
+    "checked": 7,
+    "changed": 1,
+    "model_assisted": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_34i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_35.scx.txt": {
+    "checked": 35,
+    "changed": 7,
+    "model_assisted": 16,
+    "punctuation": 6,
+    "editor_compared": 13
+  },
+  "yns_35_01.scx.txt": {
+    "checked": 44,
+    "changed": 29,
+    "editor_compared": 42,
+    "punctuation": 1,
+    "model_assisted": 1
+  },
+  "yns_35_02.scx.txt": {
+    "checked": 84,
+    "changed": 20,
+    "editor_compared": 33,
+    "model_assisted": 42,
+    "punctuation": 9
+  },
+  "yns_35i.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "punctuation": 2,
+    "editor_compared": 4
+  },
+  "yns_36i.scx.txt": {
+    "checked": 75,
+    "changed": 16,
+    "model_assisted": 39,
+    "editor_compared": 23,
+    "punctuation": 13
+  },
+  "yns_a02.scx.txt": {
+    "checked": 3,
+    "changed": 2,
+    "model_assisted": 1,
+    "editor_compared": 2
+  },
+  "yns_a02_01.scx.txt": {
+    "checked": 109,
+    "changed": 51,
+    "editor_compared": 96,
+    "model_assisted": 10,
+    "punctuation": 3
+  },
+  "yns_a04.scx.txt": {
+    "checked": 3,
+    "changed": 1,
+    "model_assisted": 2,
+    "editor_compared": 1
+  },
+  "yns_a04_01.scx.txt": {
+    "checked": 46,
+    "changed": 18,
+    "editor_compared": 24,
+    "model_assisted": 20,
+    "punctuation": 2
+  },
+  "yns_a18.scx.txt": {
+    "checked": 5,
+    "changed": 0,
+    "model_assisted": 2,
+    "editor_compared": 2,
+    "punctuation": 1
+  },
+  "yns_a18_01.scx.txt": {
+    "checked": 46,
+    "changed": 14,
+    "editor_compared": 29,
+    "punctuation": 2,
+    "model_assisted": 15
+  },
+  "yns_a22.scx.txt": {
+    "checked": 29,
+    "changed": 3,
+    "editor_compared": 9,
+    "punctuation": 7,
+    "model_assisted": 13
+  },
+  "yns_a22_01.scx.txt": {
+    "checked": 45,
+    "changed": 10,
+    "editor_compared": 19,
+    "model_assisted": 19,
+    "punctuation": 7
+  },
+  "yns_a33.scx.txt": {
+    "checked": 2,
+    "changed": 0,
+    "editor_compared": 1,
+    "punctuation": 1
+  },
+  "yns_a33_01.scx.txt": {
+    "checked": 1,
+    "changed": 0,
+    "punctuation": 1
+  },
+  "yns_a34_01.scx.txt": {
+    "checked": 100,
+    "changed": 27,
+    "editor_compared": 39,
+    "model_assisted": 53,
+    "punctuation": 8
+  },
+  "yns_a34_02.scx.txt": {
+    "checked": 73,
+    "changed": 19,
+    "editor_compared": 30,
+    "model_assisted": 38,
+    "punctuation": 5
+  },
+  "yns_a34_03.scx.txt": {
+    "checked": 6,
+    "changed": 0,
+    "model_assisted": 3,
+    "punctuation": 2,
+    "editor_compared": 1
+  },
+  "yns_a_01.scx.txt": {
+    "checked": 6,
+    "changed": 1,
+    "model_assisted": 3,
+    "editor_compared": 3
+  },
+  "yns_a_01_01.scx.txt": {
+    "checked": 27,
+    "changed": 9,
+    "model_assisted": 11,
+    "editor_compared": 15,
+    "punctuation": 1
+  },
+  "yns_a_02.scx.txt": {
+    "checked": 2,
+    "changed": 0,
+    "punctuation": 1,
+    "model_assisted": 1
+  },
+  "yns_a_02_01.scx.txt": {
+    "checked": 13,
+    "changed": 8,
+    "punctuation": 1,
+    "editor_compared": 10,
+    "model_assisted": 2
+  },
+  "yns_a_03.scx.txt": {
+    "checked": 2,
+    "changed": 1,
+    "editor_compared": 2
+  },
+  "yns_a_03_01.scx.txt": {
+    "checked": 11,
+    "changed": 5,
+    "editor_compared": 9,
+    "model_assisted": 2
+  },
+  "yns_a_04.scx.txt": {
+    "checked": 2,
+    "changed": 0,
+    "model_assisted": 2
+  },
+  "yns_a_04_01.scx.txt": {
+    "checked": 19,
+    "changed": 5,
+    "punctuation": 5,
+    "model_assisted": 5,
+    "editor_compared": 9
+  },
+  "yns_a_05.scx.txt": {
+    "checked": 4,
+    "changed": 1,
+    "punctuation": 1,
+    "model_assisted": 2,
+    "editor_compared": 1
+  },
+  "yns_a_05_01.scx.txt": {
+    "checked": 14,
+    "changed": 8,
+    "editor_compared": 11,
+    "model_assisted": 3
+  },
+  "yns_a_06.scx.txt": {
+    "checked": 2,
+    "changed": 0,
+    "model_assisted": 1,
+    "editor_compared": 1
+  },
+  "yns_a_06_01.scx.txt": {
+    "checked": 12,
+    "changed": 5,
+    "model_assisted": 1,
+    "editor_compared": 11
+  },
+  "yns_a_07.scx.txt": {
+    "checked": 1,
+    "changed": 0,
+    "editor_compared": 1
+  },
+  "yns_a_07_01.scx.txt": {
+    "checked": 12,
+    "changed": 6,
+    "editor_compared": 12
+  },
+  "yns_a_08.scx.txt": {
+    "checked": 1,
+    "changed": 0,
+    "editor_compared": 1
+  },
+  "yns_a_08_01.scx.txt": {
+    "checked": 11,
+    "changed": 5,
+    "editor_compared": 9,
+    "model_assisted": 1,
+    "punctuation": 1
+  },
+  "yns_a_09.scx.txt": {
+    "checked": 3,
+    "changed": 1,
+    "punctuation": 1,
+    "editor_compared": 1,
+    "model_assisted": 1
+  },
+  "yns_a_09_01.scx.txt": {
+    "checked": 14,
+    "changed": 7,
+    "punctuation": 1,
+    "editor_compared": 13
+  },
+  "yns_a_10.scx.txt": {
+    "checked": 2,
+    "changed": 1,
+    "editor_compared": 2
+  },
+  "yns_a_10_01.scx.txt": {
+    "checked": 12,
+    "changed": 6,
+    "editor_compared": 12
+  },
+  "yns_a_11.scx.txt": {
+    "checked": 2,
+    "changed": 1,
+    "editor_compared": 2
+  },
+  "yns_a_11_01.scx.txt": {
+    "checked": 13,
+    "changed": 7,
+    "editor_compared": 13
+  },
+  "yns_a_12.scx.txt": {
+    "checked": 3,
+    "changed": 0,
+    "punctuation": 1,
+    "model_assisted": 1,
+    "editor_compared": 1
+  },
+  "yns_a_12_01.scx.txt": {
+    "checked": 11,
+    "changed": 5,
+    "punctuation": 1,
+    "editor_compared": 9,
+    "model_assisted": 1
+  },
+  "yns_a_13.scx.txt": {
+    "checked": 28,
+    "changed": 6,
+    "model_assisted": 13,
+    "editor_compared": 11,
+    "punctuation": 4
+  },
+  "yns_a_13_01.scx.txt": {
+    "checked": 97,
+    "changed": 30,
+    "model_assisted": 34,
+    "editor_compared": 50,
+    "punctuation": 13
+  },
+  "yns_a_13_02.scx.txt": {
+    "checked": 100,
+    "changed": 29,
+    "editor_compared": 36,
+    "punctuation": 8,
+    "model_assisted": 56
+  },
+  "yns_a_13_03.scx.txt": {
+    "checked": 47,
+    "changed": 11,
+    "model_assisted": 14,
+    "editor_compared": 26,
+    "punctuation": 7
+  },
+  "yns_a_13_04.scx.txt": {
+    "checked": 45,
+    "changed": 15,
+    "punctuation": 7,
+    "model_assisted": 8,
+    "editor_compared": 30
+  },
+  "yns_a_14.scx.txt": {
+    "checked": 1,
+    "changed": 0,
+    "model_assisted": 1
+  },
+  "yns_a_14_01.scx.txt": {
+    "checked": 8,
+    "changed": 3,
+    "editor_compared": 5,
+    "model_assisted": 3
+  },
+  "yns_b01i.scx.txt": {
+    "checked": 41,
+    "changed": 17,
+    "model_assisted": 19,
+    "punctuation": 2,
+    "editor_compared": 20
+  },
+  "yns_b03i.scx.txt": {
+    "checked": 42,
+    "changed": 12,
+    "model_assisted": 21,
+    "editor_compared": 20,
+    "punctuation": 1
+  },
+  "yns_b05i.scx.txt": {
+    "checked": 47,
+    "changed": 1,
+    "model_assisted": 25,
+    "punctuation": 12,
+    "editor_compared": 10
+  },
+  "yns_b07i.scx.txt": {
+    "checked": 56,
+    "changed": 13,
+    "model_assisted": 36,
+    "punctuation": 5,
+    "editor_compared": 15
+  },
+  "yns_b08i.scx.txt": {
+    "checked": 42,
+    "changed": 11,
+    "model_assisted": 24,
+    "editor_compared": 15,
+    "punctuation": 3
+  },
+  "yns_b09i.scx.txt": {
+    "checked": 30,
+    "changed": 4,
+    "model_assisted": 19,
+    "punctuation": 3,
+    "editor_compared": 8
+  },
+  "yns_b11i.scx.txt": {
+    "checked": 31,
+    "changed": 5,
+    "model_assisted": 16,
+    "punctuation": 3,
+    "editor_compared": 12
+  },
+  "yns_b12i.scx.txt": {
+    "checked": 28,
+    "changed": 9,
+    "editor_compared": 13,
+    "model_assisted": 12,
+    "punctuation": 3
+  },
+  "yns_b13i.scx.txt": {
+    "checked": 81,
+    "changed": 10,
+    "editor_compared": 26,
+    "model_assisted": 49,
+    "punctuation": 6
+  },
+  "yns_b16i.scx.txt": {
+    "checked": 95,
+    "changed": 24,
+    "model_assisted": 55,
+    "punctuation": 6,
+    "editor_compared": 34
+  },
+  "yns_b2end.scx.txt": {
+    "checked": 69,
+    "changed": 5,
+    "punctuation": 12,
+    "model_assisted": 41,
+    "editor_compared": 16
+  },
+  "yns_c01.scx.txt": {
+    "checked": 108,
+    "changed": 17,
+    "model_assisted": 66,
+    "editor_compared": 30,
+    "punctuation": 12
+  },
+  "yns_c01_01.scx.txt": {
+    "checked": 124,
+    "changed": 43,
+    "model_assisted": 55,
+    "editor_compared": 64,
+    "punctuation": 5
+  },
+  "yns_c01_01b.scx.txt": {
+    "checked": 50,
+    "changed": 15,
+    "model_assisted": 26,
+    "editor_compared": 18,
+    "punctuation": 6
+  },
+  "yns_c01_01c.scx.txt": {
+    "checked": 85,
+    "changed": 34,
+    "editor_compared": 50,
+    "model_assisted": 32,
+    "punctuation": 3
+  },
+  "yns_c01_02.scx.txt": {
+    "checked": 56,
+    "changed": 15,
+    "model_assisted": 32,
+    "editor_compared": 17,
+    "punctuation": 7
+  },
+  "yns_c02.scx.txt": {
+    "checked": 257,
+    "changed": 49,
+    "model_assisted": 127,
+    "punctuation": 35,
+    "editor_compared": 95
+  },
+  "yns_c02_01.scx.txt": {
+    "checked": 302,
+    "changed": 116,
+    "editor_compared": 205,
+    "punctuation": 17,
+    "model_assisted": 80
+  },
+  "yns_c02_01b.scx.txt": {
+    "checked": 243,
+    "changed": 107,
+    "model_assisted": 56,
+    "editor_compared": 173,
+    "punctuation": 14
+  },
+  "yns_c02_01c.scx.txt": {
+    "checked": 129,
+    "changed": 29,
+    "model_assisted": 64,
+    "editor_compared": 57,
+    "punctuation": 8
+  },
+  "yns_c02_01d.scx.txt": {
+    "checked": 40,
+    "changed": 14,
+    "editor_compared": 22,
+    "model_assisted": 14,
+    "punctuation": 4
+  },
+  "yns_c02_01e.scx.txt": {
+    "checked": 232,
+    "changed": 104,
+    "model_assisted": 48,
+    "punctuation": 15,
+    "editor_compared": 169
+  },
+  "yns_c02_02.scx.txt": {
+    "checked": 157,
+    "changed": 33,
+    "punctuation": 11,
+    "editor_compared": 55,
+    "model_assisted": 91
+  },
+  "yns_c02_02i.scx.txt": {
+    "checked": 31,
+    "changed": 7,
+    "model_assisted": 19,
+    "editor_compared": 11,
+    "punctuation": 1
+  },
+  "yns_c02_03.scx.txt": {
+    "checked": 106,
+    "changed": 11,
+    "punctuation": 9,
+    "model_assisted": 69,
+    "editor_compared": 28
+  },
+  "yns_c02_04.scx.txt": {
+    "checked": 471,
+    "changed": 78,
+    "editor_compared": 151,
+    "model_assisted": 273,
+    "punctuation": 47
+  },
+  "yns_c02_05.scx.txt": {
+    "checked": 321,
+    "changed": 66,
+    "model_assisted": 183,
+    "editor_compared": 99,
+    "punctuation": 39
+  },
+  "yns_c02_06.scx.txt": {
+    "checked": 151,
+    "changed": 31,
+    "model_assisted": 70,
+    "punctuation": 18,
+    "editor_compared": 63
+  },
+  "yns_c02_07.scx.txt": {
+    "checked": 114,
+    "changed": 28,
+    "editor_compared": 57,
+    "punctuation": 16,
+    "model_assisted": 41
+  },
+  "yns_c02_08.scx.txt": {
+    "checked": 318,
+    "changed": 62,
+    "editor_compared": 104,
+    "model_assisted": 179,
+    "punctuation": 35
+  },
+  "yns_c02_09.scx.txt": {
+    "checked": 237,
+    "changed": 43,
+    "editor_compared": 72,
+    "model_assisted": 120,
+    "punctuation": 45
+  },
+  "yns_c03.scx.txt": {
+    "checked": 19,
+    "changed": 3,
+    "model_assisted": 7,
+    "punctuation": 1,
+    "editor_compared": 11
+  },
+  "yns_c03_01.scx.txt": {
+    "checked": 125,
+    "changed": 39,
+    "model_assisted": 53,
+    "punctuation": 3,
+    "editor_compared": 69
+  },
+  "yns_c03_01b.scx.txt": {
+    "checked": 113,
+    "changed": 41,
+    "model_assisted": 42,
+    "editor_compared": 69,
+    "punctuation": 2
+  },
+  "yns_c03_01c.scx.txt": {
+    "checked": 115,
+    "changed": 41,
+    "model_assisted": 43,
+    "editor_compared": 70,
+    "punctuation": 2
+  },
+  "yns_c04.scx.txt": {
+    "checked": 164,
+    "changed": 61,
+    "model_assisted": 58,
+    "editor_compared": 91,
+    "punctuation": 15
+  },
+  "yns_c04_01.scx.txt": {
+    "checked": 187,
+    "changed": 52,
+    "model_assisted": 92,
+    "editor_compared": 88,
+    "punctuation": 7
+  },
+  "yns_c05.scx.txt": {
+    "checked": 364,
+    "changed": 118,
+    "editor_compared": 188,
+    "punctuation": 30,
+    "model_assisted": 146
+  },
+  "yns_c05_01.scx.txt": {
+    "checked": 147,
+    "changed": 39,
+    "editor_compared": 65,
+    "model_assisted": 73,
+    "punctuation": 9
+  },
+  "yns_c05_02.scx.txt": {
+    "checked": 116,
+    "changed": 56,
+    "editor_compared": 68,
+    "model_assisted": 38,
+    "punctuation": 10
+  },
+  "yns_c06.scx.txt": {
+    "checked": 123,
+    "changed": 37,
+    "editor_compared": 52,
+    "model_assisted": 54,
+    "punctuation": 17
+  },
+  "yns_c06_01.scx.txt": {
+    "checked": 249,
+    "changed": 99,
+    "editor_compared": 129,
+    "model_assisted": 116,
+    "punctuation": 4
+  },
+  "yns_c06_02.scx.txt": {
+    "checked": 129,
+    "changed": 21,
+    "editor_compared": 51,
+    "model_assisted": 70,
+    "punctuation": 8
+  },
+  "yns_c07.scx.txt": {
+    "checked": 187,
+    "changed": 47,
+    "model_assisted": 99,
+    "editor_compared": 74,
+    "punctuation": 14
+  },
+  "yns_c07_01.scx.txt": {
+    "checked": 115,
+    "changed": 38,
+    "editor_compared": 53,
+    "model_assisted": 61,
+    "punctuation": 1
+  },
+  "yns_c07_02.scx.txt": {
+    "checked": 164,
+    "changed": 45,
+    "model_assisted": 97,
+    "punctuation": 12,
+    "editor_compared": 55
+  },
+  "yns_c07_03.scx.txt": {
+    "checked": 103,
+    "changed": 39,
+    "model_assisted": 31,
+    "editor_compared": 58,
+    "punctuation": 14
+  },
+  "yns_c08.scx.txt": {
+    "checked": 73,
+    "changed": 13,
+    "model_assisted": 44,
+    "editor_compared": 23,
+    "punctuation": 6
+  },
+  "yns_c08_01.scx.txt": {
+    "checked": 125,
+    "changed": 46,
+    "model_assisted": 49,
+    "editor_compared": 69,
+    "punctuation": 7
+  },
+  "yns_c08_02.scx.txt": {
+    "checked": 92,
+    "changed": 42,
+    "editor_compared": 52,
+    "model_assisted": 36,
+    "punctuation": 4
+  },
+  "yns_c09.scx.txt": {
+    "checked": 55,
+    "changed": 7,
+    "editor_compared": 15,
+    "model_assisted": 34,
+    "punctuation": 6
+  },
+  "yns_c09_01.scx.txt": {
+    "checked": 95,
+    "changed": 53,
+    "model_assisted": 15,
+    "editor_compared": 78,
+    "punctuation": 2
+  },
+  "yns_c09_02.scx.txt": {
+    "checked": 211,
+    "changed": 81,
+    "editor_compared": 109,
+    "model_assisted": 84,
+    "punctuation": 18
+  },
+  "yns_c09_03.scx.txt": {
+    "checked": 60,
+    "changed": 16,
+    "editor_compared": 31,
+    "model_assisted": 26,
+    "punctuation": 3
+  },
+  "yns_c09_04.scx.txt": {
+    "checked": 12,
+    "changed": 7,
+    "punctuation": 2,
+    "editor_compared": 9,
+    "model_assisted": 1
+  },
+  "yns_c09_04b.scx.txt": {
+    "checked": 245,
+    "changed": 60,
+    "editor_compared": 96,
+    "punctuation": 23,
+    "model_assisted": 126
+  },
+  "yns_c10.scx.txt": {
+    "checked": 41,
+    "changed": 14,
+    "editor_compared": 19,
+    "model_assisted": 19,
+    "punctuation": 3
+  },
+  "yns_c10_01.scx.txt": {
+    "checked": 87,
+    "changed": 45,
+    "editor_compared": 68,
+    "model_assisted": 14,
+    "punctuation": 5
+  },
+  "yns_c10_02.scx.txt": {
+    "checked": 225,
+    "changed": 42,
+    "model_assisted": 143,
+    "editor_compared": 69,
+    "punctuation": 13
+  },
+  "yns_c18.scx.txt": {
+    "checked": 315,
+    "changed": 102,
+    "model_assisted": 117,
+    "editor_compared": 164,
+    "punctuation": 34
+  },
+  "yns_c18_01.scx.txt": {
+    "checked": 216,
+    "changed": 81,
+    "model_assisted": 84,
+    "editor_compared": 131,
+    "punctuation": 1
+  },
+  "yns_c18_02.scx.txt": {
+    "checked": 98,
+    "changed": 35,
+    "model_assisted": 43,
+    "punctuation": 5,
+    "editor_compared": 50
+  },
+  "yns_c19.scx.txt": {
+    "checked": 3,
+    "changed": 1,
+    "editor_compared": 1,
+    "punctuation": 1,
+    "model_assisted": 1
+  },
+  "yns_c19_01.scx.txt": {
+    "checked": 62,
+    "changed": 16,
+    "editor_compared": 21,
+    "punctuation": 4,
+    "model_assisted": 37
+  },
+  "yns_c20_02.scx.txt": {
+    "checked": 229,
+    "changed": 59,
+    "model_assisted": 132,
+    "punctuation": 24,
+    "editor_compared": 73
+  },
+  "yns_c21.scx.txt": {
+    "checked": 100,
+    "changed": 36,
+    "editor_compared": 69,
+    "model_assisted": 23,
+    "punctuation": 8
+  },
+  "yns_c21_01.scx.txt": {
+    "checked": 213,
+    "changed": 63,
+    "editor_compared": 126,
+    "model_assisted": 79,
+    "punctuation": 8,
+    "speaker_revised": 2
+  },
+  "yns_c22.scx.txt": {
+    "checked": 66,
+    "changed": 10,
+    "editor_compared": 25,
+    "model_assisted": 31,
+    "punctuation": 10
+  },
+  "yns_c22_01.scx.txt": {
+    "checked": 43,
+    "changed": 20,
+    "editor_compared": 32,
+    "model_assisted": 8,
+    "punctuation": 3
+  },
+  "yns_c22_02.scx.txt": {
+    "checked": 69,
+    "changed": 14,
+    "editor_compared": 23,
+    "model_assisted": 38,
+    "punctuation": 8
+  },
+  "yns_c22_03.scx.txt": {
+    "checked": 190,
+    "changed": 41,
+    "model_assisted": 97,
+    "editor_compared": 68,
+    "punctuation": 25
+  },
+  "yns_c22_04.scx.txt": {
+    "checked": 89,
+    "changed": 16,
+    "editor_compared": 29,
+    "model_assisted": 52,
+    "punctuation": 8
+  },
+  "yns_c24.scx.txt": {
+    "checked": 345,
+    "changed": 112,
+    "model_assisted": 132,
+    "editor_compared": 170,
+    "punctuation": 43
+  },
+  "yns_c24_01.scx.txt": {
+    "checked": 399,
+    "changed": 119,
+    "model_assisted": 182,
+    "editor_compared": 173,
+    "punctuation": 44
+  },
+  "yns_c24_02.scx.txt": {
+    "checked": 179,
+    "changed": 123,
+    "editor_compared": 164,
+    "punctuation": 11,
+    "model_assisted": 4
+  },
+  "yns_c24_03.scx.txt": {
+    "checked": 291,
+    "changed": 77,
+    "model_assisted": 164,
+    "editor_compared": 110,
+    "punctuation": 17
+  },
+  "yns_c24_04.scx.txt": {
+    "checked": 72,
+    "changed": 21,
+    "editor_compared": 28,
+    "model_assisted": 38,
+    "punctuation": 6
+  },
+  "yns_c24_05.scx.txt": {
+    "checked": 228,
+    "changed": 61,
+    "punctuation": 20,
+    "editor_compared": 77,
+    "model_assisted": 131
+  },
+  "yns_c24_06.scx.txt": {
+    "checked": 55,
+    "changed": 22,
+    "editor_compared": 28,
+    "punctuation": 10,
+    "model_assisted": 17
+  },
+  "yns_c25.scx.txt": {
+    "checked": 44,
+    "changed": 23,
+    "editor_compared": 32,
+    "punctuation": 7,
+    "model_assisted": 5
+  },
+  "yns_c25_01.scx.txt": {
+    "checked": 54,
+    "changed": 11,
+    "punctuation": 11,
+    "model_assisted": 26,
+    "editor_compared": 17
+  },
+  "yns_c25_02.scx.txt": {
+    "checked": 288,
+    "changed": 153,
+    "editor_compared": 208,
+    "model_assisted": 57,
+    "punctuation": 23
+  },
+  "yns_c25_03.scx.txt": {
+    "checked": 114,
+    "changed": 56,
+    "editor_compared": 77,
+    "model_assisted": 37
+  },
+  "yns_c26.scx.txt": {
+    "checked": 57,
+    "changed": 19,
+    "model_assisted": 23,
+    "punctuation": 10,
+    "editor_compared": 24
+  },
+  "yns_c26_01.scx.txt": {
+    "checked": 77,
+    "changed": 28,
+    "editor_compared": 45,
+    "model_assisted": 26,
+    "punctuation": 6
+  },
+  "yns_c26_02.scx.txt": {
+    "checked": 61,
+    "changed": 21,
+    "editor_compared": 38,
+    "model_assisted": 22,
+    "punctuation": 1
+  },
+  "yns_c26_03.scx.txt": {
+    "checked": 88,
+    "changed": 26,
+    "model_assisted": 39,
+    "editor_compared": 39,
+    "punctuation": 10
+  },
+  "yns_c27.scx.txt": {
+    "checked": 203,
+    "changed": 58,
+    "model_assisted": 69,
+    "editor_compared": 110,
+    "punctuation": 24
+  },
+  "yns_c27_01.scx.txt": {
+    "checked": 110,
+    "changed": 47,
+    "model_assisted": 39,
+    "editor_compared": 65,
+    "punctuation": 6
+  },
+  "yns_c27_02.scx.txt": {
+    "checked": 75,
+    "changed": 34,
+    "punctuation": 6,
+    "editor_compared": 51,
+    "model_assisted": 18
+  },
+  "yns_c27_03.scx.txt": {
+    "checked": 28,
+    "changed": 7,
+    "model_assisted": 16,
+    "editor_compared": 12
+  },
+  "yns_c27_04.scx.txt": {
+    "checked": 142,
+    "changed": 48,
+    "editor_compared": 61,
+    "model_assisted": 74,
+    "punctuation": 7
+  },
+  "yns_c28.scx.txt": {
+    "checked": 126,
+    "changed": 46,
+    "punctuation": 18,
+    "editor_compared": 75,
+    "model_assisted": 33
+  },
+  "yns_c28_01.scx.txt": {
+    "checked": 166,
+    "changed": 37,
+    "editor_compared": 60,
+    "model_assisted": 87,
+    "punctuation": 19
+  },
+  "yns_c28_02.scx.txt": {
+    "checked": 165,
+    "changed": 45,
+    "model_assisted": 80,
+    "editor_compared": 71,
+    "punctuation": 14
+  },
+  "yns_c28_03.scx.txt": {
+    "checked": 200,
+    "changed": 29,
+    "punctuation": 18,
+    "editor_compared": 63,
+    "model_assisted": 119
+  },
+  "yns_c28_04.scx.txt": {
+    "checked": 156,
+    "changed": 35,
+    "model_assisted": 92,
+    "editor_compared": 52,
+    "punctuation": 12
+  },
+  "yns_c2_end.scx.txt": {
+    "checked": 37,
+    "changed": 3,
+    "punctuation": 5,
+    "model_assisted": 21,
+    "editor_compared": 11
+  },
+  "yns_c33.scx.txt": {
+    "checked": 6,
+    "changed": 0,
+    "editor_compared": 3,
+    "punctuation": 3
+  },
+  "yns_c33_01.scx.txt": {
+    "checked": 40,
+    "changed": 20,
+    "editor_compared": 33,
+    "punctuation": 6,
+    "model_assisted": 1
+  },
+  "yns_c35.scx.txt": {
+    "checked": 36,
+    "changed": 6,
+    "model_assisted": 15,
+    "punctuation": 7,
+    "editor_compared": 14
+  },
+  "yns_c35_01.scx.txt": {
+    "checked": 46,
+    "changed": 29,
+    "editor_compared": 43,
+    "punctuation": 1,
+    "model_assisted": 2
+  },
+  "yns_c35_02.scx.txt": {
+    "checked": 86,
+    "changed": 22,
+    "editor_compared": 35,
+    "model_assisted": 41,
+    "punctuation": 10
+  },
+  "yns_c36.scx.txt": {
+    "checked": 82,
+    "changed": 13,
+    "model_assisted": 44,
+    "editor_compared": 23,
+    "punctuation": 15
+  },
+  "yns_c36_01.scx.txt": {
+    "checked": 188,
+    "changed": 46,
+    "model_assisted": 96,
+    "editor_compared": 76,
+    "punctuation": 16
+  },
+  "yns_c36_02.scx.txt": {
+    "checked": 138,
+    "changed": 31,
+    "punctuation": 15,
+    "editor_compared": 53,
+    "model_assisted": 70
+  },
+  "yns_c36_03.scx.txt": {
+    "checked": 96,
+    "changed": 27,
+    "model_assisted": 43,
+    "punctuation": 13,
+    "editor_compared": 40
+  },
+  "yns_c36_04.scx.txt": {
+    "checked": 111,
+    "changed": 29,
+    "punctuation": 14,
+    "editor_compared": 48,
+    "model_assisted": 49
+  },
+  "yns_c36_05.scx.txt": {
+    "checked": 226,
+    "changed": 53,
+    "model_assisted": 121,
+    "editor_compared": 82,
+    "punctuation": 23
+  },
+  "yns_c3_end.scx.txt": {
+    "checked": 41,
+    "changed": 6,
+    "model_assisted": 32,
+    "editor_compared": 8,
+    "punctuation": 1
+  },
+  "yns_c_end.scx.txt": {
+    "checked": 390,
+    "changed": 67,
+    "model_assisted": 211,
+    "editor_compared": 131,
+    "punctuation": 48
+  },
+  "yns_d01.scx.txt": {
+    "checked": 12,
+    "changed": 3,
+    "editor_compared": 9,
+    "model_assisted": 3
+  },
+  "yns_d01_01.scx.txt": {
+    "checked": 85,
+    "changed": 34,
+    "editor_compared": 54,
+    "model_assisted": 28,
+    "punctuation": 3
+  },
+  "yns_d02.scx.txt": {
+    "checked": 21,
+    "changed": 4,
+    "model_assisted": 9,
+    "editor_compared": 8,
+    "punctuation": 4
+  },
+  "yns_d02_01.scx.txt": {
+    "checked": 107,
+    "changed": 47,
+    "model_assisted": 8,
+    "editor_compared": 97,
+    "punctuation": 2
+  },
+  "yns_d02_02.scx.txt": {
+    "checked": 81,
+    "changed": 14,
+    "editor_compared": 22,
+    "model_assisted": 49,
+    "punctuation": 10
+  },
+  "yns_d03.scx.txt": {
+    "checked": 15,
+    "changed": 0,
+    "model_assisted": 7,
+    "editor_compared": 8
+  },
+  "yns_d03_01.scx.txt": {
+    "checked": 114,
+    "changed": 35,
+    "model_assisted": 47,
+    "editor_compared": 66,
+    "punctuation": 1
+  },
+  "yns_d03_01b.scx.txt": {
+    "checked": 37,
+    "changed": 18,
+    "model_assisted": 15,
+    "editor_compared": 20,
+    "punctuation": 2
+  },
+  "yns_d03_01c.scx.txt": {
+    "checked": 37,
+    "changed": 18,
+    "model_assisted": 15,
+    "editor_compared": 20,
+    "punctuation": 2
+  },
+  "yns_d04.scx.txt": {
+    "checked": 109,
+    "changed": 49,
+    "editor_compared": 67,
+    "punctuation": 11,
+    "model_assisted": 31
+  },
+  "yns_d04_01.scx.txt": {
+    "checked": 101,
+    "changed": 36,
+    "model_assisted": 39,
+    "editor_compared": 58,
+    "punctuation": 4
+  },
+  "yns_d05.scx.txt": {
+    "checked": 133,
+    "changed": 26,
+    "model_assisted": 63,
+    "editor_compared": 53,
+    "punctuation": 17
+  },
+  "yns_d05_01.scx.txt": {
+    "checked": 115,
+    "changed": 33,
+    "model_assisted": 60,
+    "editor_compared": 52,
+    "punctuation": 3
+  },
+  "yns_d06.scx.txt": {
+    "checked": 195,
+    "changed": 59,
+    "editor_compared": 99,
+    "punctuation": 23,
+    "model_assisted": 73
+  },
+  "yns_d06_01.scx.txt": {
+    "checked": 202,
+    "changed": 74,
+    "editor_compared": 102,
+    "model_assisted": 99,
+    "punctuation": 1
+  },
+  "yns_d06_02.scx.txt": {
+    "checked": 57,
+    "changed": 18,
+    "editor_compared": 20,
+    "punctuation": 4,
+    "model_assisted": 33
+  },
+  "yns_d07.scx.txt": {
+    "checked": 320,
+    "changed": 92,
+    "editor_compared": 151,
+    "model_assisted": 130,
+    "punctuation": 39
+  },
+  "yns_d07_01.scx.txt": {
+    "checked": 86,
+    "changed": 35,
+    "editor_compared": 47,
+    "model_assisted": 39
+  },
+  "yns_d08.scx.txt": {
+    "checked": 73,
+    "changed": 32,
+    "model_assisted": 12,
+    "editor_compared": 49,
+    "punctuation": 12
+  },
+  "yns_d08_01.scx.txt": {
+    "checked": 104,
+    "changed": 40,
+    "model_assisted": 37,
+    "editor_compared": 62,
+    "punctuation": 5
+  },
+  "yns_d08_02.scx.txt": {
+    "checked": 253,
+    "changed": 142,
+    "editor_compared": 167,
+    "model_assisted": 66,
+    "punctuation": 20
+  },
+  "yns_d08_03.scx.txt": {
+    "checked": 209,
+    "changed": 74,
+    "editor_compared": 105,
+    "model_assisted": 89,
+    "punctuation": 15
+  },
+  "yns_d08_04.scx.txt": {
+    "checked": 90,
+    "changed": 31,
+    "model_assisted": 40,
+    "punctuation": 3,
+    "editor_compared": 47
+  },
+  "yns_d09.scx.txt": {
+    "checked": 109,
+    "changed": 36,
+    "model_assisted": 32,
+    "editor_compared": 63,
+    "punctuation": 14
+  },
+  "yns_d09_01.scx.txt": {
+    "checked": 95,
+    "changed": 56,
+    "model_assisted": 11,
+    "editor_compared": 79,
+    "punctuation": 5
+  },
+  "yns_d09_02.scx.txt": {
+    "checked": 12,
+    "changed": 7,
+    "punctuation": 2,
+    "editor_compared": 9,
+    "model_assisted": 1
+  },
+  "yns_d09_02b.scx.txt": {
+    "checked": 242,
+    "changed": 58,
+    "editor_compared": 93,
+    "punctuation": 23,
+    "model_assisted": 126
+  },
+  "yns_d09_03.scx.txt": {
+    "checked": 301,
+    "changed": 59,
+    "editor_compared": 114,
+    "punctuation": 27,
+    "model_assisted": 160
+  },
+  "yns_d09_04.scx.txt": {
+    "checked": 488,
+    "changed": 88,
+    "model_assisted": 265,
+    "punctuation": 55,
+    "editor_compared": 168
+  },
+  "yns_d09_05.scx.txt": {
+    "checked": 120,
+    "changed": 25,
+    "editor_compared": 61,
+    "model_assisted": 47,
+    "punctuation": 12
+  },
+  "yns_d10.scx.txt": {
+    "checked": 72,
+    "changed": 34,
+    "model_assisted": 15,
+    "editor_compared": 49,
+    "punctuation": 8
+  },
+  "yns_d10_01.scx.txt": {
+    "checked": 69,
+    "changed": 38,
+    "model_assisted": 10,
+    "editor_compared": 56,
+    "punctuation": 3
+  },
+  "yns_d10_02.scx.txt": {
+    "checked": 55,
+    "changed": 7,
+    "editor_compared": 16,
+    "model_assisted": 29,
+    "punctuation": 10
+  },
+  "yns_d12.scx.txt": {
+    "checked": 147,
+    "changed": 40,
+    "editor_compared": 76,
+    "punctuation": 15,
+    "model_assisted": 56
+  },
+  "yns_d12_01.scx.txt": {
+    "checked": 108,
+    "changed": 14,
+    "editor_compared": 36,
+    "model_assisted": 66,
+    "punctuation": 6
+  },
+  "yns_d12b.scx.txt": {
+    "checked": 69,
+    "changed": 11,
+    "model_assisted": 38,
+    "editor_compared": 24,
+    "punctuation": 7
+  },
+  "yns_d13_01.scx.txt": {
+    "checked": 150,
+    "changed": 17,
+    "punctuation": 18,
+    "model_assisted": 82,
+    "editor_compared": 50
+  },
+  "yns_d13_02.scx.txt": {
+    "checked": 343,
+    "changed": 67,
+    "model_assisted": 180,
+    "editor_compared": 137,
+    "punctuation": 26
+  },
+  "yns_d16.scx.txt": {
+    "checked": 40,
+    "changed": 7,
+    "editor_compared": 14,
+    "model_assisted": 22,
+    "punctuation": 4
+  },
+  "yns_d16_01.scx.txt": {
+    "checked": 108,
+    "changed": 25,
+    "editor_compared": 40,
+    "model_assisted": 56,
+    "punctuation": 12
+  },
+  "yns_d17_01.scx.txt": {
+    "checked": 54,
+    "changed": 8,
+    "model_assisted": 36,
+    "punctuation": 5,
+    "editor_compared": 13
+  },
+  "yns_d17_02.scx.txt": {
+    "checked": 251,
+    "changed": 33,
+    "model_assisted": 167,
+    "editor_compared": 63,
+    "punctuation": 21
+  },
+  "yns_d18.scx.txt": {
+    "checked": 41,
+    "changed": 12,
+    "model_assisted": 21,
+    "editor_compared": 17,
+    "punctuation": 3
+  },
+  "yns_d18_01.scx.txt": {
+    "checked": 127,
+    "changed": 41,
+    "model_assisted": 43,
+    "editor_compared": 84
+  },
+  "yns_d18_02.scx.txt": {
+    "checked": 502,
+    "changed": 99,
+    "model_assisted": 276,
+    "punctuation": 45,
+    "editor_compared": 181
+  },
+  "yns_d21.scx.txt": {
+    "checked": 161,
+    "changed": 49,
+    "editor_compared": 83,
+    "punctuation": 19,
+    "model_assisted": 59
+  },
+  "yns_d21_01.scx.txt": {
+    "checked": 140,
+    "changed": 57,
+    "editor_compared": 86,
+    "model_assisted": 47,
+    "punctuation": 7,
+    "speaker_revised": 2
+  },
+  "yns_d22.scx.txt": {
+    "checked": 211,
+    "changed": 35,
+    "editor_compared": 84,
+    "model_assisted": 101,
+    "punctuation": 26
+  },
+  "yns_d22_01.scx.txt": {
+    "checked": 69,
+    "changed": 19,
+    "punctuation": 7,
+    "model_assisted": 22,
+    "editor_compared": 40
+  },
+  "yns_d22_02.scx.txt": {
+    "checked": 202,
+    "changed": 49,
+    "editor_compared": 89,
+    "model_assisted": 94,
+    "punctuation": 19
+  },
+  "yns_d22_03.scx.txt": {
+    "checked": 237,
+    "changed": 51,
+    "punctuation": 26,
+    "editor_compared": 83,
+    "model_assisted": 128
+  },
+  "yns_d22_04.scx.txt": {
+    "checked": 96,
+    "changed": 17,
+    "model_assisted": 51,
+    "punctuation": 14,
+    "editor_compared": 31
+  },
+  "yns_d22_05.scx.txt": {
+    "checked": 185,
+    "changed": 45,
+    "model_assisted": 94,
+    "punctuation": 17,
+    "editor_compared": 74
+  },
+  "yns_d22_06b.scx.txt": {
+    "checked": 53,
+    "changed": 8,
+    "model_assisted": 32,
+    "editor_compared": 18,
+    "punctuation": 3
+  },
+  "yns_d22_06c.scx.txt": {
+    "checked": 36,
+    "changed": 7,
+    "model_assisted": 19,
+    "editor_compared": 14,
+    "punctuation": 3
+  },
+  "yns_d24.scx.txt": {
+    "checked": 92,
+    "changed": 21,
+    "editor_compared": 38,
+    "model_assisted": 42,
+    "punctuation": 12
+  },
+  "yns_d24_01.scx.txt": {
+    "checked": 108,
+    "changed": 48,
+    "editor_compared": 73,
+    "model_assisted": 23,
+    "punctuation": 12
+  },
+  "yns_d24_02.scx.txt": {
+    "checked": 215,
+    "changed": 51,
+    "punctuation": 21,
+    "editor_compared": 73,
+    "model_assisted": 121
+  },
+  "yns_d25.scx.txt": {
+    "checked": 76,
+    "changed": 34,
+    "editor_compared": 51,
+    "punctuation": 10,
+    "model_assisted": 15
+  },
+  "yns_d25_01.scx.txt": {
+    "checked": 80,
+    "changed": 38,
+    "editor_compared": 53,
+    "model_assisted": 27
+  },
+  "yns_d25_01b.scx.txt": {
+    "checked": 48,
+    "changed": 8,
+    "model_assisted": 26,
+    "editor_compared": 17,
+    "punctuation": 5
+  },
+  "yns_d25_01c.scx.txt": {
+    "checked": 206,
+    "changed": 55,
+    "model_assisted": 105,
+    "editor_compared": 94,
+    "punctuation": 7
+  },
+  "yns_d27.scx.txt": {
+    "checked": 59,
+    "changed": 30,
+    "editor_compared": 44,
+    "punctuation": 6,
+    "model_assisted": 9
+  },
+  "yns_d27_01.scx.txt": {
+    "checked": 68,
+    "changed": 23,
+    "model_assisted": 30,
+    "editor_compared": 35,
+    "punctuation": 3
+  },
+  "yns_d29.scx.txt": {
+    "checked": 30,
+    "changed": 6,
+    "model_assisted": 14,
+    "punctuation": 6,
+    "editor_compared": 10
+  },
+  "yns_d29_01.scx.txt": {
+    "checked": 66,
+    "changed": 16,
+    "editor_compared": 28,
+    "model_assisted": 34,
+    "punctuation": 4
+  },
+  "yns_d30.scx.txt": {
+    "checked": 31,
+    "changed": 7,
+    "punctuation": 9,
+    "model_assisted": 9,
+    "editor_compared": 13
+  },
+  "yns_d30_01.scx.txt": {
+    "checked": 37,
+    "changed": 4,
+    "editor_compared": 9,
+    "punctuation": 3,
+    "model_assisted": 25
+  },
+  "yns_d30_02.scx.txt": {
+    "checked": 90,
+    "changed": 15,
+    "editor_compared": 28,
+    "punctuation": 9,
+    "model_assisted": 53
+  },
+  "yns_d31.scx.txt": {
+    "checked": 63,
+    "changed": 14,
+    "editor_compared": 21,
+    "model_assisted": 34,
+    "punctuation": 8
+  },
+  "yns_d31_01.scx.txt": {
+    "checked": 32,
+    "changed": 14,
+    "editor_compared": 21,
+    "model_assisted": 10,
+    "punctuation": 1
+  },
+  "yns_d32.scx.txt": {
+    "checked": 7,
+    "changed": 4,
+    "model_assisted": 1,
+    "editor_compared": 4,
+    "punctuation": 2
+  },
+  "yns_d32_01.scx.txt": {
+    "checked": 73,
+    "changed": 30,
+    "model_assisted": 25,
+    "editor_compared": 44,
+    "punctuation": 4
+  },
+  "yns_d33.scx.txt": {
+    "checked": 2,
+    "changed": 0,
+    "editor_compared": 1,
+    "punctuation": 1
+  },
+  "yns_d33_01.scx.txt": {
+    "checked": 22,
+    "changed": 13,
+    "editor_compared": 20,
+    "punctuation": 2
+  },
+  "yns_d35.scx.txt": {
+    "checked": 2,
+    "changed": 1,
+    "editor_compared": 1,
+    "punctuation": 1
+  },
+  "yns_d35_01.scx.txt": {
+    "checked": 42,
+    "changed": 28,
+    "editor_compared": 41,
+    "punctuation": 1
+  },
+  "yns_d3_end.scx.txt": {
+    "checked": 60,
+    "changed": 9,
+    "editor_compared": 20,
+    "model_assisted": 37,
+    "punctuation": 3
+  },
+  "yns_d_a.scx.txt": {
+    "checked": 26,
+    "changed": 6,
+    "punctuation": 3,
+    "model_assisted": 13,
+    "editor_compared": 10
+  },
+  "yns_d_a00.scx.txt": {
+    "checked": 50,
+    "changed": 14,
+    "model_assisted": 20,
+    "editor_compared": 27,
+    "punctuation": 3
+  },
+  "yns_d_a00_01.scx.txt": {
+    "checked": 21,
+    "changed": 5,
+    "editor_compared": 7,
+    "model_assisted": 14
+  },
+  "yns_d_a00_02.scx.txt": {
+    "checked": 33,
+    "changed": 3,
+    "model_assisted": 15,
+    "editor_compared": 15,
+    "punctuation": 3
+  },
+  "yns_d_a01.scx.txt": {
+    "checked": 39,
+    "changed": 7,
+    "model_assisted": 25,
+    "editor_compared": 8,
+    "punctuation": 6
+  },
+  "yns_d_a01_01.scx.txt": {
+    "checked": 50,
+    "changed": 10,
+    "model_assisted": 33,
+    "editor_compared": 13,
+    "punctuation": 4
+  },
+  "yns_d_a02.scx.txt": {
+    "checked": 10,
+    "changed": 0,
+    "editor_compared": 2,
+    "model_assisted": 5,
+    "punctuation": 3
+  },
+  "yns_d_a02_01.scx.txt": {
+    "checked": 18,
+    "changed": 8,
+    "editor_compared": 12,
+    "model_assisted": 6
+  },
+  "yns_d_a03.scx.txt": {
+    "checked": 9,
+    "changed": 3,
+    "editor_compared": 4,
+    "model_assisted": 5
+  },
+  "yns_d_a03_01.scx.txt": {
+    "checked": 15,
+    "changed": 7,
+    "editor_compared": 10,
+    "model_assisted": 5
+  },
+  "yns_d_a04.scx.txt": {
+    "checked": 29,
+    "changed": 5,
+    "editor_compared": 9,
+    "punctuation": 5,
+    "model_assisted": 15
+  },
+  "yns_d_a04_01.scx.txt": {
+    "checked": 60,
+    "changed": 13,
+    "editor_compared": 22,
+    "model_assisted": 26,
+    "punctuation": 12
+  },
+  "yns_d_a05.scx.txt": {
+    "checked": 12,
+    "changed": 1,
+    "editor_compared": 3,
+    "model_assisted": 6,
+    "punctuation": 3
+  },
+  "yns_d_a05_01.scx.txt": {
+    "checked": 17,
+    "changed": 8,
+    "editor_compared": 12,
+    "model_assisted": 5
+  },
+  "yns_d_a06.scx.txt": {
+    "checked": 16,
+    "changed": 6,
+    "editor_compared": 9,
+    "model_assisted": 6,
+    "punctuation": 1
+  },
+  "yns_d_a06_01.scx.txt": {
+    "checked": 22,
+    "changed": 11,
+    "editor_compared": 18,
+    "model_assisted": 4
+  },
+  "yns_d_a07.scx.txt": {
+    "checked": 22,
+    "changed": 9,
+    "editor_compared": 14,
+    "model_assisted": 5,
+    "punctuation": 3
+  },
+  "yns_d_a07_01.scx.txt": {
+    "checked": 17,
+    "changed": 8,
+    "editor_compared": 15,
+    "model_assisted": 2
+  },
+  "yns_d_a08.scx.txt": {
+    "checked": 9,
+    "changed": 1,
+    "editor_compared": 5,
+    "model_assisted": 3,
+    "punctuation": 1
+  },
+  "yns_d_a08_01.scx.txt": {
+    "checked": 104,
+    "changed": 24,
+    "editor_compared": 46,
+    "model_assisted": 43,
+    "punctuation": 15
+  },
+  "yns_d_a09.scx.txt": {
+    "checked": 22,
+    "changed": 9,
+    "editor_compared": 14,
+    "model_assisted": 5,
+    "punctuation": 3
+  },
+  "yns_d_a09_01.scx.txt": {
+    "checked": 16,
+    "changed": 7,
+    "editor_compared": 14,
+    "model_assisted": 2
+  },
+  "yns_d_a10.scx.txt": {
+    "checked": 14,
+    "changed": 5,
+    "editor_compared": 8,
+    "model_assisted": 5,
+    "punctuation": 1
+  },
+  "yns_d_a10_01.scx.txt": {
+    "checked": 21,
+    "changed": 10,
+    "editor_compared": 18,
+    "model_assisted": 3
+  },
+  "yns_d_a11.scx.txt": {
+    "checked": 4,
+    "changed": 1,
+    "editor_compared": 3,
+    "model_assisted": 1
+  },
+  "yns_d_a11_01.scx.txt": {
+    "checked": 17,
+    "changed": 8,
+    "editor_compared": 15,
+    "model_assisted": 2
+  },
+  "yns_d_a12.scx.txt": {
+    "checked": 58,
+    "changed": 13,
+    "punctuation": 6,
+    "model_assisted": 28,
+    "editor_compared": 24
+  },
+  "yns_d_a12_01.scx.txt": {
+    "checked": 187,
+    "changed": 49,
+    "model_assisted": 83,
+    "editor_compared": 89,
+    "punctuation": 15
+  },
+  "yns_d_a12_02.scx.txt": {
+    "checked": 112,
+    "changed": 40,
+    "editor_compared": 56,
+    "model_assisted": 46,
+    "punctuation": 10
+  },
+  "yns_d_a12_03.scx.txt": {
+    "checked": 147,
+    "changed": 24,
+    "model_assisted": 87,
+    "editor_compared": 48,
+    "punctuation": 12
+  },
+  "yns_d_a14.scx.txt": {
+    "checked": 9,
+    "changed": 2,
+    "editor_compared": 2,
+    "model_assisted": 6,
+    "punctuation": 1
+  },
+  "yns_d_a14_01.scx.txt": {
+    "checked": 14,
+    "changed": 5,
+    "editor_compared": 8,
+    "model_assisted": 5,
+    "punctuation": 1
+  },
+  "yns_d_a15.scx.txt": {
+    "checked": 24,
+    "changed": 4,
+    "editor_compared": 10,
+    "model_assisted": 9,
+    "punctuation": 5
+  },
+  "yns_d_a15_01.scx.txt": {
+    "checked": 51,
+    "changed": 22,
+    "punctuation": 4,
+    "editor_compared": 39,
+    "model_assisted": 8
+  },
+  "yns_d_a15_02.scx.txt": {
+    "checked": 92,
+    "changed": 28,
+    "editor_compared": 61,
+    "punctuation": 7,
+    "model_assisted": 24
+  },
+  "yns_d_a16.scx.txt": {
+    "checked": 40,
+    "changed": 5,
+    "punctuation": 5,
+    "model_assisted": 16,
+    "editor_compared": 19
+  },
+  "yns_d_a16_01.scx.txt": {
+    "checked": 140,
+    "changed": 27,
+    "model_assisted": 72,
+    "punctuation": 18,
+    "editor_compared": 50
+  },
+  "yns_d_a16_02.scx.txt": {
+    "checked": 144,
+    "changed": 26,
+    "model_assisted": 72,
+    "editor_compared": 53,
+    "punctuation": 19
+  },
+  "yns_d_a16_03.scx.txt": {
+    "checked": 90,
+    "changed": 21,
+    "punctuation": 10,
+    "model_assisted": 47,
+    "editor_compared": 33
+  },
+  "yns_d_a17.scx.txt": {
+    "checked": 38,
+    "changed": 3,
+    "punctuation": 6,
+    "model_assisted": 24,
+    "editor_compared": 8
+  },
+  "yns_d_a17_01.scx.txt": {
+    "checked": 153,
+    "changed": 26,
+    "punctuation": 10,
+    "model_assisted": 90,
+    "editor_compared": 53
+  },
+  "yns_d_a17_02.scx.txt": {
+    "checked": 528,
+    "changed": 93,
+    "model_assisted": 277,
+    "editor_compared": 181,
+    "punctuation": 70
+  },
+  "yns_d_a17_03.scx.txt": {
+    "checked": 397,
+    "changed": 53,
+    "model_assisted": 220,
+    "editor_compared": 132,
+    "punctuation": 45
+  },
+  "yns_d_a17_04.scx.txt": {
+    "checked": 121,
+    "changed": 5,
+    "editor_compared": 24,
+    "model_assisted": 80,
+    "punctuation": 17
+  },
+  "yns_d_a17_05.scx.txt": {
+    "checked": 256,
+    "changed": 32,
+    "model_assisted": 163,
+    "punctuation": 17,
+    "editor_compared": 76
+  },
+  "yns_d_a17_06.scx.txt": {
+    "checked": 354,
+    "changed": 41,
+    "model_assisted": 188,
+    "editor_compared": 102,
+    "punctuation": 64
+  },
+  "yns_d_a17_07.scx.txt": {
+    "checked": 436,
+    "changed": 61,
+    "model_assisted": 249,
+    "punctuation": 55,
+    "editor_compared": 132
+  },
+  "yns_d_b.scx.txt": {
+    "checked": 27,
+    "changed": 4,
+    "punctuation": 3,
+    "model_assisted": 16,
+    "editor_compared": 8
+  },
+  "yns_d_b00.scx.txt": {
+    "checked": 59,
+    "changed": 14,
+    "model_assisted": 31,
+    "editor_compared": 25,
+    "punctuation": 3
+  },
+  "yns_d_b00_01.scx.txt": {
+    "checked": 22,
+    "changed": 3,
+    "editor_compared": 7,
+    "model_assisted": 14,
+    "punctuation": 1
+  },
+  "yns_d_b00_02.scx.txt": {
+    "checked": 33,
+    "changed": 4,
+    "model_assisted": 14,
+    "editor_compared": 16,
+    "punctuation": 3
+  },
+  "yns_d_b01.scx.txt": {
+    "checked": 43,
+    "changed": 13,
+    "editor_compared": 20,
+    "model_assisted": 19,
+    "punctuation": 4
+  },
+  "yns_d_b01_01.scx.txt": {
+    "checked": 49,
+    "changed": 13,
+    "model_assisted": 30,
+    "editor_compared": 17,
+    "punctuation": 2
+  },
+  "yns_d_b02.scx.txt": {
+    "checked": 14,
+    "changed": 0,
+    "editor_compared": 4,
+    "model_assisted": 7,
+    "punctuation": 3
+  },
+  "yns_d_b02_01.scx.txt": {
+    "checked": 18,
+    "changed": 9,
+    "editor_compared": 13,
+    "model_assisted": 5
+  },
+  "yns_d_b03.scx.txt": {
+    "checked": 12,
+    "changed": 3,
+    "editor_compared": 5,
+    "model_assisted": 5,
+    "punctuation": 2
+  },
+  "yns_d_b03_01.scx.txt": {
+    "checked": 16,
+    "changed": 8,
+    "editor_compared": 12,
+    "model_assisted": 4
+  },
+  "yns_d_b04.scx.txt": {
+    "checked": 22,
+    "changed": 5,
+    "editor_compared": 9,
+    "punctuation": 3,
+    "model_assisted": 10
+  },
+  "yns_d_b04_01.scx.txt": {
+    "checked": 134,
+    "changed": 44,
+    "editor_compared": 63,
+    "model_assisted": 53,
+    "punctuation": 18
+  },
+  "yns_d_b05.scx.txt": {
+    "checked": 13,
+    "changed": 2,
+    "editor_compared": 3,
+    "model_assisted": 7,
+    "punctuation": 3
+  },
+  "yns_d_b05_01.scx.txt": {
+    "checked": 20,
+    "changed": 8,
+    "editor_compared": 12,
+    "model_assisted": 8
+  },
+  "yns_d_b06.scx.txt": {
+    "checked": 19,
+    "changed": 10,
+    "editor_compared": 12,
+    "model_assisted": 5,
+    "punctuation": 2
+  },
+  "yns_d_b06_01.scx.txt": {
+    "checked": 25,
+    "changed": 14,
+    "editor_compared": 20,
+    "model_assisted": 4,
+    "punctuation": 1
+  },
+  "yns_d_b07.scx.txt": {
+    "checked": 17,
+    "changed": 7,
+    "editor_compared": 10,
+    "model_assisted": 6,
+    "punctuation": 1
+  },
+  "yns_d_b07_01.scx.txt": {
+    "checked": 19,
+    "changed": 7,
+    "editor_compared": 13,
+    "model_assisted": 5,
+    "punctuation": 1
+  },
+  "yns_d_b08.scx.txt": {
+    "checked": 9,
+    "changed": 1,
+    "editor_compared": 5,
+    "model_assisted": 3,
+    "punctuation": 1
+  },
+  "yns_d_b08_01.scx.txt": {
+    "checked": 109,
+    "changed": 30,
+    "editor_compared": 46,
+    "model_assisted": 53,
+    "punctuation": 10
+  },
+  "yns_d_b09.scx.txt": {
+    "checked": 18,
+    "changed": 7,
+    "editor_compared": 10,
+    "model_assisted": 7,
+    "punctuation": 1
+  },
+  "yns_d_b09_01.scx.txt": {
+    "checked": 17,
+    "changed": 6,
+    "editor_compared": 12,
+    "model_assisted": 5
+  },
+  "yns_d_b10.scx.txt": {
+    "checked": 13,
+    "changed": 5,
+    "editor_compared": 7,
+    "model_assisted": 5,
+    "punctuation": 1
+  },
+  "yns_d_b10_01.scx.txt": {
+    "checked": 20,
+    "changed": 10,
+    "editor_compared": 17,
+    "model_assisted": 3
+  },
+  "yns_d_b11.scx.txt": {
+    "checked": 5,
+    "changed": 1,
+    "editor_compared": 2,
+    "model_assisted": 3
+  },
+  "yns_d_b11_01.scx.txt": {
+    "checked": 19,
+    "changed": 7,
+    "editor_compared": 14,
+    "model_assisted": 5
+  },
+  "yns_d_b12.scx.txt": {
+    "checked": 77,
+    "changed": 16,
+    "punctuation": 7,
+    "model_assisted": 41,
+    "editor_compared": 29
+  },
+  "yns_d_b12_01.scx.txt": {
+    "checked": 245,
+    "changed": 74,
+    "model_assisted": 114,
+    "editor_compared": 111,
+    "punctuation": 20
+  },
+  "yns_d_b12_02.scx.txt": {
+    "checked": 135,
+    "changed": 47,
+    "editor_compared": 62,
+    "model_assisted": 58,
+    "punctuation": 15
+  },
+  "yns_d_b12_03.scx.txt": {
+    "checked": 157,
+    "changed": 33,
+    "model_assisted": 97,
+    "editor_compared": 49,
+    "punctuation": 11
+  },
+  "yns_d_b14.scx.txt": {
+    "checked": 9,
+    "changed": 1,
+    "editor_compared": 1,
+    "model_assisted": 7,
+    "punctuation": 1
+  },
+  "yns_d_b14_01.scx.txt": {
+    "checked": 14,
+    "changed": 5,
+    "editor_compared": 7,
+    "model_assisted": 6,
+    "punctuation": 1
+  },
+  "yns_d_b15.scx.txt": {
+    "checked": 22,
+    "changed": 3,
+    "editor_compared": 7,
+    "model_assisted": 11,
+    "punctuation": 4
+  },
+  "yns_d_b15_01.scx.txt": {
+    "checked": 49,
+    "changed": 20,
+    "punctuation": 4,
+    "editor_compared": 37,
+    "model_assisted": 8
+  },
+  "yns_d_b15_02.scx.txt": {
+    "checked": 93,
+    "changed": 27,
+    "editor_compared": 64,
+    "punctuation": 7,
+    "model_assisted": 22
+  },
+  "yns_d_c15.scx.txt": {
+    "checked": 6,
+    "changed": 2,
+    "model_assisted": 2,
+    "punctuation": 1,
+    "editor_compared": 3
+  },
+  "yns_d_c15_01.scx.txt": {
+    "checked": 104,
+    "changed": 21,
+    "editor_compared": 50,
+    "model_assisted": 38,
+    "punctuation": 16
+  },
+  "yns_d_c16.scx.txt": {
+    "checked": 48,
+    "changed": 3,
+    "punctuation": 5,
+    "model_assisted": 30,
+    "editor_compared": 13
+  },
+  "yns_d_c16_01.scx.txt": {
+    "checked": 126,
+    "changed": 24,
+    "editor_compared": 49,
+    "model_assisted": 64,
+    "punctuation": 13
+  },
+  "yns_d_c16_02.scx.txt": {
+    "checked": 144,
+    "changed": 26,
+    "model_assisted": 72,
+    "editor_compared": 53,
+    "punctuation": 19
+  },
+  "yns_d_c17.scx.txt": {
+    "checked": 128,
+    "changed": 11,
+    "punctuation": 9,
+    "model_assisted": 77,
+    "editor_compared": 42
+  },
+  "yns_d_c17_01.scx.txt": {
+    "checked": 290,
+    "changed": 47,
+    "model_assisted": 187,
+    "editor_compared": 87,
+    "punctuation": 16
+  },
+  "yns_d_c17_02.scx.txt": {
+    "checked": 423,
+    "changed": 61,
+    "editor_compared": 126,
+    "model_assisted": 257,
+    "punctuation": 40
+  },
+  "yns_da1706_b.scx.txt": {
+    "checked": 173,
+    "changed": 26,
+    "model_assisted": 96,
+    "editor_compared": 65,
+    "punctuation": 12
+  },
+  "yns_e01.scx.txt": {
+    "checked": 8,
+    "changed": 4,
+    "editor_compared": 7,
+    "model_assisted": 1
+  },
+  "yns_e01_01.scx.txt": {
+    "checked": 81,
+    "changed": 33,
+    "editor_compared": 49,
+    "model_assisted": 29,
+    "punctuation": 3
+  },
+  "yns_e02.scx.txt": {
+    "checked": 131,
+    "changed": 48,
+    "editor_compared": 76,
+    "model_assisted": 39,
+    "punctuation": 16
+  },
+  "yns_e02_01.scx.txt": {
+    "checked": 128,
+    "changed": 56,
+    "editor_compared": 112,
+    "model_assisted": 16
+  },
+  "yns_e02_01b.scx.txt": {
+    "checked": 90,
+    "changed": 18,
+    "model_assisted": 43,
+    "editor_compared": 34,
+    "punctuation": 13
+  },
+  "yns_e03.scx.txt": {
+    "checked": 17,
+    "changed": 4,
+    "editor_compared": 17
+  },
+  "yns_e03_01.scx.txt": {
+    "checked": 112,
+    "changed": 38,
+    "editor_compared": 66,
+    "model_assisted": 45,
+    "punctuation": 1
+  },
+  "yns_e03_01b.scx.txt": {
+    "checked": 37,
+    "changed": 18,
+    "model_assisted": 15,
+    "editor_compared": 20,
+    "punctuation": 2
+  },
+  "yns_e04.scx.txt": {
+    "checked": 86,
+    "changed": 29,
+    "editor_compared": 51,
+    "model_assisted": 27,
+    "punctuation": 8
+  },
+  "yns_e04_01.scx.txt": {
+    "checked": 102,
+    "changed": 36,
+    "editor_compared": 58,
+    "model_assisted": 38,
+    "punctuation": 6
+  },
+  "yns_e05.scx.txt": {
+    "checked": 215,
+    "changed": 48,
+    "editor_compared": 92,
+    "model_assisted": 98,
+    "punctuation": 25
+  },
+  "yns_e05_01.scx.txt": {
+    "checked": 77,
+    "changed": 26,
+    "editor_compared": 45,
+    "model_assisted": 30,
+    "punctuation": 2
+  },
+  "yns_e05_02.scx.txt": {
+    "checked": 202,
+    "changed": 64,
+    "editor_compared": 98,
+    "punctuation": 24,
+    "model_assisted": 80
+  },
+  "yns_e06.scx.txt": {
+    "checked": 80,
+    "changed": 20,
+    "editor_compared": 46,
+    "model_assisted": 28,
+    "punctuation": 6
+  },
+  "yns_e06_01.scx.txt": {
+    "checked": 201,
+    "changed": 80,
+    "editor_compared": 116,
+    "model_assisted": 84,
+    "punctuation": 1
+  },
+  "yns_e07.scx.txt": {
+    "checked": 50,
+    "changed": 16,
+    "editor_compared": 20,
+    "model_assisted": 18,
+    "punctuation": 12
+  },
+  "yns_e07_01.scx.txt": {
+    "checked": 76,
+    "changed": 35,
+    "editor_compared": 45,
+    "model_assisted": 31
+  },
+  "yns_e08.scx.txt": {
+    "checked": 5,
+    "changed": 2,
+    "editor_compared": 4,
+    "punctuation": 1
+  },
+  "yns_e08_01.scx.txt": {
+    "checked": 90,
+    "changed": 39,
+    "punctuation": 3,
+    "editor_compared": 60,
+    "model_assisted": 27
+  },
+  "yns_e09.scx.txt": {
+    "checked": 88,
+    "changed": 23,
+    "editor_compared": 47,
+    "punctuation": 12,
+    "model_assisted": 29
+  },
+  "yns_e09_01.scx.txt": {
+    "checked": 91,
+    "changed": 56,
+    "editor_compared": 83,
+    "punctuation": 5,
+    "model_assisted": 3
+  },
+  "yns_e09_02.scx.txt": {
+    "checked": 209,
+    "changed": 93,
+    "editor_compared": 128,
+    "model_assisted": 69,
+    "punctuation": 12
+  },
+  "yns_e09_03.scx.txt": {
+    "checked": 314,
+    "changed": 74,
+    "editor_compared": 155,
+    "model_assisted": 131,
+    "punctuation": 28
+  },
+  "yns_e09_04.scx.txt": {
+    "checked": 65,
+    "changed": 15,
+    "model_assisted": 34,
+    "editor_compared": 28,
+    "punctuation": 3
+  },
+  "yns_e09_05.scx.txt": {
+    "checked": 223,
+    "changed": 55,
+    "editor_compared": 99,
+    "model_assisted": 103,
+    "punctuation": 21
+  },
+  "yns_e10.scx.txt": {
+    "checked": 20,
+    "changed": 5,
+    "editor_compared": 14,
+    "model_assisted": 5,
+    "punctuation": 1
+  },
+  "yns_e10_01.scx.txt": {
+    "checked": 67,
+    "changed": 37,
+    "editor_compared": 62,
+    "punctuation": 2,
+    "model_assisted": 3
+  },
+  "yns_e10_02.scx.txt": {
+    "checked": 140,
+    "changed": 35,
+    "model_assisted": 70,
+    "editor_compared": 59,
+    "punctuation": 11
+  },
+  "yns_e14.scx.txt": {
+    "checked": 185,
+    "changed": 52,
+    "model_assisted": 77,
+    "editor_compared": 87,
+    "punctuation": 21
+  },
+  "yns_e14_01.scx.txt": {
+    "checked": 86,
+    "changed": 37,
+    "editor_compared": 48,
+    "model_assisted": 37,
+    "punctuation": 1
+  },
+  "yns_e15.scx.txt": {
+    "checked": 30,
+    "changed": 10,
+    "editor_compared": 18,
+    "model_assisted": 4,
+    "punctuation": 8
+  },
+  "yns_e15_01.scx.txt": {
+    "checked": 74,
+    "changed": 25,
+    "editor_compared": 39,
+    "model_assisted": 29,
+    "punctuation": 6
+  },
+  "yns_e15_02.scx.txt": {
+    "checked": 188,
+    "changed": 62,
+    "model_assisted": 68,
+    "editor_compared": 98,
+    "punctuation": 22
+  },
+  "yns_e15_03.scx.txt": {
+    "checked": 76,
+    "changed": 25,
+    "model_assisted": 34,
+    "editor_compared": 37,
+    "punctuation": 5
+  },
+  "yns_e15_04.scx.txt": {
+    "checked": 239,
+    "changed": 53,
+    "editor_compared": 85,
+    "model_assisted": 129,
+    "punctuation": 25
+  },
+  "yns_e15_05.scx.txt": {
+    "checked": 177,
+    "changed": 36,
+    "model_assisted": 97,
+    "editor_compared": 52,
+    "punctuation": 28
+  },
+  "yns_e15_06.scx.txt": {
+    "checked": 129,
+    "changed": 61,
+    "editor_compared": 100,
+    "punctuation": 15,
+    "model_assisted": 14
+  },
+  "yns_e15_07.scx.txt": {
+    "checked": 98,
+    "changed": 23,
+    "editor_compared": 35,
+    "model_assisted": 51,
+    "punctuation": 12
+  },
+  "yns_e15_08.scx.txt": {
+    "checked": 65,
+    "changed": 25,
+    "editor_compared": 39,
+    "model_assisted": 20,
+    "punctuation": 6
+  },
+  "yns_e15_09.scx.txt": {
+    "checked": 96,
+    "changed": 51,
+    "editor_compared": 85,
+    "model_assisted": 7,
+    "punctuation": 4
+  },
+  "yns_e15_10.scx.txt": {
+    "checked": 27,
+    "changed": 4,
+    "model_assisted": 19,
+    "punctuation": 2,
+    "editor_compared": 6
+  },
+  "yns_e18.scx.txt": {
+    "checked": 116,
+    "changed": 31,
+    "model_assisted": 50,
+    "editor_compared": 58,
+    "punctuation": 8
+  },
+  "yns_e18_01.scx.txt": {
+    "checked": 125,
+    "changed": 55,
+    "model_assisted": 30,
+    "editor_compared": 94,
+    "punctuation": 1
+  },
+  "yns_e21.scx.txt": {
+    "checked": 49,
+    "changed": 13,
+    "editor_compared": 25,
+    "model_assisted": 18,
+    "punctuation": 6
+  },
+  "yns_e21_01.scx.txt": {
+    "checked": 109,
+    "changed": 53,
+    "editor_compared": 77,
+    "model_assisted": 27,
+    "punctuation": 5,
+    "speaker_revised": 2
+  },
+  "yns_e21_02.scx.txt": {
+    "checked": 102,
+    "changed": 41,
+    "editor_compared": 70,
+    "model_assisted": 22,
+    "punctuation": 10
+  },
+  "yns_e22.scx.txt": {
+    "checked": 174,
+    "changed": 71,
+    "editor_compared": 104,
+    "punctuation": 18,
+    "model_assisted": 52
+  },
+  "yns_e22_01.scx.txt": {
+    "checked": 37,
+    "changed": 18,
+    "editor_compared": 30,
+    "punctuation": 2,
+    "model_assisted": 5
+  },
+  "yns_e22_02.scx.txt": {
+    "checked": 20,
+    "changed": 8,
+    "editor_compared": 9,
+    "punctuation": 5,
+    "model_assisted": 6
+  },
+  "yns_e22_03.scx.txt": {
+    "checked": 194,
+    "changed": 51,
+    "editor_compared": 88,
+    "model_assisted": 89,
+    "punctuation": 17
+  },
+  "yns_e23.scx.txt": {
+    "checked": 43,
+    "changed": 11,
+    "editor_compared": 22,
+    "model_assisted": 17,
+    "punctuation": 4
+  },
+  "yns_e23_01.scx.txt": {
+    "checked": 107,
+    "changed": 43,
+    "model_assisted": 46,
+    "editor_compared": 58,
+    "punctuation": 3
+  },
+  "yns_e23_02.scx.txt": {
+    "checked": 102,
+    "changed": 38,
+    "editor_compared": 66,
+    "model_assisted": 32,
+    "punctuation": 4
+  },
+  "yns_e23_03.scx.txt": {
+    "checked": 72,
+    "changed": 12,
+    "editor_compared": 29,
+    "model_assisted": 41,
+    "punctuation": 2
+  },
+  "yns_e23_04.scx.txt": {
+    "checked": 63,
+    "changed": 34,
+    "editor_compared": 52,
+    "model_assisted": 7,
+    "punctuation": 4
+  },
+  "yns_e23_05.scx.txt": {
+    "checked": 82,
+    "changed": 30,
+    "editor_compared": 51,
+    "model_assisted": 25,
+    "punctuation": 6
+  },
+  "yns_e23_06.scx.txt": {
+    "checked": 205,
+    "changed": 66,
+    "editor_compared": 95,
+    "punctuation": 30,
+    "model_assisted": 80
+  },
+  "yns_e24.scx.txt": {
+    "checked": 163,
+    "changed": 45,
+    "editor_compared": 75,
+    "model_assisted": 73,
+    "punctuation": 15
+  },
+  "yns_e24_01.scx.txt": {
+    "checked": 109,
+    "changed": 50,
+    "editor_compared": 82,
+    "model_assisted": 21,
+    "punctuation": 6
+  },
+  "yns_e24_02.scx.txt": {
+    "checked": 179,
+    "changed": 123,
+    "editor_compared": 164,
+    "punctuation": 11,
+    "model_assisted": 4
+  },
+  "yns_e25.scx.txt": {
+    "checked": 7,
+    "changed": 6,
+    "editor_compared": 6,
+    "model_assisted": 1
+  },
+  "yns_e25_01.scx.txt": {
+    "checked": 123,
+    "changed": 57,
+    "editor_compared": 81,
+    "model_assisted": 42
+  },
+  "yns_e25_02.scx.txt": {
+    "checked": 189,
+    "changed": 59,
+    "editor_compared": 90,
+    "model_assisted": 84,
+    "punctuation": 15
+  },
+  "yns_e25_03.scx.txt": {
+    "checked": 51,
+    "changed": 12,
+    "editor_compared": 18,
+    "model_assisted": 24,
+    "punctuation": 9
+  },
+  "yns_e25_04.scx.txt": {
+    "checked": 290,
+    "changed": 156,
+    "editor_compared": 218,
+    "model_assisted": 51,
+    "punctuation": 21
+  },
+  "yns_e27.scx.txt": {
+    "checked": 26,
+    "changed": 7,
+    "editor_compared": 15,
+    "model_assisted": 10,
+    "punctuation": 1
+  },
+  "yns_e27_01.scx.txt": {
+    "checked": 110,
+    "changed": 39,
+    "editor_compared": 70,
+    "model_assisted": 35,
+    "punctuation": 5
+  },
+  "yns_e28.scx.txt": {
+    "checked": 120,
+    "changed": 22,
+    "punctuation": 14,
+    "model_assisted": 65,
+    "editor_compared": 41
+  },
+  "yns_e28_01.scx.txt": {
+    "checked": 240,
+    "changed": 55,
+    "model_assisted": 115,
+    "editor_compared": 86,
+    "punctuation": 39
+  },
+  "yns_e28_02.scx.txt": {
+    "checked": 88,
+    "changed": 19,
+    "punctuation": 5,
+    "model_assisted": 50,
+    "editor_compared": 33
+  },
+  "yns_e28_03.scx.txt": {
+    "checked": 376,
+    "changed": 92,
+    "editor_compared": 139,
+    "model_assisted": 206,
+    "punctuation": 31
+  },
+  "yns_e28_04.scx.txt": {
+    "checked": 243,
+    "changed": 51,
+    "model_assisted": 122,
+    "editor_compared": 84,
+    "punctuation": 37
+  },
+  "yns_e28_05.scx.txt": {
+    "checked": 419,
+    "changed": 99,
+    "editor_compared": 171,
+    "punctuation": 59,
+    "model_assisted": 189
+  },
+  "yns_e33.scx.txt": {
+    "checked": 2,
+    "changed": 0,
+    "editor_compared": 1,
+    "punctuation": 1
+  },
+  "yns_e33_01.scx.txt": {
+    "checked": 22,
+    "changed": 13,
+    "editor_compared": 20,
+    "punctuation": 2
+  },
+  "yns_e35.scx.txt": {
+    "checked": 2,
+    "changed": 1,
+    "editor_compared": 1,
+    "punctuation": 1
+  },
+  "yns_e35_01.scx.txt": {
+    "checked": 42,
+    "changed": 28,
+    "editor_compared": 41,
+    "punctuation": 1
+  },
+  "yns_e3_end.scx.txt": {
+    "checked": 48,
+    "changed": 4,
+    "model_assisted": 31,
+    "editor_compared": 16,
+    "punctuation": 1
+  },
+  "yns_end.scx.txt": {
+    "checked": 122,
+    "changed": 27,
+    "editor_compared": 49,
+    "punctuation": 9,
+    "model_assisted": 64
+  },
+  "yns_f01.scx.txt": {
+    "checked": 101,
+    "changed": 21,
+    "editor_compared": 44,
+    "model_assisted": 50,
+    "punctuation": 7
+  },
+  "yns_f01_01.scx.txt": {
+    "checked": 81,
+    "changed": 33,
+    "editor_compared": 48,
+    "model_assisted": 30,
+    "punctuation": 3
+  },
+  "yns_f02.scx.txt": {
+    "checked": 124,
+    "changed": 46,
+    "editor_compared": 74,
+    "model_assisted": 35,
+    "punctuation": 15
+  },
+  "yns_f02_01.scx.txt": {
+    "checked": 127,
+    "changed": 57,
+    "editor_compared": 115,
+    "punctuation": 1,
+    "model_assisted": 11
+  },
+  "yns_f02_01b.scx.txt": {
+    "checked": 90,
+    "changed": 18,
+    "model_assisted": 43,
+    "editor_compared": 34,
+    "punctuation": 13
+  },
+  "yns_f03.scx.txt": {
+    "checked": 17,
+    "changed": 4,
+    "editor_compared": 17
+  },
+  "yns_f03_01.scx.txt": {
+    "checked": 112,
+    "changed": 38,
+    "editor_compared": 66,
+    "model_assisted": 45,
+    "punctuation": 1
+  },
+  "yns_f03_01b.scx.txt": {
+    "checked": 37,
+    "changed": 18,
+    "model_assisted": 15,
+    "editor_compared": 20,
+    "punctuation": 2
+  },
+  "yns_f04.scx.txt": {
+    "checked": 89,
+    "changed": 28,
+    "editor_compared": 50,
+    "model_assisted": 31,
+    "punctuation": 8
+  },
+  "yns_f04_01.scx.txt": {
+    "checked": 102,
+    "changed": 36,
+    "editor_compared": 57,
+    "model_assisted": 39,
+    "punctuation": 6
+  },
+  "yns_f05.scx.txt": {
+    "checked": 33,
+    "changed": 14,
+    "editor_compared": 23,
+    "model_assisted": 8,
+    "punctuation": 2
+  },
+  "yns_f05_01.scx.txt": {
+    "checked": 77,
+    "changed": 26,
+    "editor_compared": 45,
+    "model_assisted": 30,
+    "punctuation": 2
+  },
+  "yns_f05_02.scx.txt": {
+    "checked": 200,
+    "changed": 63,
+    "editor_compared": 97,
+    "punctuation": 23,
+    "model_assisted": 80
+  },
+  "yns_f06.scx.txt": {
+    "checked": 80,
+    "changed": 20,
+    "editor_compared": 46,
+    "model_assisted": 28,
+    "punctuation": 6
+  },
+  "yns_f06_01.scx.txt": {
+    "checked": 189,
+    "changed": 74,
+    "editor_compared": 109,
+    "model_assisted": 79,
+    "punctuation": 1
+  },
+  "yns_f07.scx.txt": {
+    "checked": 50,
+    "changed": 16,
+    "editor_compared": 19,
+    "model_assisted": 20,
+    "punctuation": 11
+  },
+  "yns_f07_01.scx.txt": {
+    "checked": 76,
+    "changed": 35,
+    "editor_compared": 45,
+    "model_assisted": 31
+  },
+  "yns_f08.scx.txt": {
+    "checked": 5,
+    "changed": 2,
+    "editor_compared": 4,
+    "punctuation": 1
+  },
+  "yns_f08_01.scx.txt": {
+    "checked": 90,
+    "changed": 39,
+    "punctuation": 3,
+    "editor_compared": 60,
+    "model_assisted": 27
+  },
+  "yns_f09.scx.txt": {
+    "checked": 88,
+    "changed": 23,
+    "editor_compared": 47,
+    "punctuation": 12,
+    "model_assisted": 29
+  },
+  "yns_f09_01.scx.txt": {
+    "checked": 91,
+    "changed": 56,
+    "editor_compared": 83,
+    "punctuation": 5,
+    "model_assisted": 3
+  },
+  "yns_f09_02.scx.txt": {
+    "checked": 209,
+    "changed": 93,
+    "editor_compared": 128,
+    "model_assisted": 69,
+    "punctuation": 12
+  },
+  "yns_f09_03.scx.txt": {
+    "checked": 303,
+    "changed": 70,
+    "editor_compared": 149,
+    "model_assisted": 126,
+    "punctuation": 28
+  },
+  "yns_f09_04.scx.txt": {
+    "checked": 65,
+    "changed": 14,
+    "model_assisted": 37,
+    "editor_compared": 26,
+    "punctuation": 2
+  },
+  "yns_f09_05.scx.txt": {
+    "checked": 223,
+    "changed": 55,
+    "editor_compared": 99,
+    "model_assisted": 103,
+    "punctuation": 21
+  },
+  "yns_f10.scx.txt": {
+    "checked": 20,
+    "changed": 5,
+    "editor_compared": 14,
+    "model_assisted": 5,
+    "punctuation": 1
+  },
+  "yns_f10_01.scx.txt": {
+    "checked": 67,
+    "changed": 37,
+    "editor_compared": 62,
+    "punctuation": 2,
+    "model_assisted": 3
+  },
+  "yns_f14.scx.txt": {
+    "checked": 159,
+    "changed": 44,
+    "editor_compared": 79,
+    "model_assisted": 61,
+    "punctuation": 19
+  },
+  "yns_f14_01.scx.txt": {
+    "checked": 82,
+    "changed": 35,
+    "editor_compared": 49,
+    "model_assisted": 32,
+    "punctuation": 1
+  },
+  "yns_f15.scx.txt": {
+    "checked": 30,
+    "changed": 10,
+    "editor_compared": 18,
+    "model_assisted": 4,
+    "punctuation": 8
+  },
+  "yns_f15_01.scx.txt": {
+    "checked": 74,
+    "changed": 25,
+    "editor_compared": 39,
+    "model_assisted": 29,
+    "punctuation": 6
+  },
+  "yns_f15_02.scx.txt": {
+    "checked": 187,
+    "changed": 59,
+    "editor_compared": 95,
+    "punctuation": 22,
+    "model_assisted": 70
+  },
+  "yns_f15_03.scx.txt": {
+    "checked": 76,
+    "changed": 25,
+    "model_assisted": 34,
+    "editor_compared": 37,
+    "punctuation": 5
+  },
+  "yns_f15_04.scx.txt": {
+    "checked": 240,
+    "changed": 53,
+    "editor_compared": 86,
+    "model_assisted": 129,
+    "punctuation": 25
+  },
+  "yns_f15_05.scx.txt": {
+    "checked": 177,
+    "changed": 36,
+    "model_assisted": 97,
+    "editor_compared": 52,
+    "punctuation": 28
+  },
+  "yns_f15_06.scx.txt": {
+    "checked": 129,
+    "changed": 61,
+    "editor_compared": 100,
+    "punctuation": 15,
+    "model_assisted": 14
+  },
+  "yns_f15_07.scx.txt": {
+    "checked": 98,
+    "changed": 23,
+    "editor_compared": 35,
+    "model_assisted": 51,
+    "punctuation": 12
+  },
+  "yns_f15_08.scx.txt": {
+    "checked": 65,
+    "changed": 24,
+    "editor_compared": 37,
+    "model_assisted": 21,
+    "punctuation": 7
+  },
+  "yns_f15_09.scx.txt": {
+    "checked": 96,
+    "changed": 51,
+    "editor_compared": 85,
+    "model_assisted": 7,
+    "punctuation": 4
+  },
+  "yns_f15_10.scx.txt": {
+    "checked": 11,
+    "changed": 1,
+    "model_assisted": 7,
+    "punctuation": 2,
+    "editor_compared": 2
+  },
+  "yns_f18.scx.txt": {
+    "checked": 101,
+    "changed": 25,
+    "editor_compared": 50,
+    "model_assisted": 45,
+    "punctuation": 6
+  },
+  "yns_f18_01.scx.txt": {
+    "checked": 124,
+    "changed": 54,
+    "editor_compared": 93,
+    "model_assisted": 30,
+    "punctuation": 1
+  },
+  "yns_f18_02.scx.txt": {
+    "checked": 130,
+    "changed": 24,
+    "model_assisted": 75,
+    "editor_compared": 47,
+    "punctuation": 8
+  },
+  "yns_f19.scx.txt": {
+    "checked": 6,
+    "changed": 3,
+    "editor_compared": 3,
+    "model_assisted": 2,
+    "punctuation": 1
+  },
+  "yns_f19_01.scx.txt": {
+    "checked": 63,
+    "changed": 12,
+    "editor_compared": 21,
+    "model_assisted": 36,
+    "punctuation": 6
+  },
+  "yns_f20.scx.txt": {
+    "checked": 5,
+    "changed": 0,
+    "punctuation": 1,
+    "model_assisted": 2,
+    "editor_compared": 2
+  },
+  "yns_f20_01.scx.txt": {
+    "checked": 78,
+    "changed": 13,
+    "model_assisted": 40,
+    "editor_compared": 32,
+    "punctuation": 6
+  },
+  "yns_f20_02.scx.txt": {
+    "checked": 116,
+    "changed": 41,
+    "editor_compared": 62,
+    "punctuation": 16,
+    "model_assisted": 38
+  },
+  "yns_f20_03.scx.txt": {
+    "checked": 177,
+    "changed": 40,
+    "model_assisted": 97,
+    "punctuation": 21,
+    "editor_compared": 59
+  },
+  "yns_f21.scx.txt": {
+    "checked": 59,
+    "changed": 15,
+    "editor_compared": 30,
+    "model_assisted": 22,
+    "punctuation": 7
+  },
+  "yns_f21_01.scx.txt": {
+    "checked": 125,
+    "changed": 55,
+    "editor_compared": 82,
+    "model_assisted": 37,
+    "punctuation": 6,
+    "speaker_revised": 2
+  },
+  "yns_f21_02.scx.txt": {
+    "checked": 102,
+    "changed": 41,
+    "editor_compared": 70,
+    "model_assisted": 22,
+    "punctuation": 10
+  },
+  "yns_f22.scx.txt": {
+    "checked": 174,
+    "changed": 69,
+    "editor_compared": 102,
+    "punctuation": 18,
+    "model_assisted": 54
+  },
+  "yns_f22_01.scx.txt": {
+    "checked": 37,
+    "changed": 17,
+    "editor_compared": 30,
+    "punctuation": 2,
+    "model_assisted": 5
+  },
+  "yns_f22_02.scx.txt": {
+    "checked": 20,
+    "changed": 8,
+    "editor_compared": 9,
+    "punctuation": 5,
+    "model_assisted": 6
+  },
+  "yns_f22_03.scx.txt": {
+    "checked": 194,
+    "changed": 51,
+    "editor_compared": 88,
+    "model_assisted": 89,
+    "punctuation": 17
+  },
+  "yns_f23.scx.txt": {
+    "checked": 37,
+    "changed": 11,
+    "model_assisted": 13,
+    "editor_compared": 20,
+    "punctuation": 4
+  },
+  "yns_f23_01.scx.txt": {
+    "checked": 101,
+    "changed": 44,
+    "model_assisted": 30,
+    "editor_compared": 68,
+    "punctuation": 3
+  },
+  "yns_f23_02.scx.txt": {
+    "checked": 101,
+    "changed": 39,
+    "editor_compared": 66,
+    "model_assisted": 31,
+    "punctuation": 4
+  },
+  "yns_f23_03.scx.txt": {
+    "checked": 71,
+    "changed": 13,
+    "editor_compared": 30,
+    "model_assisted": 39,
+    "punctuation": 2
+  },
+  "yns_f23_04.scx.txt": {
+    "checked": 63,
+    "changed": 34,
+    "editor_compared": 52,
+    "model_assisted": 7,
+    "punctuation": 4
+  },
+  "yns_f23_05.scx.txt": {
+    "checked": 71,
+    "changed": 29,
+    "editor_compared": 47,
+    "model_assisted": 19,
+    "punctuation": 5
+  },
+  "yns_f23_06.scx.txt": {
+    "checked": 205,
+    "changed": 67,
+    "editor_compared": 96,
+    "punctuation": 30,
+    "model_assisted": 79
+  },
+  "yns_f24.scx.txt": {
+    "checked": 185,
+    "changed": 52,
+    "editor_compared": 88,
+    "model_assisted": 79,
+    "punctuation": 18
+  },
+  "yns_f24_01.scx.txt": {
+    "checked": 77,
+    "changed": 40,
+    "editor_compared": 65,
+    "model_assisted": 10,
+    "punctuation": 2
+  },
+  "yns_f24_02.scx.txt": {
+    "checked": 179,
+    "changed": 123,
+    "editor_compared": 164,
+    "punctuation": 11,
+    "model_assisted": 4
+  },
+  "yns_f24_03.scx.txt": {
+    "checked": 106,
+    "changed": 16,
+    "model_assisted": 64,
+    "editor_compared": 27,
+    "punctuation": 15
+  },
+  "yns_f25.scx.txt": {
+    "checked": 8,
+    "changed": 3,
+    "model_assisted": 4,
+    "editor_compared": 4
+  },
+  "yns_f25_01.scx.txt": {
+    "checked": 121,
+    "changed": 55,
+    "editor_compared": 77,
+    "model_assisted": 44
+  },
+  "yns_f25_02.scx.txt": {
+    "checked": 189,
+    "changed": 58,
+    "editor_compared": 92,
+    "model_assisted": 82,
+    "punctuation": 15
+  },
+  "yns_f25_03.scx.txt": {
+    "checked": 51,
+    "changed": 11,
+    "editor_compared": 19,
+    "model_assisted": 23,
+    "punctuation": 9
+  },
+  "yns_f25_04.scx.txt": {
+    "checked": 288,
+    "changed": 156,
+    "editor_compared": 216,
+    "model_assisted": 51,
+    "punctuation": 21
+  },
+  "yns_f25_05.scx.txt": {
+    "checked": 106,
+    "changed": 38,
+    "editor_compared": 59,
+    "model_assisted": 44,
+    "punctuation": 3
+  },
+  "yns_f26.scx.txt": {
+    "checked": 35,
+    "changed": 7,
+    "model_assisted": 17,
+    "editor_compared": 13,
+    "punctuation": 5
+  },
+  "yns_f26_01.scx.txt": {
+    "checked": 94,
+    "changed": 24,
+    "model_assisted": 37,
+    "editor_compared": 46,
+    "punctuation": 11
+  },
+  "yns_f26_02.scx.txt": {
+    "checked": 112,
+    "changed": 34,
+    "editor_compared": 57,
+    "model_assisted": 44,
+    "punctuation": 11,
+    "speaker_revised": 3
+  },
+  "yns_f27.scx.txt": {
+    "checked": 37,
+    "changed": 4,
+    "editor_compared": 21,
+    "punctuation": 3,
+    "model_assisted": 13
+  },
+  "yns_f27_01.scx.txt": {
+    "checked": 110,
+    "changed": 39,
+    "editor_compared": 71,
+    "punctuation": 5,
+    "model_assisted": 34
+  },
+  "yns_f27_02.scx.txt": {
+    "checked": 220,
+    "changed": 64,
+    "model_assisted": 94,
+    "editor_compared": 102,
+    "punctuation": 24
+  },
+  "yns_f27_03.scx.txt": {
+    "checked": 41,
+    "changed": 13,
+    "model_assisted": 16,
+    "editor_compared": 20,
+    "punctuation": 5
+  },
+  "yns_f28.scx.txt": {
+    "checked": 115,
+    "changed": 18,
+    "editor_compared": 40,
+    "model_assisted": 62,
+    "punctuation": 13
+  },
+  "yns_f28_01.scx.txt": {
+    "checked": 240,
+    "changed": 55,
+    "model_assisted": 115,
+    "editor_compared": 86,
+    "punctuation": 39
+  },
+  "yns_f28_01b.scx.txt": {
+    "checked": 167,
+    "changed": 34,
+    "editor_compared": 60,
+    "model_assisted": 88,
+    "punctuation": 19
+  },
+  "yns_f28_03.scx.txt": {
+    "checked": 371,
+    "changed": 94,
+    "editor_compared": 141,
+    "model_assisted": 200,
+    "punctuation": 30
+  },
+  "yns_f28_04.scx.txt": {
+    "checked": 239,
+    "changed": 50,
+    "model_assisted": 119,
+    "punctuation": 38,
+    "editor_compared": 82
+  },
+  "yns_f28_05.scx.txt": {
+    "checked": 360,
+    "changed": 85,
+    "model_assisted": 160,
+    "editor_compared": 143,
+    "punctuation": 57
+  },
+  "yns_f33.scx.txt": {
+    "checked": 2,
+    "changed": 0,
+    "editor_compared": 1,
+    "punctuation": 1
+  },
+  "yns_f33_01.scx.txt": {
+    "checked": 22,
+    "changed": 13,
+    "editor_compared": 20,
+    "punctuation": 2
+  },
+  "yns_f35.scx.txt": {
+    "checked": 2,
+    "changed": 1,
+    "editor_compared": 1,
+    "punctuation": 1
+  },
+  "yns_f35_01.scx.txt": {
+    "checked": 42,
+    "changed": 28,
+    "editor_compared": 41,
+    "punctuation": 1
+  },
+  "yns_f36_01.scx.txt": {
+    "checked": 197,
+    "changed": 46,
+    "model_assisted": 105,
+    "punctuation": 15,
+    "editor_compared": 77
+  },
+  "yns_f36_02.scx.txt": {
+    "checked": 174,
+    "changed": 44,
+    "editor_compared": 81,
+    "punctuation": 22,
+    "model_assisted": 71,
+    "speaker_revised": 3
+  },
+  "yns_f36_02b.scx.txt": {
+    "checked": 178,
+    "changed": 45,
+    "model_assisted": 74,
+    "editor_compared": 82,
+    "punctuation": 22,
+    "speaker_revised": 3
+  },
+  "yns_f37_01.scx.txt": {
+    "checked": 105,
+    "changed": 14,
+    "model_assisted": 70,
+    "editor_compared": 24,
+    "punctuation": 11
+  },
+  "yns_f37_02.scx.txt": {
+    "checked": 72,
+    "changed": 11,
+    "model_assisted": 36,
+    "editor_compared": 25,
+    "punctuation": 11
+  },
+  "yns_f37_02b.scx.txt": {
+    "checked": 156,
+    "changed": 27,
+    "model_assisted": 87,
+    "punctuation": 19,
+    "editor_compared": 50
+  },
+  "yns_f37_03.scx.txt": {
+    "checked": 59,
+    "changed": 12,
+    "model_assisted": 27,
+    "editor_compared": 21,
+    "punctuation": 11
+  },
+  "yns_f37_03b.scx.txt": {
+    "checked": 146,
+    "changed": 25,
+    "model_assisted": 85,
+    "punctuation": 17,
+    "editor_compared": 44
+  },
+  "yns_oma05.scx.txt": {
+    "checked": 14,
+    "changed": 2,
+    "editor_compared": 6,
+    "model_assisted": 8
+  },
+  "yns_oma05_01.scx.txt": {
+    "checked": 45,
+    "changed": 10,
+    "model_assisted": 28,
+    "editor_compared": 15,
+    "punctuation": 2
+  },
+  "yns_oma06.scx.txt": {
+    "checked": 4,
+    "changed": 1,
+    "editor_compared": 2,
+    "model_assisted": 2
+  },
+  "yns_oma06_01.scx.txt": {
+    "checked": 71,
+    "changed": 17,
+    "model_assisted": 48,
+    "editor_compared": 21,
+    "punctuation": 2
+  },
+  "yns_ongaku.scx.txt": {
+    "checked": 82,
+    "changed": 18,
+    "editor_compared": 33,
+    "model_assisted": 45,
+    "punctuation": 4
+  },
+  "yns_p01.scx.txt": {
+    "checked": 22,
+    "changed": 3,
+    "punctuation": 5,
+    "model_assisted": 13,
+    "editor_compared": 4
+  },
+  "yns_p01_1.scx.txt": {
+    "checked": 119,
+    "changed": 16,
+    "model_assisted": 65,
+    "editor_compared": 37,
+    "punctuation": 17
+  },
+  "yns_p01_2.scx.txt": {
+    "checked": 98,
+    "changed": 18,
+    "model_assisted": 45,
+    "editor_compared": 41,
+    "punctuation": 12
+  },
+  "yns_p01_3.scx.txt": {
+    "checked": 16,
+    "changed": 1,
+    "model_assisted": 13,
+    "editor_compared": 3
+  },
+  "yns_p01_4.scx.txt": {
+    "checked": 169,
+    "changed": 17,
+    "model_assisted": 103,
+    "editor_compared": 32,
+    "punctuation": 34
+  },
+  "yns_p02.scx.txt": {
+    "checked": 50,
+    "changed": 5,
+    "model_assisted": 28,
+    "editor_compared": 13,
+    "punctuation": 9
+  },
+  "yns_p02_1.scx.txt": {
+    "checked": 84,
+    "changed": 11,
+    "model_assisted": 49,
+    "editor_compared": 30,
+    "punctuation": 5
+  },
+  "yns_p02_2.scx.txt": {
+    "checked": 108,
+    "changed": 13,
+    "editor_compared": 35,
+    "model_assisted": 64,
+    "punctuation": 9
+  },
+  "yns_p02_3.scx.txt": {
+    "checked": 320,
+    "changed": 61,
+    "model_assisted": 152,
+    "editor_compared": 135,
+    "punctuation": 33
+  },
+  "yns_p02_4.scx.txt": {
+    "checked": 13,
+    "changed": 3,
+    "model_assisted": 7,
+    "editor_compared": 6
+  },
+  "yns_p02_5.scx.txt": {
+    "checked": 43,
+    "changed": 8,
+    "model_assisted": 28,
+    "editor_compared": 15
+  },
+  "yns_p03.scx.txt": {
+    "checked": 4,
+    "changed": 1,
+    "model_assisted": 2,
+    "editor_compared": 1,
+    "punctuation": 1
+  },
+  "yns_p03_1.scx.txt": {
+    "checked": 98,
+    "changed": 19,
+    "editor_compared": 39,
+    "model_assisted": 54,
+    "punctuation": 5
+  },
+  "yns_p04.scx.txt": {
+    "checked": 15,
+    "changed": 3,
+    "punctuation": 3,
+    "model_assisted": 7,
+    "editor_compared": 5
+  },
+  "yns_p04_1.scx.txt": {
+    "checked": 20,
+    "changed": 3,
+    "editor_compared": 7,
+    "model_assisted": 12,
+    "punctuation": 1
+  },
+  "yns_p04_2.scx.txt": {
+    "checked": 19,
+    "changed": 2,
+    "editor_compared": 7,
+    "model_assisted": 11,
+    "punctuation": 1
+  },
+  "yns_p04_3.scx.txt": {
+    "checked": 17,
+    "changed": 1,
+    "editor_compared": 7,
+    "model_assisted": 10
+  },
+  "yns_p05.scx.txt": {
+    "checked": 23,
+    "changed": 2,
+    "model_assisted": 13,
+    "punctuation": 4,
+    "editor_compared": 6
+  },
+  "yns_p05_1.scx.txt": {
+    "checked": 27,
+    "changed": 7,
+    "model_assisted": 16,
+    "editor_compared": 11
+  },
+  "yns_p05_2.scx.txt": {
+    "checked": 28,
+    "changed": 7,
+    "model_assisted": 17,
+    "editor_compared": 11
+  },
+  "yns_p06.scx.txt": {
+    "checked": 64,
+    "changed": 13,
+    "model_assisted": 31,
+    "editor_compared": 24,
+    "punctuation": 9
+  },
+  "yns_p06_1.scx.txt": {
+    "checked": 57,
+    "changed": 14,
+    "editor_compared": 21,
+    "model_assisted": 35,
+    "punctuation": 1
+  },
+  "yns_p06_2.scx.txt": {
+    "checked": 44,
+    "changed": 13,
+    "editor_compared": 22,
+    "model_assisted": 21,
+    "punctuation": 1
+  },
+  "yns_p18.scx.txt": {
+    "checked": 90,
+    "changed": 13,
+    "editor_compared": 30,
+    "model_assisted": 49,
+    "punctuation": 11
+  },
+  "yns_p18_1.scx.txt": {
+    "checked": 57,
+    "changed": 20,
+    "editor_compared": 33,
+    "model_assisted": 22,
+    "punctuation": 2
+  },
+  "yns_p18_2.scx.txt": {
+    "checked": 28,
+    "changed": 8,
+    "editor_compared": 14,
+    "model_assisted": 13,
+    "punctuation": 1
+  },
+  "yns_p18_3.scx.txt": {
+    "checked": 86,
+    "changed": 20,
+    "model_assisted": 42,
+    "editor_compared": 35,
+    "punctuation": 9
+  },
+  "yns_p18_4.scx.txt": {
+    "checked": 45,
+    "changed": 15,
+    "editor_compared": 25,
+    "model_assisted": 19,
+    "punctuation": 1
+  },
+  "yns_p18_5.scx.txt": {
+    "checked": 18,
+    "changed": 0,
+    "model_assisted": 14,
+    "editor_compared": 3,
+    "punctuation": 1
+  },
+  "yns_p22_3.scx.txt": {
+    "checked": 103,
+    "changed": 21,
+    "model_assisted": 54,
+    "editor_compared": 36,
+    "punctuation": 13
+  },
+  "yns_p22_4.scx.txt": {
+    "checked": 198,
+    "changed": 30,
+    "model_assisted": 116,
+    "editor_compared": 57,
+    "punctuation": 25
+  },
+  "yns_p33.scx.txt": {
+    "checked": 8,
+    "changed": 0,
+    "model_assisted": 5,
+    "editor_compared": 2,
+    "punctuation": 1
+  },
+  "yns_p33_1.scx.txt": {
+    "checked": 42,
+    "changed": 10,
+    "model_assisted": 25,
+    "editor_compared": 16,
+    "punctuation": 1
+  },
+  "yns_sp00.scx.txt": {
+    "checked": 61,
+    "changed": 10,
+    "model_assisted": 29,
+    "editor_compared": 20,
+    "punctuation": 12
+  },
+  "yns_sp50.scx.txt": {
+    "checked": 17,
+    "changed": 3,
+    "editor_compared": 6,
+    "model_assisted": 10,
+    "punctuation": 1
+  },
+  "yns_sp50_01.scx.txt": {
+    "checked": 31,
+    "changed": 4,
+    "model_assisted": 18,
+    "editor_compared": 10,
+    "punctuation": 3
+  },
+  "yns_sp52.scx.txt": {
+    "checked": 7,
+    "changed": 0,
+    "model_assisted": 5,
+    "editor_compared": 2
+  },
+  "yns_sp52_01.scx.txt": {
+    "checked": 21,
+    "changed": 3,
+    "model_assisted": 12,
+    "punctuation": 1,
+    "editor_compared": 8
+  },
+  "yns_sp52_02.scx.txt": {
+    "checked": 11,
+    "changed": 2,
+    "model_assisted": 7,
+    "editor_compared": 4
+  },
+  "yns_sp53.scx.txt": {
+    "checked": 92,
+    "changed": 22,
+    "model_assisted": 43,
+    "editor_compared": 39,
+    "punctuation": 10
+  },
+  "yns_sp53_02.scx.txt": {
+    "checked": 33,
+    "changed": 3,
+    "model_assisted": 14,
+    "editor_compared": 19
+  },
+  "yns_sp53_03.scx.txt": {
+    "checked": 22,
+    "changed": 5,
+    "editor_compared": 12,
+    "model_assisted": 10
+  },
+  "yns_sp54.scx.txt": {
+    "checked": 148,
+    "changed": 16,
+    "model_assisted": 77,
+    "punctuation": 25,
+    "editor_compared": 46
+  },
+  "yns_sp54_01.scx.txt": {
+    "checked": 163,
+    "changed": 38,
+    "model_assisted": 66,
+    "editor_compared": 72,
+    "punctuation": 25
+  },
+  "yns_sp54_02.scx.txt": {
+    "checked": 19,
+    "changed": 3,
+    "model_assisted": 14,
+    "editor_compared": 3,
+    "punctuation": 2
+  },
+  "yns_sp54_03.scx.txt": {
+    "checked": 44,
+    "changed": 8,
+    "model_assisted": 23,
+    "punctuation": 4,
+    "editor_compared": 17
+  },
+  "yns_sp54_04.scx.txt": {
+    "checked": 17,
+    "changed": 1,
+    "model_assisted": 10,
+    "editor_compared": 7
+  },
+  "yns_sp54_05.scx.txt": {
+    "checked": 22,
+    "changed": 2,
+    "editor_compared": 8,
+    "model_assisted": 12,
+    "punctuation": 2
+  },
+  "yns_sp54_06.scx.txt": {
+    "checked": 104,
+    "changed": 30,
+    "model_assisted": 36,
+    "editor_compared": 57,
+    "punctuation": 11
+  },
+  "yns_sp54_07.scx.txt": {
+    "checked": 133,
+    "changed": 14,
+    "model_assisted": 64,
+    "editor_compared": 47,
+    "punctuation": 22
+  },
+  "yns_sp55.scx.txt": {
+    "checked": 317,
+    "changed": 48,
+    "model_assisted": 161,
+    "editor_compared": 105,
+    "punctuation": 51
+  },
+  "yns_sp55_01.scx.txt": {
+    "checked": 12,
+    "changed": 2,
+    "model_assisted": 6,
+    "editor_compared": 6
+  },
+  "yns_sp55_02.scx.txt": {
+    "checked": 34,
+    "changed": 5,
+    "model_assisted": 20,
+    "editor_compared": 13,
+    "punctuation": 1
+  },
+  "yns_sp56.scx.txt": {
+    "checked": 87,
+    "changed": 16,
+    "editor_compared": 25,
+    "model_assisted": 44,
+    "punctuation": 18
+  },
+  "yns_warp.scx.txt": {
+    "checked": 183,
+    "changed": 29,
+    "editor_compared": 64,
+    "punctuation": 19,
+    "model_assisted": 100
+  },
+  "yns_warp2.scx.txt": {
+    "checked": 111,
+    "changed": 39,
+    "model_assisted": 55,
+    "editor_compared": 54,
+    "punctuation": 2
+  },
+  "yns_warp3.scx.txt": {
+    "checked": 231,
+    "changed": 54,
+    "model_assisted": 127,
+    "punctuation": 20,
+    "editor_compared": 84
+  },
+  "yns_warp4.scx.txt": {
+    "checked": 109,
+    "changed": 16,
+    "model_assisted": 70,
+    "editor_compared": 26,
+    "punctuation": 13
+  },
+  "yns_z00.scx.txt": {
+    "checked": 30,
+    "changed": 3,
+    "editor_compared": 11,
+    "punctuation": 9,
+    "model_assisted": 10
+  },
+  "yns_z00_01.scx.txt": {
+    "checked": 164,
+    "changed": 19,
+    "punctuation": 27,
+    "model_assisted": 94,
+    "editor_compared": 43
+  },
+  "yns_z00_02.scx.txt": {
+    "checked": 460,
+    "changed": 142,
+    "model_assisted": 140,
+    "punctuation": 94,
+    "editor_compared": 226
+  },
+  "yns_z00_03.scx.txt": {
+    "checked": 132,
+    "changed": 20,
+    "model_assisted": 64,
+    "editor_compared": 51,
+    "punctuation": 17
+  },
+  "yns_z00_04.scx.txt": {
+    "checked": 106,
+    "changed": 20,
+    "model_assisted": 53,
+    "editor_compared": 35,
+    "punctuation": 18
+  },
+  "yns_z00_05.scx.txt": {
+    "checked": 241,
+    "changed": 31,
+    "model_assisted": 111,
+    "editor_compared": 89,
+    "punctuation": 41
+  },
+  "yns_z00_05b.scx.txt": {
+    "checked": 62,
+    "changed": 13,
+    "model_assisted": 33,
+    "editor_compared": 23,
+    "punctuation": 6
+  },
+  "yns_z00_06.scx.txt": {
+    "checked": 412,
+    "changed": 58,
+    "model_assisted": 248,
+    "editor_compared": 107,
+    "punctuation": 57
+  },
+  "yns_z50.scx.txt": {
+    "checked": 71,
+    "changed": 13,
+    "model_assisted": 38,
+    "editor_compared": 20,
+    "punctuation": 13
+  },
+  "yns_z50_01.scx.txt": {
+    "checked": 24,
+    "changed": 3,
+    "model_assisted": 18,
+    "editor_compared": 5,
+    "punctuation": 1
+  },
+  "yns_z50_02.scx.txt": {
+    "checked": 35,
+    "changed": 9,
+    "editor_compared": 15,
+    "model_assisted": 20
+  },
+  "yns_z50_03.scx.txt": {
+    "checked": 54,
+    "changed": 10,
+    "editor_compared": 21,
+    "model_assisted": 28,
+    "punctuation": 5
+  },
+  "yns_z50_04.scx.txt": {
+    "checked": 159,
+    "changed": 21,
+    "editor_compared": 60,
+    "model_assisted": 90,
+    "punctuation": 9
+  },
+  "yns_z50_05.scx.txt": {
+    "checked": 137,
+    "changed": 22,
+    "model_assisted": 87,
+    "editor_compared": 42,
+    "punctuation": 8
+  },
+  "yns_z50_06.scx.txt": {
+    "checked": 234,
+    "changed": 41,
+    "editor_compared": 77,
+    "model_assisted": 139,
+    "punctuation": 18
+  },
+  "yns_z50_07.scx.txt": {
+    "checked": 72,
+    "changed": 18,
+    "model_assisted": 36,
+    "editor_compared": 28,
+    "punctuation": 8
+  },
+  "yns_z50_08.scx.txt": {
+    "checked": 20,
+    "changed": 4,
+    "model_assisted": 12,
+    "editor_compared": 8
+  },
+  "yns_z50_09.scx.txt": {
+    "checked": 28,
+    "changed": 8,
+    "model_assisted": 14,
+    "editor_compared": 11,
+    "punctuation": 3
+  },
+  "yns_z51.scx.txt": {
+    "checked": 54,
+    "changed": 10,
+    "model_assisted": 26,
+    "editor_compared": 18,
+    "punctuation": 10
+  },
+  "yns_z51_01.scx.txt": {
+    "checked": 165,
+    "changed": 25,
+    "editor_compared": 48,
+    "model_assisted": 90,
+    "punctuation": 27
+  },
+  "yns_z51_02.scx.txt": {
+    "checked": 42,
+    "changed": 6,
+    "editor_compared": 14,
+    "model_assisted": 27,
+    "punctuation": 1
+  },
+  "yns_z51_03.scx.txt": {
+    "checked": 14,
+    "changed": 2,
+    "punctuation": 1,
+    "model_assisted": 8,
+    "editor_compared": 5
+  },
+  "yns_z52.scx.txt": {
+    "checked": 94,
+    "changed": 19,
+    "editor_compared": 38,
+    "model_assisted": 44,
+    "punctuation": 12
+  },
+  "yns_z52_01.scx.txt": {
+    "checked": 152,
+    "changed": 19,
+    "model_assisted": 98,
+    "editor_compared": 38,
+    "punctuation": 16
+  },
+  "yns_z52_02.scx.txt": {
+    "checked": 24,
+    "changed": 8,
+    "model_assisted": 12,
+    "editor_compared": 12
+  },
+  "yns_z52_03.scx.txt": {
+    "checked": 226,
+    "changed": 48,
+    "model_assisted": 126,
+    "punctuation": 17,
+    "editor_compared": 83
+  },
+  "yns_z52_04.scx.txt": {
+    "checked": 27,
+    "changed": 5,
+    "model_assisted": 18,
+    "editor_compared": 9
+  },
+  "yns_z52_05.scx.txt": {
+    "checked": 17,
+    "changed": 6,
+    "model_assisted": 10,
+    "editor_compared": 7
+  },
+  "yns_z52_06.scx.txt": {
+    "checked": 21,
+    "changed": 7,
+    "editor_compared": 9,
+    "model_assisted": 11,
+    "punctuation": 1
+  },
+  "yns_z53.scx.txt": {
+    "checked": 24,
+    "changed": 5,
+    "model_assisted": 14,
+    "editor_compared": 9,
+    "punctuation": 1
+  },
+  "yns_z53_01.scx.txt": {
+    "checked": 45,
+    "changed": 9,
+    "model_assisted": 23,
+    "editor_compared": 20,
+    "punctuation": 2
+  },
+  "yns_z53_02.scx.txt": {
+    "checked": 30,
+    "changed": 13,
+    "editor_compared": 18,
+    "model_assisted": 12
+  },
+  "yns_z53_03.scx.txt": {
+    "checked": 35,
+    "changed": 12,
+    "model_assisted": 16,
+    "editor_compared": 19
+  },
+  "yns_z53_04.scx.txt": {
+    "checked": 140,
+    "changed": 29,
+    "model_assisted": 62,
+    "editor_compared": 62,
+    "punctuation": 16
+  },
+  "yns_z53_05.scx.txt": {
+    "checked": 30,
+    "changed": 11,
+    "editor_compared": 15,
+    "model_assisted": 14,
+    "punctuation": 1
+  },
+  "yns_z53_06.scx.txt": {
+    "checked": 32,
+    "changed": 10,
+    "model_assisted": 14,
+    "editor_compared": 16,
+    "punctuation": 2
+  },
+  "yns_z54.scx.txt": {
+    "checked": 99,
+    "changed": 15,
+    "model_assisted": 45,
+    "editor_compared": 37,
+    "punctuation": 17
+  },
+  "yns_z54_01.scx.txt": {
+    "checked": 29,
+    "changed": 4,
+    "editor_compared": 10,
+    "model_assisted": 18,
+    "punctuation": 1
+  },
+  "yns_z54_02.scx.txt": {
+    "checked": 44,
+    "changed": 3,
+    "model_assisted": 24,
+    "editor_compared": 17,
+    "punctuation": 3
+  },
+  "yns_z54_03.scx.txt": {
+    "checked": 28,
+    "changed": 5,
+    "model_assisted": 15,
+    "editor_compared": 13
+  },
+  "yns_z54_04.scx.txt": {
+    "checked": 60,
+    "changed": 10,
+    "model_assisted": 41,
+    "editor_compared": 16,
+    "punctuation": 3
+  },
+  "yns_z54_05.scx.txt": {
+    "checked": 266,
+    "changed": 31,
+    "model_assisted": 163,
+    "editor_compared": 74,
+    "punctuation": 29
+  },
+  "yns_z54_06.scx.txt": {
+    "checked": 27,
+    "changed": 5,
+    "editor_compared": 9,
+    "model_assisted": 12,
+    "punctuation": 6
+  },
+  "yns_z54_07.scx.txt": {
+    "checked": 193,
+    "changed": 33,
+    "model_assisted": 98,
+    "editor_compared": 70,
+    "punctuation": 25
+  },
+  "yns_z55.scx.txt": {
+    "checked": 255,
+    "changed": 56,
+    "model_assisted": 125,
+    "punctuation": 24,
+    "editor_compared": 106
+  },
+  "yns_z55_01.scx.txt": {
+    "checked": 22,
+    "changed": 5,
+    "editor_compared": 7,
+    "model_assisted": 14,
+    "punctuation": 1
+  },
+  "yns_z55_02.scx.txt": {
+    "checked": 249,
+    "changed": 38,
+    "model_assisted": 123,
+    "punctuation": 54,
+    "editor_compared": 72
+  },
+  "yns_z55_03.scx.txt": {
+    "checked": 10,
+    "changed": 2,
+    "editor_compared": 3,
+    "model_assisted": 6,
+    "punctuation": 1
+  },
+  "yns_z56.scx.txt": {
+    "checked": 58,
+    "changed": 3,
+    "punctuation": 10,
+    "model_assisted": 30,
+    "editor_compared": 18
+  },
+  "yns_z56_01.scx.txt": {
+    "checked": 271,
+    "changed": 39,
+    "punctuation": 24,
+    "model_assisted": 173,
+    "editor_compared": 74
+  },
+  "yns_z56_02.scx.txt": {
+    "checked": 151,
+    "changed": 21,
+    "model_assisted": 86,
+    "punctuation": 18,
+    "editor_compared": 47
+  },
+  "yns_z57_01.scx.txt": {
+    "checked": 164,
+    "changed": 23,
+    "editor_compared": 46,
+    "model_assisted": 112,
+    "punctuation": 6
+  },
+  "yns_z57_02.scx.txt": {
+    "checked": 286,
+    "changed": 52,
+    "model_assisted": 151,
+    "punctuation": 16,
+    "editor_compared": 119
+  },
+  "yns_z57_03.scx.txt": {
+    "checked": 376,
+    "changed": 63,
+    "model_assisted": 216,
+    "punctuation": 39,
+    "editor_compared": 121
+  },
+  "yns_z58.scx.txt": {
+    "checked": 55,
+    "changed": 11,
+    "model_assisted": 30,
+    "editor_compared": 19,
+    "punctuation": 6
+  },
+  "yns_z58_01.scx.txt": {
+    "checked": 112,
+    "changed": 15,
+    "editor_compared": 36,
+    "model_assisted": 64,
+    "punctuation": 12
+  },
+  "yns_z59.scx.txt": {
+    "checked": 59,
+    "changed": 9,
+    "editor_compared": 20,
+    "model_assisted": 34,
+    "punctuation": 5
+  },
+  "yns_z59_01.scx.txt": {
+    "checked": 87,
+    "changed": 10,
+    "punctuation": 10,
+    "model_assisted": 55,
+    "editor_compared": 22
+  },
+  "yns_z60.scx.txt": {
+    "checked": 4,
+    "changed": 0,
+    "punctuation": 1,
+    "model_assisted": 3
+  },
+  "yns_z60_01.scx.txt": {
+    "checked": 53,
+    "changed": 11,
+    "punctuation": 2,
+    "model_assisted": 34,
+    "editor_compared": 17
+  },
+  "yns_z60_02.scx.txt": {
+    "checked": 231,
+    "changed": 49,
+    "editor_compared": 76,
+    "model_assisted": 123,
+    "punctuation": 32
+  },
+  "yns_z61_01.scx.txt": {
+    "checked": 250,
+    "changed": 32,
+    "model_assisted": 160,
+    "editor_compared": 63,
+    "punctuation": 27
+  },
+  "yns_z61_02.scx.txt": {
+    "checked": 392,
+    "changed": 74,
+    "model_assisted": 199,
+    "punctuation": 36,
+    "editor_compared": 157
+  },
+  "yns_z61_03.scx.txt": {
+    "checked": 284,
+    "changed": 33,
+    "model_assisted": 153,
+    "editor_compared": 95,
+    "punctuation": 36
+  },
+  "yns_z64_01.scx.txt": {
+    "checked": 202,
+    "changed": 31,
+    "model_assisted": 111,
+    "editor_compared": 68,
+    "punctuation": 23
+  },
+  "yns_z64_02.scx.txt": {
+    "checked": 507,
+    "changed": 97,
+    "model_assisted": 268,
+    "editor_compared": 179,
+    "punctuation": 60
+  },
+  "yns_z67_01.scx.txt": {
+    "checked": 255,
+    "changed": 98,
+    "model_assisted": 91,
+    "editor_compared": 127,
+    "punctuation": 37
+  },
+  "yns_z67_02.scx.txt": {
+    "checked": 109,
+    "changed": 29,
+    "model_assisted": 53,
+    "editor_compared": 44,
+    "punctuation": 12
+  },
+  "yns_z67_03.scx.txt": {
+    "checked": 316,
+    "changed": 69,
+    "model_assisted": 163,
+    "punctuation": 31,
+    "editor_compared": 122
+  },
+  "yns_z68.scx.txt": {
+    "checked": 4,
+    "changed": 0,
+    "model_assisted": 4
+  },
+  "yns_z68_01.scx.txt": {
+    "checked": 223,
+    "changed": 38,
+    "model_assisted": 122,
+    "punctuation": 31,
+    "editor_compared": 70
+  },
+  "yns_z68_02.scx.txt": {
+    "checked": 132,
+    "changed": 15,
+    "model_assisted": 81,
+    "editor_compared": 32,
+    "punctuation": 19
+  },
+  "yns_z71.scx.txt": {
+    "checked": 11,
+    "changed": 4,
+    "model_assisted": 4,
+    "editor_compared": 6,
+    "punctuation": 1
+  },
+  "yns_z71_01.scx.txt": {
+    "checked": 64,
+    "changed": 10,
+    "model_assisted": 42,
+    "punctuation": 6,
+    "editor_compared": 16
+  },
+  "yns_z71b.scx.txt": {
+    "checked": 14,
+    "changed": 2,
+    "punctuation": 3,
+    "model_assisted": 7,
+    "editor_compared": 4
+  },
+  "yns_z71b_01.scx.txt": {
+    "checked": 18,
+    "changed": 8,
+    "model_assisted": 6,
+    "editor_compared": 12
+  },
+  "yns_z71b_02.scx.txt": {
+    "checked": 90,
+    "changed": 22,
+    "editor_compared": 35,
+    "model_assisted": 45,
+    "punctuation": 10
+  },
+  "yns_z71c.scx.txt": {
+    "checked": 10,
+    "changed": 0,
+    "editor_compared": 1,
+    "punctuation": 2,
+    "model_assisted": 7
+  },
+  "yns_z71c_01.scx.txt": {
+    "checked": 25,
+    "changed": 9,
+    "model_assisted": 6,
+    "editor_compared": 17,
+    "punctuation": 2
+  },
+  "yns_z71c_02.scx.txt": {
+    "checked": 25,
+    "changed": 9,
+    "model_assisted": 6,
+    "editor_compared": 17,
+    "punctuation": 2
+  },
+  "yns_z71d.scx.txt": {
+    "checked": 9,
+    "changed": 3,
+    "editor_compared": 4,
+    "model_assisted": 4,
+    "punctuation": 1
+  },
+  "yns_z71d_01.scx.txt": {
+    "checked": 20,
+    "changed": 8,
+    "model_assisted": 10,
+    "editor_compared": 10
+  },
+  "yns_z71d_02.scx.txt": {
+    "checked": 17,
+    "changed": 7,
+    "model_assisted": 8,
+    "editor_compared": 9
+  },
+  "yns_z71e.scx.txt": {
+    "checked": 18,
+    "changed": 3,
+    "model_assisted": 11,
+    "editor_compared": 5,
+    "punctuation": 2
+  },
+  "yns_z71e_01.scx.txt": {
+    "checked": 19,
+    "changed": 3,
+    "model_assisted": 15,
+    "editor_compared": 3,
+    "punctuation": 1
+  },
+  "yns_z71e_02.scx.txt": {
+    "checked": 19,
+    "changed": 5,
+    "editor_compared": 8,
+    "model_assisted": 9,
+    "punctuation": 2
+  },
+  "yns_z71f.scx.txt": {
+    "checked": 2,
+    "changed": 0,
+    "model_assisted": 2
+  },
+  "yns_z71f_01.scx.txt": {
+    "checked": 30,
+    "changed": 9,
+    "model_assisted": 15,
+    "editor_compared": 12,
+    "punctuation": 3
+  },
+  "yns_z71g.scx.txt": {
+    "checked": 5,
+    "changed": 0,
+    "punctuation": 1,
+    "editor_compared": 3,
+    "model_assisted": 1
+  },
+  "yns_z71g_01.scx.txt": {
+    "checked": 28,
+    "changed": 12,
+    "model_assisted": 8,
+    "editor_compared": 18,
+    "punctuation": 2
+  },
+  "yns_z71g_02.scx.txt": {
+    "checked": 26,
+    "changed": 10,
+    "model_assisted": 8,
+    "editor_compared": 16,
+    "punctuation": 2
+  },
+  "yns_z72.scx.txt": {
+    "checked": 8,
+    "changed": 1,
+    "punctuation": 3,
+    "model_assisted": 3,
+    "editor_compared": 2
+  },
+  "yns_z72_01.scx.txt": {
+    "checked": 54,
+    "changed": 12,
+    "model_assisted": 32,
+    "editor_compared": 19,
+    "punctuation": 3
+  },
+  "yns_z72_02.scx.txt": {
+    "checked": 518,
+    "changed": 59,
+    "editor_compared": 119,
+    "model_assisted": 327,
+    "punctuation": 72
+  },
+  "yns_z72_03.scx.txt": {
+    "checked": 35,
+    "changed": 5,
+    "model_assisted": 22,
+    "punctuation": 4,
+    "editor_compared": 9
+  },
+  "yns_z72_04.scx.txt": {
+    "checked": 17,
+    "changed": 11,
+    "editor_compared": 17
+  },
+  "yns_z73.scx.txt": {
+    "checked": 46,
+    "changed": 3,
+    "model_assisted": 30,
+    "punctuation": 7,
+    "editor_compared": 9
+  },
+  "yns_z73_01.scx.txt": {
+    "checked": 68,
+    "changed": 7,
+    "model_assisted": 47,
+    "editor_compared": 16,
+    "punctuation": 5
+  },
+  "yns_z73_02.scx.txt": {
+    "checked": 590,
+    "changed": 317,
+    "editor_compared": 531,
+    "punctuation": 57,
+    "model_assisted": 2
+  },
+  "yns_z73_03.scx.txt": {
+    "checked": 555,
+    "changed": 127,
+    "model_assisted": 296,
+    "editor_compared": 210,
+    "punctuation": 49
+  },
+  "yns_z73_04.scx.txt": {
+    "checked": 168,
+    "changed": 25,
+    "model_assisted": 92,
+    "editor_compared": 58,
+    "punctuation": 18
+  },
+  "yns_z73_05.scx.txt": {
+    "checked": 34,
+    "changed": 19,
+    "editor_compared": 31,
+    "punctuation": 3
+  },
+  "yns_z73_06.scx.txt": {
+    "checked": 37,
+    "changed": 17,
+    "editor_compared": 37
+  },
+  "yns_z73_07.scx.txt": {
+    "checked": 21,
+    "changed": 13,
+    "editor_compared": 20,
+    "punctuation": 1
+  },
+  "yns_z74.scx.txt": {
+    "checked": 175,
+    "changed": 20,
+    "punctuation": 28,
+    "model_assisted": 95,
+    "editor_compared": 52
+  },
+  "yns_z74_01.scx.txt": {
+    "checked": 131,
+    "changed": 24,
+    "model_assisted": 65,
+    "punctuation": 12,
+    "editor_compared": 54
+  },
+  "yns_z75_01.scx.txt": {
+    "checked": 160,
+    "changed": 16,
+    "model_assisted": 94,
+    "editor_compared": 49,
+    "punctuation": 17
+  },
+  "yns_z75_02.scx.txt": {
+    "checked": 119,
+    "changed": 22,
+    "model_assisted": 71,
+    "punctuation": 10,
+    "editor_compared": 38
+  },
+  "yns_z75_02a.scx.txt": {
+    "checked": 447,
+    "changed": 72,
+    "editor_compared": 248,
+    "model_assisted": 161,
+    "punctuation": 38
+  },
+  "yns_z77_01.scx.txt": {
+    "checked": 505,
+    "changed": 75,
+    "editor_compared": 286,
+    "model_assisted": 154,
+    "punctuation": 65
+  },
+  "yns_z77_02.scx.txt": {
+    "checked": 145,
+    "changed": 71,
+    "editor_compared": 130,
+    "punctuation": 15
+  },
+  "zz.scx.txt": {
+    "checked": 415,
+    "changed": 234,
+    "editor_compared": 269,
+    "punctuation": 40,
+    "model_assisted": 106
+  }
+}
